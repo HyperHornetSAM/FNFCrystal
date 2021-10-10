@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bottomBop.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Bottom Level Boppers instance 10000" x="0" y="0" width="1976" height="661" pivotX="3.2" pivotY="13.95" frameX="-3" frameY="-14" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10001" x="0" y="0" width="1976" height="661" frameX="-3" frameY="-14" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10002" x="1986" y="0" width="1971" height="664" frameX="-5" frameY="-11" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10003" x="1986" y="0" width="1971" height="664" frameX="-5" frameY="-11" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10004" x="0" y="674" width="1974" height="672" frameX="0" frameY="-3" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10005" x="0" y="674" width="1974" height="672" frameX="0" frameY="-3" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10006" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10007" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10008" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10009" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10010" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10011" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10012" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+	<SubTexture name="Bottom Level Boppers instance 10013" x="1984" y="674" width="1974" height="675" frameX="0" frameY="0" frameWidth="1979" frameHeight="675"/>
+</TextureAtlas>

@@ -1,0 +1,26 @@
+{
+    "box": "dialogueBox-evil",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "senpai",
+            "expression": "mad",
+            "text": "Hello, mister."
+        },
+        {
+            "text": "I'm sure the poor English was really \nconfusing, wasn't it?"
+        },
+        {
+            "text": "Well, thanks to you... I can finally \nescape this hellhole."
+        },
+        {
+            "text": "But in order TO leave... I must kill you."
+        },
+        {
+            "text": "I must take your body from you, and \nput you in my place."
+        },
+	{
+	    "text": "Trust me... it'll drive you mad, too..."
+	}
+    ]
+}

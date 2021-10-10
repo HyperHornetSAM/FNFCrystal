@@ -1,0 +1,18 @@
+{
+    "box": "dialogueBox-pixel",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "senpai",
+            "expression": "mad",
+            "text": "Nasty bug! I have heard worse."
+        },
+        {
+            "text": "However I will have my testicles \nmouthwashed. Your girlfriend does it \nafter I tear yours!"
+        },
+        {
+            "portrait": "bf-pixel",
+            "text": "???"
+        }
+    ]
+}
