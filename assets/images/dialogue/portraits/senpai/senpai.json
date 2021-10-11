@@ -4,8 +4,8 @@
         "normal": "Senpai Portrait Enter",
         "mad": "SENPAI ANGRY IMPACT SPEECH"
     },
-    "position": [200, 500],
-    "scale": 1,
+    "position": [200, 225],
+    "scale": 2.5,
     "flipX": true,
     "antialiasing": false,
     "loop": false,

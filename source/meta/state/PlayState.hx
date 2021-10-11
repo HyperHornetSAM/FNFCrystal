@@ -495,7 +495,7 @@ class PlayState extends MusicBeatState
 						case 'senpai':
 							getCenterY = char.getMidpoint().y - 430;
 							getCenterX = char.getMidpoint().x - 100;
-						case 'senpai-angry':
+						case 'roses-senpai':
 							getCenterY = char.getMidpoint().y - 430;
 							getCenterX = char.getMidpoint().x - 100;
 					}
