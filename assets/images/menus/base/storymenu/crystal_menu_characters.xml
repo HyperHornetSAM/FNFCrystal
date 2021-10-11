@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="crystal menu characters.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf christmas0000" x="0" y="0" width="249" height="269" pivotX="124.1" pivotY="134.5"/>
+	<SubTexture name="bf normal0000" x="259" y="0" width="253" height="225" pivotX="126.7" pivotY="112.2"/>
+	<SubTexture name="dad0000" x="522" y="0" width="395" height="381" pivotX="197.5" pivotY="190.15"/>
+	<SubTexture name="gf0000" x="927" y="0" width="279" height="267" pivotX="139.15" pivotY="133.65"/>
+	<SubTexture name="mom0000" x="1216" y="0" width="237" height="325" pivotX="118.95" pivotY="162.55"/>
+	<SubTexture name="parents0000" x="1463" y="0" width="395" height="383" pivotX="197.45" pivotY="191.35"/>
+	<SubTexture name="pico0000" x="0" y="393" width="375" height="335" pivotX="187.65" pivotY="167.6"/>
+	<SubTexture name="senpai0000" x="385" y="393" width="219" height="315" pivotX="109.35" pivotY="157.7"/>
+	<SubTexture name="spooky kids0000" x="614" y="393" width="241" height="341" pivotX="120.9" pivotY="170.45"/>
+</TextureAtlas>
