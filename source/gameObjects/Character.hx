@@ -386,7 +386,7 @@ class Character extends FNFSprite
 				updateHitbox();
 
 				antialiasing = false;
-			case 'senpai-angry':
+			case 'roses-senpai':
 				frames = Paths.getSparrowAtlas('characters/senpai');
 				animation.addByPrefix('idle', 'Angry Senpai Idle', 24, false);
 				animation.addByPrefix('singUP', 'Angry Senpai UP NOTE', 24, false);
