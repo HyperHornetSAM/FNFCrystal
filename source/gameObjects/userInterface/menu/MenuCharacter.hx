@@ -10,15 +10,16 @@ class MenuCharacter extends FlxSprite
 	var curCharacterMap:Map<String, Array<Dynamic>> = [
 		// the format is currently
 		// name of character => id in atlas, fps, loop, scale, offsetx, offsety
-		'bf' => ["BF idle dance white", 24, true, 0.9, 100, 100],
-		'bfConfirm' => ['BF HEY!!', 24, false, 0.9, 100, 100],
-		'gf' => ["GF Dancing Beat WHITE", 24, true, 1, 100, 100],
-		'dad' => ["Dad idle dance BLACK LINE", 24, true, 1 * 0.5, 0, 0],
-		'spooky' => ["spooky dance idle BLACK LINES", 24, true, 1 * 0.5, 0, 90],
-		'pico' => ["Pico Idle Dance", 24, true, 1 * 0.5, 0, 100],
-		'mom' => ["Mom Idle BLACK LINES", 24, true, 1 * 0.5, 0, -20],
-		'parents-christmas' => ["Parent Christmas Idle", 24, true, 0.8, -100, 50],
-		'senpai' => ["SENPAI idle Black Lines", 24, true, 1.4 * 0.5, -50, 100],
+		'bf' => ["bf normal", 24, true, 1, 0, 1000],
+		'bfConfirm' => ["bf normal", 24, true, 1, 0, 1000],
+		'xmasbf' => ['bf christmas', 24, true, 1, 0, 0],
+		'gf' => ["gf", 24, true, 1, -100, 100],
+		'dad' => ["dad", 24, true, 1, -50, 100],
+		'spooky' => ["spooky kids", 24, true, 1, 0, 40],
+		'pico' => ["pico", 24, true, 1, -50, 150],
+		'mom' => ["mom", 24, true, 1, -50, 25],
+		'parents-christmas' => ["parents", 24, true, 1.25, -100, 60],
+		'senpai' => ["senpai", 24, true, 1, -50, 0]
 	];
 
 	var baseX:Float = 0;
@@ -38,7 +39,8 @@ class MenuCharacter extends FlxSprite
 
 	public function createCharacter(newCharacter:String, canChange:Bool = false)
 	{
-		var tex = Paths.getSparrowAtlas('menus/base/storymenu/campaign_menu_UI_characters');
+		var tex = Paths.getSparrowAtlas('menus/base/storymenu/crystal_menu_characters');
+		var tex = Paths.getSparrowAtlas('menus/base/storymenu/crystal_menu_characters');
 		frames = tex;
 		var assortedValues = curCharacterMap.get(newCharacter);
 		if (assortedValues != null)
@@ -58,10 +60,10 @@ class MenuCharacter extends FlxSprite
 				updateHitbox();
 				setPosition(baseX + assortedValues[4], baseY + assortedValues[5]);
 
-				if (newCharacter == 'pico')
+				/*if (newCharacter == 'pico')
 					flipX = true;
 				else
-					flipX = false;
+					flipX = false;*/
 			}
 		}
 		else

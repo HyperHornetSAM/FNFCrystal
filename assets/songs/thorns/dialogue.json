@@ -3,8 +3,8 @@
     "boxState": "normal",
     "dialogue": [
         {
-            "portrait": "senpai",
-            "expression": "mad",
+            "portrait": "spirit",
+            "expression": "normal",
             "text": "Hello, mister."
         },
         {

@@ -26,13 +26,13 @@ class StoryMenuState extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
 
 	var weekCharacters:Array<Dynamic> = [
-		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['gf', 'bf', ''],
+		['dad', 'bf', ''],
+		['spooky', 'bf', ''],
+		['pico', 'bf', ''],
+		['mom', 'bf', ''],
+		['parents-christmas', 'gf', ''],
+		['senpai', 'bf', '']
 	];
 
 	var txtWeekTitle:FlxText;
@@ -265,7 +265,7 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
 				grpWeekText.members[curWeek].startFlashing();
-				grpWeekCharacters.members[1].createCharacter('bfConfirm');
+				//grpWeekCharacters.members[1].createCharacter('bfConfirm');
 				stopspamming = true;
 			}
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="bf-pixel.png">
+<TextureAtlas imagePath="spirit.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="crystal pixel bf portrait0000" x="0" y="0" width="111" height="101" pivotX="0" pivotY="0"/>
+	<SubTexture name="crystal spirit portrait instance0000" x="0" y="0" width="209" height="214" pivotX="0" pivotY="0"/>
 </TextureAtlas>
