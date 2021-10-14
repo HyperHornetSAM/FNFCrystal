@@ -10,8 +10,8 @@ class MenuCharacter extends FlxSprite
 	var curCharacterMap:Map<String, Array<Dynamic>> = [
 		// the format is currently
 		// name of character => id in atlas, fps, loop, scale, offsetx, offsety
-		'bf' => ["bf normal", 24, true, 1, 0, 1000],
-		'bfConfirm' => ["bf normal", 24, true, 1, 0, 1000],
+		'bf' => ["bf normal", 24, true, 1, 0, 0],
+		//'bfConfirm' => ["bf normal", 24, true, 1, 0, 0],
 		'xmasbf' => ['bf christmas', 24, true, 1, 0, 0],
 		'gf' => ["gf", 24, true, 1, -100, 100],
 		'dad' => ["dad", 24, true, 1, -50, 100],
@@ -29,10 +29,11 @@ class MenuCharacter extends FlxSprite
 	{
 		super(x);
 		y += 70;
-
+		if(newCharacter == 'bf' || newCharacter == 'xmasbf'){
+			y += 150;
+		}
 		baseX = x;
 		baseY = y;
-
 		createCharacter(newCharacter);
 		updateHitbox();
 	}

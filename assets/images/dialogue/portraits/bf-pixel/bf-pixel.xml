@@ -2,5 +2,5 @@
 <TextureAtlas imagePath="bf-pixel.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="crystal pixel bf portrait0000" x="0" y="0" width="111" height="101" pivotX="0" pivotY="0"/>
+	<SubTexture name="crystal pixel bf portrait0000" x="0" y="0" width="110" height="100" pivotX="0" pivotY="0"/>
 </TextureAtlas>

@@ -3,8 +3,8 @@
     "expressions": {
         "normal": "crystal pixel bf portrait"
     },
-    "position": [630, 370],
-    "scale": 2,
+    "position": [950, 280],
+    "scale": 2.5,
     "antialiasing": false,
     "loop": false,
 

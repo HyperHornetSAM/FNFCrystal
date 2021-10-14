@@ -111,13 +111,13 @@ class Main extends Sprite
 		],
 		[
 			['Cocoa', 'Eggnog', 'Winter-Horrorland'],
-			['parents-christmas', 'parents-christmas', 'monster-christmas'],
+			['parents-christmas', 'parents-christmas', 'christmas-monster'],
 			[FlxColor.fromRGB(141, 165, 206)],
 			'RED SNOW'
 		],
 		[
 			['Senpai', 'Roses', 'Thorns'],
-			['senpai', 'senpai', 'spirit'],
+			['senpai', 'roses-senpai', 'spirit'],
 			[FlxColor.fromRGB(206, 106, 169)],
 			"hating simulator ft. moawling"
 		],
