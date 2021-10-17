@@ -181,6 +181,8 @@ class Character extends FNFSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
+				
+				setGraphicSize(Std.int(width * .9));
 
 				playAnim('idle');
 			case 'christmas-monster':
@@ -191,6 +193,8 @@ class Character extends FNFSprite
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
 				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
+				
+				setGraphicSize(Std.int(width * .9));
 
 				playAnim('idle');
 			case 'pico':

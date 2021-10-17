@@ -31,7 +31,7 @@ class StoryMenuState extends MusicBeatState
 		['spooky', 'bf', ''],
 		['pico', 'bf', ''],
 		['mom', 'bf', ''],
-		['parents-christmas', 'gf', ''],
+		['parents-christmas', '', 'xmasbf'],
 		['senpai', 'bf', '']
 	];
 
@@ -81,7 +81,7 @@ class StoryMenuState extends MusicBeatState
 		rankText.screenCenter(X);
 
 		var ui_tex = Paths.getSparrowAtlas('menus/base/storymenu/campaign_menu_UI_assets');
-		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFF9CF51);
+		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFC0C0C0);
 
 		grpWeekText = new FlxTypedGroup<MenuItem>();
 		add(grpWeekText);
@@ -127,20 +127,20 @@ class StoryMenuState extends MusicBeatState
 			switch (weekCharacterThing.character)
 			{
 				case 'dad':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					weekCharacterThing.updateHitbox();
+					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
+					//weekCharacterThing.updateHitbox();
 				case 'bf':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					weekCharacterThing.updateHitbox();
-					weekCharacterThing.x -= 80;
+					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
+					//weekCharacterThing.updateHitbox();
+					//weekCharacterThing.x -= 80;
 				case 'gf':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					weekCharacterThing.updateHitbox();
+					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
+					//weekCharacterThing.updateHitbox();
 				case 'pico':
 					weekCharacterThing.flipX = true;
 				case 'parents-christmas':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					weekCharacterThing.updateHitbox();
+					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
+					//weekCharacterThing.updateHitbox();
 			}
 
 			grpWeekCharacters.add(weekCharacterThing);

@@ -10,16 +10,16 @@ class MenuCharacter extends FlxSprite
 	var curCharacterMap:Map<String, Array<Dynamic>> = [
 		// the format is currently
 		// name of character => id in atlas, fps, loop, scale, offsetx, offsety
-		'bf' => ["bf normal", 24, true, 1, 1500, 0],
+		'bf' => ["bf normal", 24, true, 1, 30, 200],
 		//'bfConfirm' => ["bf normal", 24, true, 1, 0, 0],
-		'xmasbf' => ['bf christmas', 24, true, 1, 0, 0],
-		'gf' => ["gf", 24, true, 1, -100, 100],
-		'dad' => ["dad", 24, true, 1.25, -50, 100],
-		'spooky' => ["spooky kids", 24, true, 1, 0, 40],
-		'pico' => ["pico", 24, true, 1, -50, 150],
-		'mom' => ["mom", 24, true, .75, -50, 25],
-		'parents-christmas' => ["parents", 24, true, 1.25, -100, 60],
-		'senpai' => ["senpai", 24, true, .75, -50, 0]
+		'xmas' => ['bf christmas', 24, true, 1, 0, 0],
+		'gf' => ["gf", 24, true, 1, -100, 155],
+		'dad' => ["dad", 24, true, 1.5, -150, 50],
+		'spooky' => ["spooky kids", 24, true, 1, -50, 40],
+		'pico' => ["pico", 24, true, 1.5, -165, 75],
+		'mom' => ["mom", 24, true, 1, -100, 55],
+		'parents-christmas' => ["parents", 24, true, 1.5, -150, 60],
+		'senpai' => ["senpai", 24, true, 1, -100, 42]
 	];
 
 	var baseX:Float = 0;
@@ -30,7 +30,7 @@ class MenuCharacter extends FlxSprite
 		super(x);
 		y += 70;
 		if(newCharacter == 'bf' || newCharacter == 'xmasbf'){
-			y += 150;
+			y += 170;
 		}
 		baseX = x;
 		baseY = y;
