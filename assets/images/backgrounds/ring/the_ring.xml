@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="the ring.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="full ring instance 10000" x="0" y="0" width="2784" height="1816" pivotX="1390.55" pivotY="903"/>
+	<SubTexture name="full ring instance 10001" x="2794" y="0" width="2784" height="1816"/>
+	<SubTexture name="full ring instance 10002" x="0" y="1826" width="2784" height="1816"/>
+	<SubTexture name="full ring instance 10003" x="2794" y="1826" width="2784" height="1816"/>
+	<SubTexture name="full ring instance 10004" x="0" y="3652" width="2784" height="1816"/>
+</TextureAtlas>

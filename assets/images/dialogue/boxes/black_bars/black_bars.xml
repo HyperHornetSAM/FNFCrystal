@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="black_bars.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="black bars instance 10000" x="0" y="0" width="2005" height="1134" pivotX="1002.8" pivotY="567.15"/>
+	<SubTexture name="black bars instance 10001" x="0" y="0" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10002" x="2015" y="0" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10003" x="2015" y="0" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10004" x="0" y="1144" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10005" x="2015" y="1144" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10006" x="2015" y="1144" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10007" x="2015" y="1144" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10008" x="0" y="2288" width="2005" height="1134"/>
+	<SubTexture name="black bars instance 10009" x="0" y="2288" width="2005" height="1134"/>
+</TextureAtlas>

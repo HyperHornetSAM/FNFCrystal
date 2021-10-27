@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="back trailers.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="back trailers instance 10000" x="0" y="0" width="2266" height="342" pivotX="1132.65" pivotY="170.15"/>
+	<SubTexture name="back trailers instance 10001" x="0" y="352" width="2266" height="342"/>
+	<SubTexture name="back trailers instance 10002" x="0" y="704" width="2266" height="342"/>
+	<SubTexture name="back trailers instance 10003" x="0" y="1056" width="2266" height="342"/>
+</TextureAtlas>

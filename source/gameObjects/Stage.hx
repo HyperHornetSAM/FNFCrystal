@@ -94,57 +94,56 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				curStage = 'spooky';
 				// halloweenLevel = true;
 
-				var hallowTex = Paths.getSparrowAtlas('backgrounds/' + curStage + '/halloween_bg');
+				var hallowTex = Paths.getSparrowAtlas('backgrounds/' + curStage + '/halloweenie_bg');
 
-				halloweenBG = new FNFSprite(-200, -100);
+				halloweenBG = new FNFSprite(-800, -550);
 				halloweenBG.frames = hallowTex;
-				halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
-				halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
+				halloweenBG.setGraphicSize(Std.int(halloweenBG.width * 0.75));
+				halloweenBG.animation.addByPrefix('idle', 'halloweenie bg', 24, true);
 				halloweenBG.animation.play('idle');
 				halloweenBG.antialiasing = true;
 				add(halloweenBG);
+				
+				var front_table:FNFSprite = new FNFSprite(600, 600).loadGraphic(Paths.image('backgrounds/' + curStage + '/front_obstructor'));
+				front_table.setGraphicSize(Std.int(front_table.width * 0.75));
+				foreground.add(front_table);
 
 			// isHalloween = true;
 			case 'philly':
+				PlayState.defaultCamZoom = 0.80;
 				curStage = 'philly';
-
-				var bg:FNFSprite = new FNFSprite(-100).loadGraphic(Paths.image('backgrounds/' + curStage + '/sky'));
+				var bg:FNFSprite = new FNFSprite(-200, -250).loadGraphic(Paths.image('backgrounds/' + curStage + '/sky'));
 				bg.scrollFactor.set(0.1, 0.1);
 				add(bg);
 
-				var city:FNFSprite = new FNFSprite(-10).loadGraphic(Paths.image('backgrounds/' + curStage + '/city'));
-				city.scrollFactor.set(0.3, 0.3);
-				city.setGraphicSize(Std.int(city.width * 0.85));
-				city.updateHitbox();
-				add(city);
-
+				var grass:FNFSprite = new FNFSprite(-500, 400).loadGraphic(Paths.image('backgrounds/' + curStage + '/grass'));
+				add(grass);
+				
 				phillyCityLights = new FlxTypedGroup<FNFSprite>();
 				add(phillyCityLights);
-
-				for (i in 0...5)
+				
+				for (i in 0...4)
 				{
-					var light:FNFSprite = new FNFSprite(city.x).loadGraphic(Paths.image('backgrounds/' + curStage + '/win' + i));
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/philly/back_trailers');
+					var light:FNFSprite = new FNFSprite(-180, 75);
+					light.frames = hallowTex;
 					light.scrollFactor.set(0.3, 0.3);
 					light.visible = false;
-					light.setGraphicSize(Std.int(light.width * 0.85));
+					light.setGraphicSize(Std.int(light.width * 0.75));
+					light.animation.addByPrefix('idle', 'back trailers instance 1000' + i, 24, true);
+					light.animation.play('idle');
 					light.updateHitbox();
 					light.antialiasing = true;
 					phillyCityLights.add(light);
 				}
-
-				var streetBehind:FNFSprite = new FNFSprite(-40, 50).loadGraphic(Paths.image('backgrounds/' + curStage + '/behindTrain'));
-				add(streetBehind);
-
-				phillyTrain = new FNFSprite(2000, 360).loadGraphic(Paths.image('backgrounds/' + curStage + '/train'));
-				add(phillyTrain);
-
-				trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
-				FlxG.sound.list.add(trainSound);
-
-				// var cityLights:FNFSprite = new FNFSprite().loadGraphic(AssetPaths.win0.png);
-
-				var street:FNFSprite = new FNFSprite(-40, streetBehind.y).loadGraphic(Paths.image('backgrounds/' + curStage + '/street'));
-				add(street);
+				
+				var trailer:FNFSprite = new FNFSprite(-150, -100).loadGraphic(Paths.image('backgrounds/' + curStage + '/lighting_RV'));
+				add(trailer);
+				
+				var foregroundTrailer:FNFSprite = new FNFSprite(-850, 50).loadGraphic(Paths.image('backgrounds/' + curStage + '/trailer_foreground'));
+				foregroundTrailer.setGraphicSize(Std.int(foregroundTrailer.width * 0.70));
+				foreground.add(foregroundTrailer);
+				
 			case 'highway':
 				curStage = 'highway';
 				PlayState.defaultCamZoom = 0.90;
@@ -334,37 +333,124 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				bg.scrollFactor.set(0.8, 0.9);
 				bg.scale.set(6, 6);
 				add(bg);
-
+				
 			default:
 				PlayState.defaultCamZoom = 0.9;
 				curStage = 'stage';
-				var bg:FNFSprite = new FNFSprite(-600, -200).loadGraphic(Paths.image('backgrounds/' + curStage + '/stageback'));
+				var bg:FNFSprite = new FNFSprite(-600, -250).loadGraphic(Paths.image('backgrounds/crystalstage/brick_wall'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(0.9, 0.9);
 				bg.active = false;
 
 				// add to the final array
 				add(bg);
+				
+				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
+					var stageFront:FNFSprite = new FNFSprite(-650, 600).loadGraphic(Paths.image('backgrounds/stage/stagefront'));
+					stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
+					stageFront.updateHitbox();
+					stageFront.antialiasing = true;
+					stageFront.scrollFactor.set(0.9, 0.9);
+					stageFront.active = false;
+					// add to the final array
+					add(stageFront);
+				}
+				
+				else{
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_front');
+					var stageFront:FNFSprite = new FNFSprite(-650, 650);
+					stageFront.frames = hallowTex;
+					switch(PlayState.SONG.song.toLowerCase())
+					{
+						case 'fresh':
+							stageFront.animation.addByPrefix('idle', 'stage0001', 24, false);
+							stageFront.animation.play('idle');
+						case 'dadbattle':
+							stageFront.animation.addByPrefix('idle', 'stage0002', 24, false);
+							stageFront.animation.play('idle');
+						default:
+							stageFront.animation.addByPrefix('idle', 'stage0000', 24, false);
+							stageFront.animation.play('idle');
+					}
+					stageFront.antialiasing = true;
+					stageFront.scrollFactor.set(0.9, 0.9);
+					stageFront.active = false;
+				
+					// add to the final array
+					add(stageFront);
+				}
+				
+				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
+					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/blue_curtains'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1.3, 1.3);
+					stageCurtains.active = false;
 
-				var stageFront:FNFSprite = new FNFSprite(-650, 600).loadGraphic(Paths.image('backgrounds/' + curStage + '/stagefront'));
-				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
-				stageFront.updateHitbox();
-				stageFront.antialiasing = true;
-				stageFront.scrollFactor.set(0.9, 0.9);
-				stageFront.active = false;
+					// add to the final array
+					add(stageCurtains);
+				}
+				else{
+					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/curtains'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1.3, 1.3);
+					stageCurtains.active = false;
 
-				// add to the final array
-				add(stageFront);
-
-				var stageCurtains:FNFSprite = new FNFSprite(-500, -300).loadGraphic(Paths.image('backgrounds/' + curStage + '/stagecurtains'));
-				stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
-				stageCurtains.updateHitbox();
-				stageCurtains.antialiasing = true;
-				stageCurtains.scrollFactor.set(1.3, 1.3);
-				stageCurtains.active = false;
-
-				// add to the final array
-				add(stageCurtains);
+					// add to the final array
+					add(stageCurtains);
+				}
+				
+				if(PlayState.SONG.song.toLowerCase() == 'bopeebo' || PlayState.SONG.song.toLowerCase() == 'fresh' || PlayState.SONG.song.toLowerCase() == 'dadbattle'){
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_farLeft:FNFSprite = new FNFSprite(0, 150);
+					stageFlame_farLeft.frames = hallowTex;
+					stageFlame_farLeft.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_farLeft.animation.play('fire');
+					foreground.add(stageFlame_farLeft);
+					
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_farRight:FNFSprite = new FNFSprite(1000, 150);
+					stageFlame_farRight.frames = hallowTex;
+					stageFlame_farRight.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_farRight.animation.play('fire');
+					foreground.add(stageFlame_farRight);
+				}
+				
+				if(PlayState.SONG.song.toLowerCase() == 'fresh' || PlayState.SONG.song.toLowerCase() == 'dadbattle'){	
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_midLeft:FNFSprite = new FNFSprite(200, 185);
+					stageFlame_midLeft.frames = hallowTex;
+					stageFlame_midLeft.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_midLeft.animation.play('fire');
+					foreground.add(stageFlame_midLeft);
+					
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_midRight:FNFSprite = new FNFSprite(800, 185);
+					stageFlame_midRight.frames = hallowTex;
+					stageFlame_midRight.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_midRight.animation.play('fire');
+					foreground.add(stageFlame_midRight);
+				}
+				
+				if(PlayState.SONG.song.toLowerCase() == 'dadbattle'){
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_centerLeft:FNFSprite = new FNFSprite(400, 210);
+					stageFlame_centerLeft.frames = hallowTex;
+					stageFlame_centerLeft.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_centerLeft.animation.play('fire');
+					foreground.add(stageFlame_centerLeft);
+					
+					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
+					var stageFlame_centerRight:FNFSprite = new FNFSprite(600, 210);
+					stageFlame_centerRight.frames = hallowTex;
+					stageFlame_centerRight.animation.addByPrefix('fire', 'full flame', 24, true);
+					stageFlame_centerRight.animation.play('fire');
+					foreground.add(stageFlame_centerRight);
+					
+				}
 		}
 	}
 
@@ -473,6 +559,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'philly':
+				boyfriend.x += 100;
+				dad.x -= 100;
 		}
 	}
 
@@ -530,7 +619,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					phillyCityLights.members[curLight].visible = true;
 					phillyCityLights.members[curLight].alpha = 1;
 
-					FlxTween.tween(phillyCityLights.members[curLight], {alpha: 0}, Conductor.stepCrochet * .016);
+					//FlxTween.tween(phillyCityLights.members[curLight], {alpha: 0}, Conductor.stepCrochet * .016);
 				}
 
 				if (curBeat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
@@ -548,13 +637,13 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'philly':
 				if (trainMoving)
 				{
-					trainFrameTiming += elapsed;
+					/*trainFrameTiming += elapsed;
 
 					if (trainFrameTiming >= 1 / 24)
 					{
 						updateTrainPos(gf);
 						trainFrameTiming = 0;
-					}
+					}*/
 				}
 		}
 	}
@@ -562,14 +651,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	// PHILLY STUFFS!
 	function trainStart():Void
 	{
-		trainMoving = true;
+		/*trainMoving = true;
 		if (!trainSound.playing)
-			trainSound.play(true);
+			trainSound.play(true);*/
 	}
 
 	function updateTrainPos(gf:Character):Void
 	{
-		if (trainSound.time >= 4700)
+		/*if (trainSound.time >= 4700)
 		{
 			startedMoving = true;
 			gf.playAnim('hairBlow');
@@ -590,19 +679,19 @@ class Stage extends FlxTypedGroup<FlxBasic>
 
 			if (phillyTrain.x < -4000 && trainFinishing)
 				trainReset(gf);
-		}
+		}*/
 	}
 
 	function trainReset(gf:Character):Void
 	{
-		gf.playAnim('hairFall');
+		/*gf.playAnim('hairFall');
 		phillyTrain.x = FlxG.width + 200;
 		trainMoving = false;
 		// trainSound.stop();
 		// trainSound.time = 0;
 		trainCars = 8;
 		trainFinishing = false;
-		startedMoving = false;
+		startedMoving = false;*/
 	}
 
 	override function add(Object:FlxBasic):FlxBasic

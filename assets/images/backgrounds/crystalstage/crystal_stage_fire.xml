@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="crystal_stage_fire.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="full flame0000" x="0" y="0" width="276" height="832" pivotX="162.65" pivotY="717.55" frameX="-28" frameY="0" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0001" x="286" y="0" width="290" height="822" frameX="-21" frameY="-5" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0002" x="586" y="0" width="304" height="812" frameX="-14" frameY="-10" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0003" x="900" y="0" width="318" height="803" frameX="-7" frameY="-14" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0004" x="1228" y="0" width="332" height="793" frameX="0" frameY="-19" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0005" x="1570" y="0" width="313" height="806" frameX="-9" frameY="-13" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0006" x="0" y="842" width="295" height="819" frameX="-18" frameY="-6" frameWidth="332" frameHeight="832"/>
+	<SubTexture name="full flame0007" x="305" y="842" width="276" height="832" frameX="-28" frameY="0" frameWidth="332" frameHeight="832"/>
+</TextureAtlas>
