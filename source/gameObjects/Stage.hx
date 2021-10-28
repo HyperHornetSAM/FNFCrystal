@@ -91,6 +91,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 		switch (curStage)
 		{
 			case 'spooky':
+				PlayState.defaultCamZoom = 0.90;
 				curStage = 'spooky';
 				// halloweenLevel = true;
 
@@ -118,6 +119,17 @@ class Stage extends FlxTypedGroup<FlxBasic>
 
 				var grass:FNFSprite = new FNFSprite(-500, 400).loadGraphic(Paths.image('backgrounds/' + curStage + '/grass'));
 				add(grass);
+				
+				var hallowTex = Paths.getSparrowAtlas('backgrounds/philly/back_trailers');
+				var phillyTrailerLight:FNFSprite = new FNFSprite(-180, 75);
+				phillyTrailerLight.frames = hallowTex;
+				phillyTrailerLight.scrollFactor.set(0.3, 0.3);
+				phillyTrailerLight.setGraphicSize(Std.int(phillyTrailerLight.width * 0.75));
+				phillyTrailerLight.animation.addByPrefix('idle', 'back trailers instance 10000', 24, true);
+				phillyTrailerLight.animation.play('idle');
+				phillyTrailerLight.updateHitbox();
+				phillyTrailerLight.antialiasing = true;
+				add(phillyTrailerLight);
 				
 				phillyCityLights = new FlxTypedGroup<FNFSprite>();
 				add(phillyCityLights);
@@ -492,9 +504,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case "spooky":
 				dad.y += 200;
 			case "monster":
-				dad.y += 100;
+				dad.y += -20;
 			case 'christmas-monster':
-				dad.y += 130;
+				dad.y += -20;
 			case 'dad':
 				camPos.x += 400;
 			case 'pico':
