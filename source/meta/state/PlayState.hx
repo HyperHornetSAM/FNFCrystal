@@ -1632,7 +1632,19 @@ class PlayState extends MusicBeatState
 	}
 
 	function callTextbox() {
-		var dialogPath = Paths.json(SONG.song.toLowerCase() + '/dialogue');
+		var dialogPath;
+		if(Init.trueSettings.get('BF Skin') == 'Beta'){
+			dialogPath = Paths.json(SONG.song.toLowerCase() + '/betadialogue');
+		}
+		else if(Init.trueSettings.get('BF Skin') == 'Mean'){
+			dialogPath = Paths.json(SONG.song.toLowerCase() + '/meandialogue');
+		}
+		else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
+			dialogPath = Paths.json(SONG.song.toLowerCase() + '/chefdialogue');
+		}
+		else{
+			dialogPath = Paths.json(SONG.song.toLowerCase() + '/dialogue');
+		}
 		if (sys.FileSystem.exists(dialogPath))
 		{
 			startedCountdown = false;

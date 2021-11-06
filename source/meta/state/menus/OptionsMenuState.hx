@@ -101,6 +101,7 @@ class OptionsMenuState extends MusicBeatState
 					['', null],
 					["UI Skin", getFromOption],
 					["Note Skin", getFromOption],
+					["BF Skin", getFromOption],
 					['Disable Note Splashes', getFromOption],
 					['Opaque Arrows', getFromOption],
 					['Opaque Holds', getFromOption],

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="meanbfportrait.png">
+<TextureAtlas imagePath="bf-beta-pixel.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="mean bf instance 10000" x="0" y="0" width="101" height="111" pivotX="50" pivotY="55"/>
+	<SubTexture name="beta bf instance 10000" x="0" y="0" width="101" height="111" pivotX="50" pivotY="55"/>
 </TextureAtlas>

@@ -1,4 +1,6 @@
 bf
+beta-bf
+mean-bf
 dad
 gf
 spooky
@@ -6,12 +8,18 @@ pico
 mom
 mom-car
 bf-car
+beta-bf-car
+mean-bf-car
 parents-christmas
 christmas-monster
 bf-christmas
+beta-bf-christmas
+mean-bf-christmas
 gf-christmas
 monster
 bf-pixel
+beta-bf-pixel
+mean-bf-pixel
 senpai
 roses-senpai
 spirit

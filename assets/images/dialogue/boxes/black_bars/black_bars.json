@@ -1,15 +1,15 @@
 {
-    "position": [515, 370],
+    "position": [-340, -200],
     "textPos": [200, 480],
-    "scale": 5.4,
+    "scale": 0.70,
     "antialiasing": false,
     "singleFrame": true,
     "doFlip": false,
-    "bgColor": [255, 255, 255],
+    "bgColor": [0, 0, 0],
     "states": {
         "normal": {
             "open": ["black bars instance 1"],
-            "default": ["black bars instance 1"]
+            "default": ["black bars instance 10009"]
         }
     }
 }

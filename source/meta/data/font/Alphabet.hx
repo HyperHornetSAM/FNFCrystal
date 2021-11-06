@@ -21,8 +21,6 @@ class Alphabet extends FlxSpriteGroup
 	public var randomSpeed:Bool = false; // When enabled, it'll change the speed of the text speed randomly between 80% and 180%
 
 	public var textSize:Float;
-	
-	public var thornsdialouge:Bool;
 
 	public var paused:Bool = false;
 
@@ -331,14 +329,11 @@ class AlphaCharacter extends FlxSprite
 
 	private var textSize:Float = 1;
 
-	public function new(x:Float, y:Float, ?textSize:Float = 1, ?thornsdialouge:Bool = false)
+	public function new(x:Float, y:Float, ?textSize:Float = 1)
 	{
 		super(x, y);
 		this.textSize = textSize;
 		var tex = Paths.getSparrowAtlas('UI/default/base/alphabet');
-		if(thornsdialouge == true){
-			var tex = Paths.getSparrowAtlas('UI/default/base/thorns_alphabet');
-		}
 		frames = tex;
 
 		antialiasing = true;

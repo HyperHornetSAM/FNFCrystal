@@ -152,16 +152,16 @@ class ForeverAssets
 				tempSplash.addOffset('anim1', -20, -10);
 				tempSplash.addOffset('anim2', -20, -10);
 
-				/*
-					tempSplash.frames = Paths.getSparrowAtlas('UI/$assetModifier/notes/noteSplashes');
-					// get a random value for the note splash type
-					tempSplash.animation.addByPrefix('anim1', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
-					tempSplash.animation.addByPrefix('anim2', 'note impact 2 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
-					tempSplash.animation.play('anim1');
+				
+				/*tempSplash.frames = Paths.getSparrowAtlas('UI/$assetModifier/notes/noteSplashes');
+				// get a random value for the note splash type
+				tempSplash.animation.addByPrefix('anim1', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
+				tempSplash.animation.addByPrefix('anim2', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
+				tempSplash.animation.play('anim1');
 
-					tempSplash.addOffset('anim1', 16, 16);
-					tempSplash.addOffset('anim2', 16, 16);
-				 */
+				tempSplash.addOffset('anim1', 16, 16);
+				tempSplash.addOffset('anim2', 16, 16);*/
+				
 		}
 
 		return tempSplash;

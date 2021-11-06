@@ -1,0 +1,14 @@
+{
+    "name": "bf-beta-pixel",
+    "expressions": {
+        "normal": "beta bf instance 1"
+    },
+    "position": [950, 280],
+    "scale": 2.5,
+    "antialiasing": false,
+    "loop": false,
+
+    "sounds": ["pixelText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

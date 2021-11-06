@@ -30,8 +30,18 @@ class GameOverSubstate extends MusicBeatSubState
 			case 'bf-pixel':
 				daBf = 'bf-pixel-dead';
 				stageSuffix = '-pixel';
+			case 'mean-bf-pixel':
+				daBf = 'bf-pixel-dead';
+				stageSuffix = '-pixel';
+			case 'beta-bf-pixel':
+				daBf = 'bf-pixel-dead';
+				stageSuffix = '-pixel';
+			case 'chef-bf-pixel':
+				daBf = 'bf-pixel-dead';
+				stageSuffix = '-pixel';
 			default:
 				daBf = 'bf-dead';
+				stageSuffix = '';
 		}
 
 		PlayState.boyfriend.destroy();
