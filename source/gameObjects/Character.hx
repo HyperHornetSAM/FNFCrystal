@@ -668,22 +668,22 @@ class Character extends FNFSprite
 					frames = Paths.getSparrowAtlas('characters/betabfPIXEL_DEAD');
 				
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
+					animation.addByPrefix('deathLoop', "BF dead loop instance 1", 24, true);
+					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Mean'){
 					frames = Paths.getSparrowAtlas('characters/meanbfPIXEL_DEAD');
 				
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
+					animation.addByPrefix('deathLoop', "BF dead idle instance 1", 24, true);
+					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
 					frames = Paths.getSparrowAtlas('characters/meanbfPIXEL_DEAD');
 				
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
+					animation.addByPrefix('deathLoop', "BF dead idle instance 1", 24, true);
+					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
 				}
 				else{
 					frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');

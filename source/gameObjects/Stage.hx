@@ -213,7 +213,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				bg.updateHitbox();
 				add(bg);
 
-				upperBoppers = new FNFSprite(-300, -115);
+				upperBoppers = new FNFSprite(-315, -135);
 				upperBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/upperBop');
 				upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 				upperBoppers.antialiasing = true;

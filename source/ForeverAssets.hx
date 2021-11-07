@@ -131,37 +131,38 @@ class ForeverAssets
 
 			default:
 				// 'UI/$assetModifier/notes/noteSplashes'
-				tempSplash.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('noteSplashes', assetModifier, Init.trueSettings.get("Note Skin"),
-					'noteskins/notes')), true,
-					210, 210);
-				tempSplash.animation.add('anim1', [
-					(noteData * 2 + 1),
-					8 + (noteData * 2 + 1),
-					16 + (noteData * 2 + 1),
-					24 + (noteData * 2 + 1),
-					32 + (noteData * 2 + 1)
-				], 24, false);
-				tempSplash.animation.add('anim2', [
-					(noteData * 2),
-					8 + (noteData * 2),
-					16 + (noteData * 2),
-					24 + (noteData * 2),
-					32 + (noteData * 2)
-				], 24, false);
-				tempSplash.animation.play('anim1');
-				tempSplash.addOffset('anim1', -20, -10);
-				tempSplash.addOffset('anim2', -20, -10);
+				if(Init.trueSettings.get('Note Skin') != 'crystal' && Init.trueSettings.get('Note Skin') != 'wkseven'){
+					tempSplash.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('noteSplashes', assetModifier, Init.trueSettings.get("Note Skin"),
+						'noteskins/notes')), true,
+						210, 210);
+					tempSplash.animation.add('anim1', [
+						(noteData * 2 + 1),
+						8 + (noteData * 2 + 1),
+						16 + (noteData * 2 + 1),
+						24 + (noteData * 2 + 1),
+						32 + (noteData * 2 + 1)
+					], 24, false);
+					tempSplash.animation.add('anim2', [
+						(noteData * 2),
+						8 + (noteData * 2),
+						16 + (noteData * 2),
+						24 + (noteData * 2),
+						32 + (noteData * 2)
+					], 24, false);
+					tempSplash.animation.play('anim1');
+					tempSplash.addOffset('anim1', -20, -10);
+					tempSplash.addOffset('anim2', -20, -10);
+				}
+				else{
+					tempSplash.frames = Paths.getSparrowAtlas('UI/$assetModifier/notes/noteSplashes');
+					// get a random value for the note splash type
+					tempSplash.animation.addByPrefix('anim1', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
+					tempSplash.animation.addByPrefix('anim2', 'note impact 2 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
+					tempSplash.animation.play('anim1');
 
-				
-				/*tempSplash.frames = Paths.getSparrowAtlas('UI/$assetModifier/notes/noteSplashes');
-				// get a random value for the note splash type
-				tempSplash.animation.addByPrefix('anim1', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
-				tempSplash.animation.addByPrefix('anim2', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
-				tempSplash.animation.play('anim1');
-
-				tempSplash.addOffset('anim1', 16, 16);
-				tempSplash.addOffset('anim2', 16, 16);*/
-				
+					tempSplash.addOffset('anim1', 16, 16);
+					tempSplash.addOffset('anim2', 16, 16);
+				}
 		}
 
 		return tempSplash;
