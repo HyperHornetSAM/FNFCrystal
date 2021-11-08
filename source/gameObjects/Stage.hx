@@ -152,7 +152,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				var trailer:FNFSprite = new FNFSprite(-150, -100).loadGraphic(Paths.image('backgrounds/' + curStage + '/lighting_RV'));
 				add(trailer);
 				
-				var foregroundTrailer:FNFSprite = new FNFSprite(-850, 100).loadGraphic(Paths.image('backgrounds/' + curStage + '/trailer_foreground'));
+				var foregroundTrailer:FNFSprite = new FNFSprite(-750, 100).loadGraphic(Paths.image('backgrounds/' + curStage + '/trailer_foreground'));
 				foregroundTrailer.setGraphicSize(Std.int(foregroundTrailer.width * 0.70));
 				foreground.add(foregroundTrailer);
 				
