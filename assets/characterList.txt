@@ -1,6 +1,7 @@
 bf
 beta-bf
 mean-bf
+chef-bf
 dad
 gf
 spooky
@@ -10,6 +11,7 @@ mom-car
 bf-car
 beta-bf-car
 mean-bf-car
+chef-bf-car
 parents-christmas
 christmas-monster
 bf-christmas

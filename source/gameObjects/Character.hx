@@ -324,18 +324,18 @@ class Character extends FNFSprite
 				flipX = true;
 				
 			case 'chef-bf':
-				frames = Paths.getSparrowAtlas('characters/mean_bf_anims');
-				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
-				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
-				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
+				frames = Paths.getSparrowAtlas('characters/cheffriend');
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY!!', 24, false);
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
 
 				playAnim('idle');
 
@@ -379,10 +379,10 @@ class Character extends FNFSprite
 					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					frames = Paths.getSparrowAtlas('characters/mean_bf_dead');
-					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
+					frames = Paths.getSparrowAtlas('characters/cheffriend_DEATH');
+					animation.addByPrefix('firstDeath', "BF dies", 24, false);
+					animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+					animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 				}
 				else{
 					frames = Paths.getSparrowAtlas('characters/BF_DEATH');
