@@ -433,14 +433,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 				if(PlayState.SONG.song.toLowerCase() == 'fresh' || PlayState.SONG.song.toLowerCase() == 'dadbattle'){	
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_midLeft:FNFSprite = new FNFSprite(200, 185);
+					var stageFlame_midLeft:FNFSprite = new FNFSprite(100, 185);
 					stageFlame_midLeft.frames = hallowTex;
 					stageFlame_midLeft.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_midLeft.animation.play('fire');
 					foreground.add(stageFlame_midLeft);
 					
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_midRight:FNFSprite = new FNFSprite(800, 185);
+					var stageFlame_midRight:FNFSprite = new FNFSprite(900, 185);
 					stageFlame_midRight.frames = hallowTex;
 					stageFlame_midRight.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_midRight.animation.play('fire');
@@ -449,14 +449,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 				if(PlayState.SONG.song.toLowerCase() == 'dadbattle'){
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_centerLeft:FNFSprite = new FNFSprite(400, 210);
+					var stageFlame_centerLeft:FNFSprite = new FNFSprite(200, 210);
 					stageFlame_centerLeft.frames = hallowTex;
 					stageFlame_centerLeft.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_centerLeft.animation.play('fire');
 					foreground.add(stageFlame_centerLeft);
 					
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_centerRight:FNFSprite = new FNFSprite(600, 210);
+					var stageFlame_centerRight:FNFSprite = new FNFSprite(800, 210);
 					stageFlame_centerRight.frames = hallowTex;
 					stageFlame_centerRight.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_centerRight.animation.play('fire');
