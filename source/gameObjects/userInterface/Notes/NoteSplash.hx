@@ -17,7 +17,6 @@ class NoteSplash extends FNFSprite
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-
 		// kill the note splash if it's done
 		if (animation.finished)
 		{

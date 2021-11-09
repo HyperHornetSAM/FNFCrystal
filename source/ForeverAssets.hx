@@ -160,8 +160,8 @@ class ForeverAssets
 					tempSplash.animation.addByPrefix('anim2', 'note impact 2 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
 					tempSplash.animation.play('anim1');
 
-					tempSplash.addOffset('anim1', 16, 16);
-					tempSplash.addOffset('anim2', 16, 16);
+					tempSplash.addOffset('anim1', -50, -30);
+					tempSplash.addOffset('anim2', -50, -30);
 				}
 		}
 
