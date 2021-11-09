@@ -166,7 +166,7 @@ class Strumline extends FlxTypedGroup<FlxBasic>
 			FlxTween.tween(staticArrow, {y: staticArrow.initialY, alpha: staticArrow.setAlpha}, 1, {ease: FlxEase.circOut, startDelay: 0.5 + (0.2 * i)});
 
 			if (noteSplashes) {
-				var noteSplash:NoteSplash = ForeverAssets.generateNoteSplashes('noteSplashes', PlayState.assetModifier, 'UI', i);
+				var noteSplash:NoteSplash = ForeverAssets.generateNoteSplashes('noteSplashes', PlayState.assetModifier, 'noteskins/notes', i);
 				splashNotes.add(noteSplash);
 			}
 		}
