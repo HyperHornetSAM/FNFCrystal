@@ -154,7 +154,7 @@ class ForeverAssets
 					tempSplash.addOffset('anim2', -20, -10);
 				}
 				else{
-					tempSplash.frames = Paths.getSparrowAtlas('noteskins/notes/${Init.trueSettings.get("Note Skin")}/noteSplashes');
+					tempSplash.frames = Paths.getSparrowAtlas('noteskins/notes/${Init.trueSettings.get("Note Skin")}/$assetModifier/noteSplashes');
 					// get a random value for the note splash type
 					tempSplash.animation.addByPrefix('anim1', 'note impact 1 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
 					tempSplash.animation.addByPrefix('anim2', 'note impact 2 ' + UIStaticArrow.getColorFromNumber(noteData), 24, false);
