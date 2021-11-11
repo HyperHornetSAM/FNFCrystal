@@ -566,7 +566,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					boyfriend.y -= 100;
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					boyfriend.y -= 100;
+					boyfriend.y -= 50;
 				}
 			case 'schoolEvil':
 				// trailArea.scrollFactor.set();
@@ -588,7 +588,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					boyfriend.y -= 100;
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					boyfriend.y -= 100;
+					boyfriend.y -= 50;
 				}
 			case 'philly':
 				boyfriend.x += 100;
