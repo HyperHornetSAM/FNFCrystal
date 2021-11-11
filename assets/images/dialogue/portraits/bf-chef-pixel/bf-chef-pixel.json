@@ -1,0 +1,14 @@
+{
+    "name": "bf-chef-pixel",
+    "expressions": {
+        "normal": "cheffriend"
+    },
+    "position": [950, 280],
+    "scale": 2.5,
+    "antialiasing": false,
+    "loop": false,
+
+    "sounds": ["pixelText"],
+    "soundChance": 100,
+    "soundPath": "sounds/"
+}

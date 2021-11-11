@@ -358,6 +358,29 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(bg);
 				
 				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
+					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/blue_curtains'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1.3, 1.3);
+					stageCurtains.active = false;
+
+					// add to the final array
+					add(stageCurtains);
+				}
+				else{
+					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/curtains'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
+					stageCurtains.updateHitbox();
+					stageCurtains.antialiasing = true;
+					stageCurtains.scrollFactor.set(1, 1);
+					stageCurtains.active = false;
+
+					// add to the final array
+					add(stageCurtains);
+				}
+				
+				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
 					var stageFront:FNFSprite = new FNFSprite(-650, 600).loadGraphic(Paths.image('backgrounds/stage/stagefront'));
 					stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 					stageFront.updateHitbox();
@@ -392,39 +415,17 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					add(stageFront);
 				}
 				
-				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
-					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/blue_curtains'));
-					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
-					stageCurtains.updateHitbox();
-					stageCurtains.antialiasing = true;
-					stageCurtains.scrollFactor.set(1.3, 1.3);
-					stageCurtains.active = false;
-
-					// add to the final array
-					add(stageCurtains);
-				}
-				else{
-					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/curtains'));
-					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
-					stageCurtains.updateHitbox();
-					stageCurtains.antialiasing = true;
-					stageCurtains.scrollFactor.set(1.3, 1.3);
-					stageCurtains.active = false;
-
-					// add to the final array
-					add(stageCurtains);
-				}
 				
 				if(PlayState.SONG.song.toLowerCase() == 'bopeebo' || PlayState.SONG.song.toLowerCase() == 'fresh' || PlayState.SONG.song.toLowerCase() == 'dadbattle'){
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_farLeft:FNFSprite = new FNFSprite(0, 150);
+					var stageFlame_farLeft:FNFSprite = new FNFSprite(-250, 150);
 					stageFlame_farLeft.frames = hallowTex;
 					stageFlame_farLeft.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_farLeft.animation.play('fire');
 					foreground.add(stageFlame_farLeft);
 					
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_farRight:FNFSprite = new FNFSprite(1000, 150);
+					var stageFlame_farRight:FNFSprite = new FNFSprite(1250, 150);
 					stageFlame_farRight.frames = hallowTex;
 					stageFlame_farRight.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_farRight.animation.play('fire');
@@ -433,14 +434,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 				if(PlayState.SONG.song.toLowerCase() == 'fresh' || PlayState.SONG.song.toLowerCase() == 'dadbattle'){	
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_midLeft:FNFSprite = new FNFSprite(100, 185);
+					var stageFlame_midLeft:FNFSprite = new FNFSprite(-150, 185);
 					stageFlame_midLeft.frames = hallowTex;
 					stageFlame_midLeft.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_midLeft.animation.play('fire');
 					foreground.add(stageFlame_midLeft);
 					
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_midRight:FNFSprite = new FNFSprite(900, 185);
+					var stageFlame_midRight:FNFSprite = new FNFSprite(1150, 185);
 					stageFlame_midRight.frames = hallowTex;
 					stageFlame_midRight.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_midRight.animation.play('fire');
@@ -449,14 +450,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				
 				if(PlayState.SONG.song.toLowerCase() == 'dadbattle'){
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_centerLeft:FNFSprite = new FNFSprite(200, 210);
+					var stageFlame_centerLeft:FNFSprite = new FNFSprite(-50, 210);
 					stageFlame_centerLeft.frames = hallowTex;
 					stageFlame_centerLeft.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_centerLeft.animation.play('fire');
 					foreground.add(stageFlame_centerLeft);
 					
 					var hallowTex = Paths.getSparrowAtlas('backgrounds/crystalstage/crystal_stage_fire');
-					var stageFlame_centerRight:FNFSprite = new FNFSprite(800, 210);
+					var stageFlame_centerRight:FNFSprite = new FNFSprite(1050, 210);
 					stageFlame_centerRight.frames = hallowTex;
 					stageFlame_centerRight.animation.addByPrefix('fire', 'full flame', 24, true);
 					stageFlame_centerRight.animation.play('fire');
@@ -558,6 +559,15 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+				if(Init.trueSettings.get('BF Skin') == 'Beta'){
+					boyfriend.y -= 100;
+				}
+				else if(Init.trueSettings.get('BF Skin') == 'Mean'){
+					boyfriend.y -= 100;
+				}
+				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
+					boyfriend.y -= 100;
+				}
 			case 'schoolEvil':
 				// trailArea.scrollFactor.set();
 
@@ -571,6 +581,15 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+				if(Init.trueSettings.get('BF Skin') == 'Beta'){
+					boyfriend.y -= 100;
+				}
+				else if(Init.trueSettings.get('BF Skin') == 'Mean'){
+					boyfriend.y -= 100;
+				}
+				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
+					boyfriend.y -= 100;
+				}
 			case 'philly':
 				boyfriend.x += 100;
 				dad.x -= 100;

@@ -90,7 +90,7 @@ class Character extends FNFSprite
 		{
 			case 'gf':
 				// GIRLFRIEND CODE
-				tex = Paths.getSparrowAtlas('characters/GF_assets');
+				tex = Paths.getSparrowAtlas('characters/gf/GF_assets');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
@@ -107,7 +107,7 @@ class Character extends FNFSprite
 				playAnim('danceRight');
 
 			case 'gf-christmas':
-				tex = Paths.getSparrowAtlas('characters/gfChristmas');
+				tex = Paths.getSparrowAtlas('characters/gf/gfChristmas');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
@@ -124,7 +124,7 @@ class Character extends FNFSprite
 				playAnim('danceRight');
 
 			case 'gf-car':
-				tex = Paths.getSparrowAtlas('characters/gfCar');
+				tex = Paths.getSparrowAtlas('characters/gf/gfCar');
 				frames = tex;
 				animation.addByIndices('singUP', 'GF Dancing Beat Hair blowing CAR', [0], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF Dancing Beat Hair blowing CAR', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
@@ -137,7 +137,7 @@ class Character extends FNFSprite
 				playAnim('danceRight');
 
 			case 'gf-pixel':
-				tex = Paths.getSparrowAtlas('characters/gfPixel');
+				tex = Paths.getSparrowAtlas('characters/gf/gfPixel');
 				frames = tex;
 				animation.addByIndices('singUP', 'GF IDLE', [2], "", 24, false);
 				animation.addByIndices('danceLeft', 'GF IDLE', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
@@ -163,7 +163,7 @@ class Character extends FNFSprite
 
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
-				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
+				tex = Paths.getSparrowAtlas('characters/dad/DADDY_DEAREST');
 				frames = tex;
 				animation.addByPrefix('idle', 'Dad idle dance', 24, false);
 				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24);
@@ -173,7 +173,7 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 			case 'spooky':
-				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
+				tex = Paths.getSparrowAtlas('characters/spooky/spooky_kids_assets');
 				frames = tex;
 				animation.addByPrefix('singUP', 'spooky UP NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'spooky DOWN note', 24, false);
@@ -186,7 +186,7 @@ class Character extends FNFSprite
 
 				playAnim('danceRight');
 			case 'mom':
-				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
+				tex = Paths.getSparrowAtlas('characters/mom/Mom_Assets');
 				frames = tex;
 
 				animation.addByPrefix('idle', "Mom Idle", 24, false);
@@ -203,7 +203,7 @@ class Character extends FNFSprite
 				playAnim('idle');
 
 			case 'mom-car':
-				tex = Paths.getSparrowAtlas('characters/momCar');
+				tex = Paths.getSparrowAtlas('characters/mom/momCar');
 				frames = tex;
 
 				animation.addByPrefix('idle', "Mom Idle", 24, false);
@@ -217,7 +217,7 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 			case 'monster':
-				tex = Paths.getSparrowAtlas('characters/Monster_Assets');
+				tex = Paths.getSparrowAtlas('characters/monster/Monster_Assets');
 				frames = tex;
 				animation.addByPrefix('idle', 'monster idle', 24, false);
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
@@ -229,7 +229,7 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 			case 'christmas-monster':
-				tex = Paths.getSparrowAtlas('characters/monsterChristmas');
+				tex = Paths.getSparrowAtlas('characters/monster/monsterChristmas');
 				frames = tex;
 				animation.addByPrefix('idle', 'monster idle', 24, false);
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
@@ -241,7 +241,7 @@ class Character extends FNFSprite
 
 				playAnim('idle');
 			case 'pico':
-				tex = Paths.getSparrowAtlas('characters/Pico_FNF_assetss');
+				tex = Paths.getSparrowAtlas('characters/pico/Pico_FNF_assetss');
 				frames = tex;
 				animation.addByPrefix('idle', "Pico Idle Dance", 24, false);
 				animation.addByPrefix('singUP', 'pico Up note0', 24, false);
@@ -270,7 +270,7 @@ class Character extends FNFSprite
 				flipX = true;
 
 			case 'bf':
-				frames = Paths.getSparrowAtlas('characters/BOYFRIEND');
+				frames = Paths.getSparrowAtlas('characters/bf/BOYFRIEND');
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
@@ -288,7 +288,7 @@ class Character extends FNFSprite
 				flipX = true;
 					
 			case 'beta-bf':
-				frames = Paths.getSparrowAtlas('characters/beta_bf_anims');
+				frames = Paths.getSparrowAtlas('characters/beta-bf/beta_bf_anims');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
@@ -306,7 +306,7 @@ class Character extends FNFSprite
 				flipX = true;
 					
 			case 'mean-bf':
-				frames = Paths.getSparrowAtlas('characters/mean_bf_anims');
+				frames = Paths.getSparrowAtlas('characters/mean-bf/mean_bf_anims');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
@@ -324,7 +324,7 @@ class Character extends FNFSprite
 				flipX = true;
 				
 			case 'chef-bf':
-				frames = Paths.getSparrowAtlas('characters/cheffriend');
+				frames = Paths.getSparrowAtlas('characters/chef-bf/cheffriend');
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
@@ -367,25 +367,25 @@ class Character extends FNFSprite
 
 			case 'bf-dead':
 				if(Init.trueSettings.get('BF Skin') == 'Beta'){
-					frames = Paths.getSparrowAtlas('characters/beta_bf_dead');
+					frames = Paths.getSparrowAtlas('characters/beta-bf/beta_bf_dead');
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
 					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
 					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Mean'){
-					frames = Paths.getSparrowAtlas('characters/mean_bf_dead');
+					frames = Paths.getSparrowAtlas('characters/mean-bf/mean_bf_dead');
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
 					animation.addByPrefix('deathLoop', "BF Dead Loop instance 1", 24, true);
 					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					frames = Paths.getSparrowAtlas('characters/cheffriend_DEATH');
+					frames = Paths.getSparrowAtlas('characters/chef-bf/cheffriend_DEATH');
 					animation.addByPrefix('firstDeath', "BF dies", 24, false);
 					animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
 					animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 				}
 				else{
-					frames = Paths.getSparrowAtlas('characters/BF_DEATH');
+					frames = Paths.getSparrowAtlas('characters/bf/BF_DEATH');
 					animation.addByPrefix('firstDeath', "BF dies", 24, false);
 					animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
 					animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
@@ -421,7 +421,7 @@ class Character extends FNFSprite
 				playAnim('firstDeath');
 
 			case 'bf-christmas':
-				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
+				var tex = Paths.getSparrowAtlas('characters/bf/bfChristmas');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
@@ -438,7 +438,7 @@ class Character extends FNFSprite
 
 				flipX = true;
 			case 'mean-bf-christmas':
-				var tex = Paths.getSparrowAtlas('characters/meanbf_XMAS');
+				var tex = Paths.getSparrowAtlas('characters/mean-bf/meanbf_XMAS');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
@@ -456,7 +456,7 @@ class Character extends FNFSprite
 
 				flipX = true;
 			case 'beta-bf-christmas':
-				var tex = Paths.getSparrowAtlas('characters/betabf_XMAS');
+				var tex = Paths.getSparrowAtlas('characters/beta-bf/betabf_XMAS');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
@@ -474,25 +474,24 @@ class Character extends FNFSprite
 
 				flipX = true;
 			case 'chef-bf-christmas':
-				var tex = Paths.getSparrowAtlas('characters/meanbf_XMAS');
+				var tex = Paths.getSparrowAtlas('characters/chef-bf/chefbf_XMAS');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
-				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
-				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
 				playAnim('idle');
 
 				flipX = true;
 			case 'bf-car':
-				var tex = Paths.getSparrowAtlas('characters/bfCar');
+				var tex = Paths.getSparrowAtlas('characters/bf/bfCar');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByIndices('idlePost', 'BF idle dance', [8, 9, 10, 11, 12, 13, 14], "", 24, true);
@@ -510,7 +509,7 @@ class Character extends FNFSprite
 				flipX = true;
 			case 'beta-bf-car':
 		
-				var tex = Paths.getSparrowAtlas('characters/betabfCar');
+				var tex = Paths.getSparrowAtlas('characters/beta-bf/betabfCar');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
@@ -530,7 +529,7 @@ class Character extends FNFSprite
 				
 			case 'mean-bf-car':
 			
-				var tex = Paths.getSparrowAtlas('characters/meanbfCar');
+				var tex = Paths.getSparrowAtlas('characters/mean-bf/meanbfCar');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
@@ -550,26 +549,25 @@ class Character extends FNFSprite
 				
 			case 'chef-bf-car':
 			
-				var tex = Paths.getSparrowAtlas('characters/meanbfCar');
+				var tex = Paths.getSparrowAtlas('characters/chef-bf/chefbf_car');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
-				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
-				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN NOTE', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY!!', 24, false);
 				
 				playAnim('idle');
 
 				flipX = true;
 				
 			case 'bf-pixel':
-				frames = Paths.getSparrowAtlas('characters/bfPixel');
+				frames = Paths.getSparrowAtlas('characters/bf/bfPixel');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
 				animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
 				animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
@@ -592,7 +590,7 @@ class Character extends FNFSprite
 
 				flipX = true;
 			case 'beta-bf-pixel':
-				frames = Paths.getSparrowAtlas('characters/betabfPIXEL');
+				frames = Paths.getSparrowAtlas('characters/beta-bf/betabfPIXEL');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
@@ -615,7 +613,7 @@ class Character extends FNFSprite
 
 				flipX = true;
 			case 'mean-bf-pixel':
-				frames = Paths.getSparrowAtlas('characters/meanbfPIXEL');
+				frames = Paths.getSparrowAtlas('characters/mean-bf/meanbfPIXEL');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
@@ -639,16 +637,16 @@ class Character extends FNFSprite
 				flipX = true;
 			
 			case 'chef-bf-pixel':
-				frames = Paths.getSparrowAtlas('characters/chefbfPIXEL');
-				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
+				frames = Paths.getSparrowAtlas('characters/chef-bf/chefbf_pixel');
+				animation.addByPrefix('idle', 'BF IDLE', 24, false);
+				animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
+				animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
+				animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
 				
 				setGraphicSize(Std.int(width * 6));
 				updateHitbox();
@@ -665,28 +663,28 @@ class Character extends FNFSprite
 			case 'bf-pixel-dead':
 			
 				if(Init.trueSettings.get('BF Skin') == 'Beta'){
-					frames = Paths.getSparrowAtlas('characters/betabfPIXEL_DEAD');
+					frames = Paths.getSparrowAtlas('characters/beta-bf/betabfPIXEL_DEAD');
 				
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
 					animation.addByPrefix('deathLoop', "BF dead loop instance 1", 24, true);
 					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Mean'){
-					frames = Paths.getSparrowAtlas('characters/meanbfPIXEL_DEAD');
+					frames = Paths.getSparrowAtlas('characters/mean-bf/meanbfPIXEL_DEAD');
 				
 					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
 					animation.addByPrefix('deathLoop', "BF dead idle instance 1", 24, true);
 					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					frames = Paths.getSparrowAtlas('characters/meanbfPIXEL_DEAD');
+					frames = Paths.getSparrowAtlas('characters/chef-bf/chefbfpixel_DEATH');
 				
-					animation.addByPrefix('firstDeath', "BF dies instance 1", 24, false);
-					animation.addByPrefix('deathLoop', "BF dead idle instance 1", 24, true);
-					animation.addByPrefix('deathConfirm', "BF dead confirm instance 1", 24, false);
+					animation.addByPrefix('firstDeath', "BF Dies pixel", 24, false);
+					animation.addByPrefix('deathLoop', "Retry Loop", 24, true);
+					animation.addByPrefix('deathConfirm', "RETRY CONFIRM", 24, false);
 				}
 				else{
-					frames = Paths.getSparrowAtlas('characters/bfPixelsDEAD');
+					frames = Paths.getSparrowAtlas('characters/bf/bfPixelsDEAD');
 				
 					animation.addByPrefix('firstDeath', "BF Dies pixel", 24, false);
 					animation.addByPrefix('deathLoop', "Retry Loop", 24, true);
@@ -700,7 +698,7 @@ class Character extends FNFSprite
 				flipX = true;
 				
 			case 'senpai':
-				frames = Paths.getSparrowAtlas('characters/senpai');
+				frames = Paths.getSparrowAtlas('characters/senpai/senpai');
 				animation.addByPrefix('idle', 'Senpai Idle', 24, false);
 				animation.addByPrefix('singUP', 'SENPAI UP NOTE', 24, false);
 				animation.addByPrefix('singLEFT', 'SENPAI LEFT NOTE', 24, false);
@@ -714,7 +712,7 @@ class Character extends FNFSprite
 
 				antialiasing = false;
 			case 'roses-senpai':
-				frames = Paths.getSparrowAtlas('characters/senpai');
+				frames = Paths.getSparrowAtlas('characters/senpai/senpai');
 				animation.addByPrefix('idle', 'Angry Senpai Idle', 24, false);
 				animation.addByPrefix('singUP', 'Angry Senpai UP NOTE', 24, false);
 				animation.addByPrefix('singLEFT', 'Angry Senpai LEFT NOTE', 24, false);
@@ -727,7 +725,7 @@ class Character extends FNFSprite
 				antialiasing = false;
 
 			case 'spirit':
-				frames = Paths.getPackerAtlas('characters/spirit');
+				frames = Paths.getPackerAtlas('characters/spirit/spirit');
 				animation.addByPrefix('idle', "idle spirit_", 24, false);
 				animation.addByPrefix('singUP', "up_", 24, false);
 				animation.addByPrefix('singRIGHT', "right_", 24, false);
@@ -742,7 +740,7 @@ class Character extends FNFSprite
 				antialiasing = false;
 
 			case 'parents-christmas':
-				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
+				frames = Paths.getSparrowAtlas('characters/parents-christmas/mom_dad_christmas_assets');
 				animation.addByPrefix('idle', 'Parent Christmas Idle', 24, false);
 				animation.addByPrefix('singUP', 'Parent Up Note Dad', 24, false);
 				animation.addByPrefix('singDOWN', 'Parent Down Note Dad', 24, false);
@@ -814,12 +812,12 @@ class Character extends FNFSprite
 		}
 
 		// set up offsets cus why not
-		if (OpenFlAssets.exists(Paths.offsetTxt(curCharacter + 'Offsets')))
+		if (OpenFlAssets.exists(Paths.offsetTxt('offsets/' + curCharacter + 'Offsets')))
 		{
-			var characterOffsets:Array<String> = CoolUtil.coolTextFile(Paths.offsetTxt(curCharacter + 'Offsets'));
+			var characterOffsets:Array<String> = CoolUtil.coolTextFile(Paths.offsetTxt('offsets/' + curCharacter + 'Offsets'));
 			for (i in 0...characterOffsets.length)
 			{
-				var getterArray:Array<Array<String>> = CoolUtil.getOffsetsFromTxt(Paths.offsetTxt(curCharacter + 'Offsets'));
+				var getterArray:Array<Array<String>> = CoolUtil.getOffsetsFromTxt(Paths.offsetTxt('offsets/' + curCharacter + 'Offsets'));
 				addOffset(getterArray[i][0], Std.parseInt(getterArray[i][1]), Std.parseInt(getterArray[i][2]));
 			}
 		}

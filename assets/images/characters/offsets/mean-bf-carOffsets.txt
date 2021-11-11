@@ -1,0 +1,10 @@
+idle -85 0
+singUP -89 10
+singRIGHT -25 -22
+singLEFT -87 -28
+singDOWN -33 -84
+singUPmiss -87 10
+singRIGHTmiss -19 -22
+singLEFTmiss -91 -28
+singDOWNmiss -33 -93
+idleHair -5 0
