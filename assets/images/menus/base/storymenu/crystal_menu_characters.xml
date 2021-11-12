@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="crystal menu characters.png">
+<TextureAtlas imagePath="crystal_menu_characters.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="beta bf0000" x="0" y="0" width="171" height="239" pivotX="85.5" pivotY="119.15"/>
 	<SubTexture name="beta bf xmas0000" x="181" y="0" width="171" height="239" pivotX="85.5" pivotY="119.15"/>
 	<SubTexture name="bf christmas0000" x="362" y="0" width="249" height="269" pivotX="124.1" pivotY="134.5"/>
 	<SubTexture name="bf normal0000" x="621" y="0" width="253" height="225" pivotX="126.7" pivotY="112.2"/>
-	<SubTexture name="dad0000" x="884" y="0" width="395" height="381" pivotX="197.5" pivotY="190.15"/>
-	<SubTexture name="gf0000" x="1289" y="0" width="279" height="267" pivotX="139.15" pivotY="133.65"/>
-	<SubTexture name="mean bf0000" x="1578" y="0" width="157" height="243" pivotX="78.1" pivotY="121.6"/>
-	<SubTexture name="mean bf xmas0000" x="1745" y="0" width="189" height="243" pivotX="94.3" pivotY="121.6"/>
-	<SubTexture name="mom0000" x="0" y="391" width="237" height="325" pivotX="118.95" pivotY="162.55"/>
-	<SubTexture name="parents0000" x="247" y="391" width="395" height="383" pivotX="197.45" pivotY="191.35"/>
-	<SubTexture name="pico0000" x="652" y="391" width="375" height="335" pivotX="187.65" pivotY="167.6"/>
-	<SubTexture name="senpai0000" x="1037" y="391" width="219" height="315" pivotX="109.35" pivotY="157.7"/>
-	<SubTexture name="spooky kids0000" x="1266" y="391" width="241" height="341" pivotX="120.9" pivotY="170.45"/>
+	<SubTexture name="cheffriend0000" x="884" y="0" width="259" height="265" pivotX="129.4" pivotY="132.85"/>
+	<SubTexture name="cheffriend xmas0000" x="1153" y="0" width="279" height="234" pivotX="139.65" pivotY="117"/>
+	<SubTexture name="dad0000" x="1442" y="0" width="395" height="381" pivotX="197.5" pivotY="190.15"/>
+	<SubTexture name="gf0000" x="0" y="391" width="279" height="267" pivotX="139.15" pivotY="133.65"/>
+	<SubTexture name="mean bf0000" x="289" y="391" width="157" height="243" pivotX="78.1" pivotY="121.6"/>
+	<SubTexture name="mean bf xmas0000" x="456" y="391" width="189" height="243" pivotX="94.3" pivotY="121.6"/>
+	<SubTexture name="mom0000" x="655" y="391" width="237" height="325" pivotX="118.95" pivotY="162.55"/>
+	<SubTexture name="parents0000" x="902" y="391" width="395" height="383" pivotX="197.45" pivotY="191.35"/>
+	<SubTexture name="pico0000" x="1307" y="391" width="375" height="335" pivotX="187.65" pivotY="167.6"/>
+	<SubTexture name="senpai0000" x="1692" y="391" width="219" height="315" pivotX="109.35" pivotY="157.7"/>
+	<SubTexture name="spooky kids0000" x="0" y="784" width="241" height="341" pivotX="120.9" pivotY="170.45"/>
 </TextureAtlas>

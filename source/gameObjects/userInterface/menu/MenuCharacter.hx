@@ -10,9 +10,15 @@ class MenuCharacter extends FlxSprite
 	var curCharacterMap:Map<String, Array<Dynamic>> = [
 		// the format is currently
 		// name of character => id in atlas, fps, loop, scale, offsetx, offsety
-		'bf' => ["bf normal", 24, true, 1, 30, 200],
+		'bf' => ["bf normal", 24, true, 1, 30, 0],
 		//'bfConfirm' => ["bf normal", 24, true, 1, 0, 0],
-		'xmas' => ['bf christmas', 24, true, 1, 0, 0],
+		'xmas-bf' => ["bf christmas", 24, true, 1, 0, 0],
+		'beta-bf' => ['beta bf0', 24, true, 1, 0, 0],
+		'xmas-beta-bf' => ['beta bf xmas', 24, true, 1, 0, 0],
+		'mean-bf' => ['mean bf0', 24, true, 1, 0, 0],
+		'xmas-mean-bf' => ['mean bf xmas', 24, true, 1, 0, 0],
+		'chef-bf' => ['cheffriend0', 24, true, 1, 0, 0],
+		'xmas-chef-bf' => ['cheffriend xmas', 24, true, 1, 0, 0],
 		'gf' => ["gf", 24, true, 1, -100, 155],
 		'dad' => ["dad", 24, true, 1.5, -150, 50],
 		'spooky' => ["spooky kids", 24, true, 1, -50, 40],
@@ -29,7 +35,10 @@ class MenuCharacter extends FlxSprite
 	{
 		super(x);
 		y += 70;
-		if(newCharacter == 'bf' || newCharacter == 'xmasbf'){
+		if(newCharacter == 'bf' || newCharacter == 'xmas-bf'
+		|| newCharacter == 'beta-bf' || newCharacter == 'xmas-beta-bf' 
+		|| newCharacter == 'mean-bf' || newCharacter == 'xmas-mean-bf'
+		|| newCharacter == 'chef-bf' || newCharacter == 'xmas-chef-bf'){
 			y += 170;
 		}
 		baseX = x;

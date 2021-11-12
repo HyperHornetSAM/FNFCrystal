@@ -77,6 +77,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					curStage = 'school';
 				case 'thorns':
 					curStage = 'schoolEvil';
+				case 'ebin' | 'kamexmas' | 'voidslave':
+					curStage = 'ring';
 				default:
 					curStage = 'stage';
 			}
@@ -346,6 +348,33 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				bg.scale.set(6, 6);
 				add(bg);
 				
+			case 'ring':
+				PlayState.defaultCamZoom = .6;
+				var hallowTex = Paths.getSparrowAtlas('backgrounds/ring/the_ring');
+				var bg:FNFSprite = new FNFSprite(-625, -300);
+				bg.frames = hallowTex;
+				switch(PlayState.SONG.song.toLowerCase())
+				{
+					case 'ebin':
+						bg.animation.addByPrefix('idle', 'full ring green', 24, false);
+						bg.animation.play('idle');
+					case 'kamexmas':
+						bg.animation.addByPrefix('idle', 'full ring white', 24, false);
+						bg.animation.play('idle');
+					case 'voidslave':
+						bg.animation.addByPrefix('idle', 'full ring red', 24, false);
+						bg.animation.play('idle');
+					default:
+						bg.animation.addByPrefix('idle', 'full ring purple', 24, false);
+						bg.animation.play('idle');
+				}
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1, 1);
+				bg.active = false;
+				
+				// add to the final array
+				add(bg);
+				
 			default:
 				PlayState.defaultCamZoom = 0.9;
 				curStage = 'stage';
@@ -358,7 +387,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(bg);
 				
 				if(PlayState.SONG.song.toLowerCase() == 'test' || PlayState.SONG.song.toLowerCase() == 'tutorial'){
-					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/blue_curtains'));
+					var stageCurtains:FNFSprite = new FNFSprite(-740, -350).loadGraphic(Paths.image('backgrounds/crystalstage/blue_curtains'));
 					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
 					stageCurtains.updateHitbox();
 					stageCurtains.antialiasing = true;
@@ -369,8 +398,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					add(stageCurtains);
 				}
 				else{
-					var stageCurtains:FNFSprite = new FNFSprite(-720, -350).loadGraphic(Paths.image('backgrounds/crystalstage/curtains'));
-					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.5));
+					var stageCurtains:FNFSprite = new FNFSprite(-580, -350).loadGraphic(Paths.image('backgrounds/crystalstage/curtains'));
+					stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 1.3));
 					stageCurtains.updateHitbox();
 					stageCurtains.antialiasing = true;
 					stageCurtains.scrollFactor.set(1, 1);
@@ -510,6 +539,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				dad.y += -20;
 			case 'dad':
 				camPos.x += 400;
+				dad.y -= 150;
 			case 'pico':
 				camPos.x += 600;
 				dad.x += 150;
@@ -593,6 +623,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'philly':
 				boyfriend.x += 100;
 				dad.x -= 100;
+			case 'ring':
+				boyfriend.x += 150;
+				dad.x -= 150;
 		}
 	}
 

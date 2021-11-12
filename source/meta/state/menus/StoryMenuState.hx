@@ -24,15 +24,15 @@ class StoryMenuState extends MusicBeatState
 	var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
-
-	var weekCharacters:Array<Dynamic> = [
-		['gf', 'bf', ''],
-		['dad', 'bf', ''],
-		['spooky', 'bf', ''],
-		['pico', 'bf', ''],
-		['mom', 'bf', ''],
-		['parents-christmas', '', 'xmasbf'],
-		['senpai', 'bf', '']
+	
+	public var weekCharacters:Array<Dynamic> = [
+		['', 'bf', 'gf'],
+		['dad', 'bf', 'gf'],
+		['spooky', 'bf', 'gf'],
+		['pico', 'bf', 'gf'],
+		['mom', 'bf', 'gf'],
+		['parents-christmas', 'xmas-bf', 'gf'],
+		['senpai', 'bf', 'gf']
 	];
 
 	var txtWeekTitle:FlxText;
@@ -54,7 +54,32 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		super.create();
-
+		
+		var bfstring:String = 'bf';
+		var bfxmasstring:String = 'xmas-bf';
+		switch (Init.trueSettings.get('BF Skin')) {
+			case 'Beta':
+				bfstring = 'beta-bf';
+				bfxmasstring = 'xmas-beta-bf';
+			case 'Mean':
+				bfstring = 'mean-bf';
+				bfxmasstring = 'xmas-mean-bf';			
+			case 'Cheffriend':
+				bfstring = 'chef-bf';
+				bfxmasstring = 'xmas-chef-bf';						
+		}
+		var weekCharacters:Array<Dynamic> = [
+			['', bfstring, ''],
+			['dad', bfstring, ''],
+			['spooky', bfstring, ''],
+			['pico', bfstring, ''],
+			['mom', bfstring, ''],
+			['parents-christmas', bfxmasstring, ''],
+			['senpai', bfstring, 'gf']
+		];
+		trace(bfstring);
+		trace(bfxmasstring);
+		
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
@@ -127,20 +152,20 @@ class StoryMenuState extends MusicBeatState
 			switch (weekCharacterThing.character)
 			{
 				case 'dad':
-					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					//weekCharacterThing.updateHitbox();
+					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
+					weekCharacterThing.updateHitbox();
 				case 'bf':
-					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					//weekCharacterThing.updateHitbox();
-					//weekCharacterThing.x -= 80;
+					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
+					weekCharacterThing.updateHitbox();
+					weekCharacterThing.x -= 80;
 				case 'gf':
-					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					//weekCharacterThing.updateHitbox();
+					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
+					weekCharacterThing.updateHitbox();
 				case 'pico':
 					weekCharacterThing.flipX = true;
 				case 'parents-christmas':
-					//weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					//weekCharacterThing.updateHitbox();
+					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
+					weekCharacterThing.updateHitbox();
 			}
 
 			grpWeekCharacters.add(weekCharacterThing);
@@ -265,7 +290,7 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
 				grpWeekText.members[curWeek].startFlashing();
-				//grpWeekCharacters.members[1].createCharacter('bfConfirm');
+				grpWeekCharacters.members[1].createCharacter('bfConfirm');
 				stopspamming = true;
 			}
 

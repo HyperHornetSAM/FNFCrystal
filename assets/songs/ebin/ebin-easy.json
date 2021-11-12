@@ -4745,7 +4745,7 @@
 		"validScore": true,
 		"sections": 0,
 		"needsVoices": true,
-		"stage": "stage",
+		"stage": "ring",
 		"speed": 3,
 		"bpm": 175
 	}
