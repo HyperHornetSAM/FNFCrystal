@@ -291,12 +291,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/beta-bf/beta_bf_anims');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -309,12 +309,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/mean-bf/mean_bf_anims');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -327,12 +327,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/chef-bf/cheffriend');
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!!', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
@@ -379,10 +379,18 @@ class Character extends FNFSprite
 					animation.addByPrefix('deathConfirm', "BF Dead confirm instance 1", 24, false);
 				}
 				else if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
-					frames = Paths.getSparrowAtlas('characters/chef-bf/cheffriend_DEATH');
-					animation.addByPrefix('firstDeath', "BF dies", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+					if(PlayState.SONG.song.toLowerCase() != 'cocoa' && PlayState.SONG.song.toLowerCase() != 'eggnog' && PlayState.SONG.song.toLowerCase() != 'winter-horrorland'){
+						frames = Paths.getSparrowAtlas('characters/chef-bf/cheffriend_DEATH');
+						animation.addByPrefix('firstDeath', "BF dies", 24, false);
+						animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+						animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+					}
+					else{
+						frames = Paths.getSparrowAtlas('characters/chef-bf/chefbf_XMAS_DEATH');
+						animation.addByPrefix('firstDeath', "BF dies", 24, false);
+						animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+						animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+					}
 				}
 				else{
 					frames = Paths.getSparrowAtlas('characters/bf/BF_DEATH');
@@ -393,7 +401,6 @@ class Character extends FNFSprite
 				playAnim('firstDeath');
 
 				flipX = true;
-
 			case 'bf-holding-gf':
 				frames = Paths.getSparrowAtlas('characters/bfAndGF');
 
@@ -442,12 +449,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -460,12 +467,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -478,12 +485,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
@@ -513,12 +520,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -533,12 +540,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!! instance 1', 24, false);
 				animation.addByPrefix('scared', 'BF idle shaking instance 1', 24);
@@ -553,12 +560,12 @@ class Character extends FNFSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN NOTE', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY!!', 24, false);
 				
@@ -593,12 +600,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/beta-bf/betabfPIXEL');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				
 				setGraphicSize(Std.int(width * 6));
@@ -616,12 +623,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/mean-bf/meanbfPIXEL');
 				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance 1', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
 				
 				setGraphicSize(Std.int(width * 6));
@@ -640,12 +647,12 @@ class Character extends FNFSprite
 				frames = Paths.getSparrowAtlas('characters/chef-bf/chefbf_pixel');
 				animation.addByPrefix('idle', 'BF IDLE', 24, false);
 				animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF LEFT NOTE', 24, false);
+				animation.addByPrefix('singLEFT', 'BF RIGHT NOTE', 24, false);
 				animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF LEFT MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
 				
 				setGraphicSize(Std.int(width * 6));
