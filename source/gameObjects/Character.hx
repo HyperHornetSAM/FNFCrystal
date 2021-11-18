@@ -775,7 +775,36 @@ class Character extends FNFSprite
 
 				flipX = true;
 				playAnim('idle');
-			// flipX = true;
+			case 'agoti':
+				frames = Paths.getSparrowAtlas('characters/agoti/mean_bf_silhouette');
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP instance', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance', 24, false);
+				
+				flipX = true;
+				playAnim('idle');
+			case 'ron':
+				frames = Paths.getSparrowAtlas('characters/ron/beta_bf_silhouette');
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP instance', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT instance', 24, false);
+				
+				flipX = true;
+				playAnim('idle');
+			case 'ace':
+				frames = Paths.getSparrowAtlas('characters/ace/BOYFRIEND_silhouette');
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE LEFT0', 24, false);
+				
+				flipX = true;
+				playAnim('idle');
 			case 'pico-speaker':
 				frames = Paths.getSparrowAtlas('characters/picoSpeaker');
 

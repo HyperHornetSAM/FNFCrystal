@@ -10,22 +10,16 @@ class MenuCharacter extends FlxSprite
 	var curCharacterMap:Map<String, Array<Dynamic>> = [
 		// the format is currently
 		// name of character => id in atlas, fps, loop, scale, offsetx, offsety
-		'bf' => ["bf normal", 24, true, 1, 30, 0],
-		//'bfConfirm' => ["bf normal", 24, true, 1, 0, 0],
-		'xmas-bf' => ["bf christmas", 24, true, 1, 0, 0],
-		'beta-bf' => ['beta bf0', 24, true, 1, 0, 0],
-		'xmas-beta-bf' => ['beta bf xmas', 24, true, 1, 0, 0],
-		'mean-bf' => ['mean bf0', 24, true, 1, 0, 0],
-		'xmas-mean-bf' => ['mean bf xmas', 24, true, 1, 0, 0],
-		'chef-bf' => ['cheffriend0', 24, true, 1, 0, 0],
-		'xmas-chef-bf' => ['cheffriend xmas', 24, true, 1, 0, 0],
-		'gf' => ["gf", 24, true, 1, -100, 155],
-		'dad' => ["dad", 24, true, 1.5, -150, 50],
-		'spooky' => ["spooky kids", 24, true, 1, -50, 40],
-		'pico' => ["pico", 24, true, 1.5, -165, 75],
-		'mom' => ["mom", 24, true, 1, -100, 55],
-		'parents-christmas' => ["parents", 24, true, 1.5, -150, 60],
-		'senpai' => ["senpai", 24, true, 1, -100, 42]
+		//'bf' => ["bf normal", 24, true, .8, -240, 0],
+		//'bfConfirm' => ["bf normal", 24, true, .8, -240, -60],
+		//'xmas-bf' => ["bf christmas", 24, true, .8, -260, -60],
+		'gf' => ["BF STORY MENU0000", 24, true, .8, -220, -75],
+		'dad' => ["BF STORY MENU0001", 24, true, .8, -220, -75],
+		'spooky' => ["BF STORY MENU0002", 24, true, .8, -220, -75],
+		'pico' => ["BF STORY MENU0003", 24, true, .8, -220, -75],
+		'mom' => ["BF STORY MENU0004", 24, true, .8, -220, -75],
+		'parents-christmas' => ["BF STORY MENU0005", 24, true, .8, -220, -75],
+		'senpai' => ["BF STORY MENU0006", 24, true, .8, -220, -75]
 	];
 
 	var baseX:Float = 0;
@@ -49,7 +43,17 @@ class MenuCharacter extends FlxSprite
 
 	public function createCharacter(newCharacter:String, canChange:Bool = false)
 	{
-		var tex = Paths.getSparrowAtlas('menus/base/storymenu/crystal_menu_characters');
+		var tex = Paths.getSparrowAtlas('menus/base/storymenu/MENU_NORMAL');
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				tex = Paths.getSparrowAtlas('menus/base/storymenu/MENU_BETA');
+			case 'Mean':
+				tex = Paths.getSparrowAtlas('menus/base/storymenu/MENU_MEAN');
+			case 'Cheffriend':
+				tex = Paths.getSparrowAtlas('menus/base/storymenu/MENU_CHEF');
+			default:
+				tex = Paths.getSparrowAtlas('menus/base/storymenu/MENU_NORMAL');
+		}
 		frames = tex;
 		var assortedValues = curCharacterMap.get(newCharacter);
 		if (assortedValues != null)

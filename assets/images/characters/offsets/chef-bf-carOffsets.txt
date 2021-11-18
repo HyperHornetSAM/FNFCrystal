@@ -2,7 +2,7 @@ idle 45 145
 singUP 67 177
 singLEFT 100 140
 singRIGHT 30 134
-singDOWN 25 150
+singDOWN 25 90
 singUPmiss 55 147
 singLEFTmiss 108 122
 singRIGHTmiss 23 132

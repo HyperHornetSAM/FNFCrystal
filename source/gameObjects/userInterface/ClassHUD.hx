@@ -62,7 +62,110 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 
 		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8));
 		healthBar.scrollFactor.set();
-		healthBar.createFilledBar(0xFFFF0000, 0xFF66FF33);
+		
+		//set up color variables
+		var P1HealthBarColor:Array<FlxColor> = [0xFF66FF33];
+		var P2HealthBarColor:Array<FlxColor> = [0xFFFF0000];
+		switch(SONG.player1) {
+			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car':
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Mean':
+						P1HealthBarColor = [0xFFF6F41C];
+					case 'Beta':
+						P1HealthBarColor = [0xFFF4313F];
+					default:
+						P1HealthBarColor = [0xFF2D76FF];
+				}
+			case 'gf':
+				P1HealthBarColor = [0xFFE879FF];
+				
+			case 'dad':
+				P1HealthBarColor = [0xFFFC731E];
+				
+			case 'parents-christmas':
+				P1HealthBarColor = [0xFFFC731E, 0xFFFC731E, 0xFF603373];
+				
+			case 'spooky': 
+				P1HealthBarColor = [0xFF98C73F, 0xFF98C73F, 0xFF604C8D];
+				
+			case 'monster':
+				P1HealthBarColor = [0xFFC92930];
+				
+			case 'pico':
+				P1HealthBarColor = [0xFF1D5A41];
+				
+			case 'mom' | 'mom-car':
+				P1HealthBarColor = [0xFF603373];
+				
+			case 'christmas-monster':
+				P1HealthBarColor = [0xFFE5E9ED];
+				
+			case 'senpai' | 'roses-senpai':
+				P1HealthBarColor = [0xFF3B4759];
+				
+			case 'spirit':
+				P1HealthBarColor = [0xFFA8E8FF];
+				
+			case 'ace':
+				P1HealthBarColor = [0xFFBBE2FE];
+				
+			case 'tankman':
+				P1HealthBarColor = [0xFF81949A];
+				
+			default:
+				P1HealthBarColor = [0xFF66FF33];
+			
+		}
+		switch(SONG.player2) {
+			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car':
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Mean':
+						P2HealthBarColor = [0xFFF6F41C];
+					case 'Beta':
+						P2HealthBarColor = [0xFFF4313F];
+					default:
+						P2HealthBarColor = [0xFF2D76FF];
+				}
+			case 'gf':
+				P2HealthBarColor = [0xFFE879FF];
+				
+			case 'dad':
+				P2HealthBarColor = [0xFFFC731E];
+				
+			case 'parents-christmas':
+				P2HealthBarColor = [0xFFFC731E, 0xFFFC731E, 0xFF603373];
+				
+			case 'spooky': 
+				P2HealthBarColor = [0xFF98C73F, 0xFF98C73F, 0xFF604C8D];
+				
+			case 'monster':
+				P2HealthBarColor = [0xFFC92930];
+				
+			case 'pico':
+				P2HealthBarColor = [0xFF1D5A41];
+				
+			case 'mom' | 'mom-car':
+				P2HealthBarColor = [0xFF603373];
+				
+			case 'christmas-monster':
+				P2HealthBarColor = [0xFFE5E9ED];
+				
+			case 'senpai' | 'roses-senpai':
+				P2HealthBarColor = [0xFF3B4759];
+				
+			case 'spirit':
+				P2HealthBarColor = [0xFFA8E8FF];
+				
+			case 'ace':
+				P2HealthBarColor = [0xFFBBE2FE];
+				
+			case 'tankman':
+				P2HealthBarColor = [0xFF81949A];
+				
+			default:
+				P2HealthBarColor = [0xFFFF0000];
+		}
+		healthBar.createGradientBar(P2HealthBarColor, P1HealthBarColor);
 		// healthBar
 		add(healthBar);
 

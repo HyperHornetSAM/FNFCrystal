@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MENU_NORMAL.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF STORY MENU0000" x="0" y="0" width="1933" height="1037" pivotX="728.05" pivotY="436"/>
+	<SubTexture name="BF STORY MENU0001" x="1943" y="0" width="1933" height="1037"/>
+	<SubTexture name="BF STORY MENU0002" x="3886" y="0" width="1933" height="1037"/>
+	<SubTexture name="BF STORY MENU0003" x="5829" y="0" width="1933" height="1037"/>
+	<SubTexture name="BF STORY MENU0004" x="0" y="1047" width="1933" height="1037"/>
+	<SubTexture name="BF STORY MENU0005" x="1943" y="1047" width="1933" height="1037"/>
+	<SubTexture name="BF STORY MENU0006" x="3886" y="1047" width="1933" height="1037"/>
+</TextureAtlas>

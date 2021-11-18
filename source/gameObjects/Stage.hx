@@ -563,6 +563,8 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'tankman':
 				dad.x += 50;
 				dad.y += 200;
+			case 'ron' | 'agoti' | 'ace':
+				dad.y += 200;
 		}
 	}
 

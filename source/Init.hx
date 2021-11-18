@@ -105,7 +105,7 @@ class Init extends FlxState
 			['none', 'Deuteranopia', 'Protanopia', 'Tritanopia']
 		],
 		"UI Skin" => ['default', Selector, 'Choose a UI Skin for judgements, combo, etc.', NOT_FORCED, ''],
-		"Note Skin" => ['default', Selector, 'Choose a note skin.', NOT_FORCED, ''],
+		"Note Skin" => ['crystal', Selector, 'Choose a note skin.', NOT_FORCED, ''],
 		"BF Skin" => ['Normal', Selector, 'Change Boyfriends appearance.', NOT_FORCED, ['Normal', 'Beta', 'Mean', 'Cheffriend']],
 		"Framerate Cap" => [120, Selector, 'Define your maximum FPS.', NOT_FORCED, ['']],
 		"Opaque Arrows" => [false, Checkmark, "Makes the arrows at the top of the screen opaque again.", NOT_FORCED],

@@ -17,6 +17,7 @@ christmas-monster
 bf-christmas
 beta-bf-christmas
 mean-bf-christmas
+chef-bf-christmas
 gf-christmas
 monster
 bf-pixel
@@ -28,4 +29,7 @@ spirit
 tankman
 pico-speaker
 bf-holding-gf
+ron
+agoti
+ace
 shubs

@@ -26,13 +26,13 @@ class StoryMenuState extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true];
 	
 	public var weekCharacters:Array<Dynamic> = [
-		['', 'bf', 'gf'],
-		['dad', 'bf', 'gf'],
-		['spooky', 'bf', 'gf'],
-		['pico', 'bf', 'gf'],
-		['mom', 'bf', 'gf'],
-		['parents-christmas', 'xmas-bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['gf', '', ''],
+		['dad', '', ''],
+		['spooky', '', ''],
+		['pico', '', ''],
+		['mom', '', ''],
+		['parents-christmas', '', ''],
+		['senpai', '', '']
 	];
 
 	var txtWeekTitle:FlxText;
@@ -54,32 +54,6 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		super.create();
-		
-		var bfstring:String = 'bf';
-		var bfxmasstring:String = 'xmas-bf';
-		switch (Init.trueSettings.get('BF Skin')) {
-			case 'Beta':
-				bfstring = 'beta-bf';
-				bfxmasstring = 'xmas-beta-bf';
-			case 'Mean':
-				bfstring = 'mean-bf';
-				bfxmasstring = 'xmas-mean-bf';			
-			case 'Cheffriend':
-				bfstring = 'chef-bf';
-				bfxmasstring = 'xmas-chef-bf';						
-		}
-		var weekCharacters:Array<Dynamic> = [
-			['', bfstring, ''],
-			['dad', bfstring, ''],
-			['spooky', bfstring, ''],
-			['pico', bfstring, ''],
-			['mom', bfstring, ''],
-			['parents-christmas', bfxmasstring, ''],
-			['senpai', bfstring, 'gf']
-		];
-		trace(bfstring);
-		trace(bfxmasstring);
-		
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 
@@ -92,7 +66,7 @@ class StoryMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-		scoreText = new FlxText(10, 10, 0, "SCORE: 49324858", 36);
+		scoreText = new FlxText(10, 50, 0, "SCORE: 49324858", 36);
 		scoreText.setFormat("VCR OSD Mono", 32);
 
 		txtWeekTitle = new FlxText(FlxG.width * 0.7, 10, 0, "", 32);
@@ -108,9 +82,6 @@ class StoryMenuState extends MusicBeatState
 		var ui_tex = Paths.getSparrowAtlas('menus/base/storymenu/campaign_menu_UI_assets');
 		var yellowBG:FlxSprite = new FlxSprite(0, 56).makeGraphic(FlxG.width, 400, 0xFFC0C0C0);
 
-		grpWeekText = new FlxTypedGroup<MenuItem>();
-		add(grpWeekText);
-
 		var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, 56, FlxColor.BLACK);
 		add(blackBarThingie);
 
@@ -119,11 +90,27 @@ class StoryMenuState extends MusicBeatState
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
+		for (char in 0...3)
+		{
+			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, weekCharacters[curWeek][char]);
+			weekCharacterThing.antialiasing = true;
+			grpWeekCharacters.add(weekCharacterThing);
+		}
+
+		add(yellowBG);
+		add(grpWeekCharacters);
+		
+		grpWeekText = new FlxTypedGroup<MenuItem>();
+		add(grpWeekText);
+		
 		for (i in 0...Main.gameWeeks.length)
 		{
 			var weekThing:MenuItem = new MenuItem(0, yellowBG.y + yellowBG.height + 10, i);
 			weekThing.y += ((weekThing.height + 20) * i);
 			weekThing.targetY = i;
+			if(i != 0){
+				weekThing.alpha = 0;
+			}
 			grpWeekText.add(weekThing);
 
 			weekThing.screenCenter(X);
@@ -144,33 +131,7 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		trace("Line 96");
-
-		for (char in 0...3)
-		{
-			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.25) * (1 + char) - 150, weekCharacters[curWeek][char]);
-			weekCharacterThing.antialiasing = true;
-			switch (weekCharacterThing.character)
-			{
-				case 'dad':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					weekCharacterThing.updateHitbox();
-				case 'bf':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					weekCharacterThing.updateHitbox();
-					weekCharacterThing.x -= 80;
-				case 'gf':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.5));
-					weekCharacterThing.updateHitbox();
-				case 'pico':
-					weekCharacterThing.flipX = true;
-				case 'parents-christmas':
-					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width * 0.9));
-					weekCharacterThing.updateHitbox();
-			}
-
-			grpWeekCharacters.add(weekCharacterThing);
-		}
-
+		
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
@@ -199,15 +160,12 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
-		trace("Line 150");
-
-		add(yellowBG);
-		add(grpWeekCharacters);
+		trace("Line 153");
 
 		txtTracklist = new FlxText(FlxG.width * 0.05, yellowBG.x + yellowBG.height + 100, 0, "Tracks", 32);
 		txtTracklist.alignment = CENTER;
 		txtTracklist.font = rankText.font;
-		txtTracklist.color = 0xFFe55777;
+		txtTracklist.color = 0xFFC0C0C0;
 		add(txtTracklist);
 		// add(rankText);
 		add(scoreText);
@@ -228,6 +186,7 @@ class StoryMenuState extends MusicBeatState
 
 		txtWeekTitle.text = Main.gameWeeks[curWeek][3].toUpperCase();
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
+		scoreText.x = FlxG.width - (scoreText.width + 10);
 
 		// FlxG.watch.addQuick('font', scoreText.font);
 
@@ -290,7 +249,7 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 
 				grpWeekText.members[curWeek].startFlashing();
-				grpWeekCharacters.members[1].createCharacter('bfConfirm');
+				//grpWeekCharacters.members[1].createCharacter('bfConfirm');
 				stopspamming = true;
 			}
 
@@ -365,7 +324,7 @@ class StoryMenuState extends MusicBeatState
 			if (item.targetY == Std.int(0) && weekUnlocked[curWeek])
 				item.alpha = 1;
 			else
-				item.alpha = 0.6;
+				item.alpha = 0;
 			bullShit++;
 		}
 
