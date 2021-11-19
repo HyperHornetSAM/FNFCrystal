@@ -492,6 +492,23 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					stageFlame_centerRight.animation.play('fire');
 					foreground.add(stageFlame_centerRight);
 					
+					var leftSpotLight:FNFSprite = new FNFSprite(0, -350).loadGraphic(Paths.image('backgrounds/crystalstage/light'));
+					leftSpotLight.antialiasing = true;
+					leftSpotLight.scrollFactor.set(1, 1);
+					leftSpotLight.active = false;
+					
+					var rightSpotLight:FNFSprite = new FNFSprite(1000, -350).loadGraphic(Paths.image('backgrounds/crystalstage/light'));
+					rightSpotLight.antialiasing = true;
+					rightSpotLight.scrollFactor.set(1, 1);
+					rightSpotLight.active = false;
+					rightSpotLight.flipX = true;
+
+					// add to the final array
+					add(leftSpotLight);
+
+					// add to the final array
+					add(rightSpotLight);
+					
 				}
 		}
 	}
@@ -564,7 +581,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				dad.x += 50;
 				dad.y += 200;
 			case 'ron' | 'agoti' | 'ace':
-				dad.y += 200;
+				dad.y += 350;
 		}
 	}
 
@@ -576,6 +593,9 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'highway':
 				boyfriend.y -= 220;
 				boyfriend.x += 260;
+				if(Init.trueSettings.get('BF Skin') == 'Cheffriend'){
+					boyfriend.x -= 115;
+				}
 
 			// resetFastCar();
 			// add(fastCar);
@@ -626,7 +646,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				boyfriend.x += 100;
 				dad.x -= 100;
 			case 'ring':
-				boyfriend.x += 150;
+				boyfriend.x += 300;
 				dad.x -= 150;
 		}
 	}

@@ -149,6 +149,9 @@ class PlayState extends MusicBeatState
 	public static var lastCombo:Array<FlxSprite>;
 
 	// at the beginning of the playstate
+	
+	var sound:FlxSound;
+	
 	override public function create()
 	{
 		super.create();
@@ -398,8 +401,12 @@ class PlayState extends MusicBeatState
 		// dialogue checks
 		if (dialogueBox != null && dialogueBox.alive) {
 			// wheee the shift closes the dialogue
-			if (FlxG.keys.justPressed.SHIFT)
+			if (FlxG.keys.justPressed.SHIFT){
+				if(curSong.toLowerCase() == 'thorns' || curSong.toLowerCase() == 'senpai'){
+					sound.fadeOut(2.2, 0);
+				}
 				dialogueBox.closeDialog();
+			}
 
 			// the change I made was just so that it would only take accept inputs
 			if (controls.ACCEPT && dialogueBox.textStarted)
@@ -407,8 +414,12 @@ class PlayState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				dialogueBox.curPage += 1;
 
-				if (dialogueBox.curPage == dialogueBox.dialogueData.dialogue.length)
-					dialogueBox.closeDialog()
+				if (dialogueBox.curPage == dialogueBox.dialogueData.dialogue.length){
+					if(curSong.toLowerCase() == 'thorns' || curSong.toLowerCase() == 'senpai'){
+						sound.fadeOut(2.2, 0);
+					}
+					dialogueBox.closeDialog();
+				}
 				else
 					dialogueBox.updateDialog();
 			}
@@ -1387,6 +1398,22 @@ class PlayState extends MusicBeatState
 
 		// stage stuffs
 		stageBuild.stageUpdate(curBeat, boyfriend, gf, dadOpponent);
+		
+		switch (curSong){
+			case 'Tutorial':
+				switch(curBeat){
+					case 30 | 46 | 62:
+						boyfriend.playAnim('hey', true);
+						gf.playAnim('cheer', true);
+				}
+			case 'Spookeez':
+				switch(curBeat){
+					case 4 | 20 | 160 | 176 | 193 | 208 | 224 | 240:
+						boyfriend.playAnim('scared', true);
+						gf.playAnim('scared', true);
+				}
+			
+		}
 	}
 
 	//
@@ -1577,9 +1604,21 @@ class PlayState extends MusicBeatState
 						
 					});
 				});
+			case 'senpai':
+				sound = new FlxSound().loadEmbedded(Paths.music('Lunchbox'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, 0.8);
+				callTextbox();
 			case 'roses':
 				// the same just play angery noise LOL
 				FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
+				callTextbox();
+			case 'spookeez' | 'south' | 'monster' :
+				sound = new FlxSound().loadEmbedded(Paths.sound('rainfall'),true);
+				sound.volume = 0;
+				FlxG.sound.list.add(sound);
+				sound.fadeIn(1, 0, .5);
 				callTextbox();
 			case 'thorns':
 				inCutscene = true;
@@ -1616,6 +1655,10 @@ class PlayState extends MusicBeatState
 							{
 								for (hud in allUIs)
 									hud.visible = true;
+								sound = new FlxSound().loadEmbedded(Paths.music('LunchboxScary'),true);
+								sound.volume = 0;
+								FlxG.sound.list.add(sound);
+								sound.fadeIn(1, 0, 0.8);
 								callTextbox();
 							}, true);
 						});

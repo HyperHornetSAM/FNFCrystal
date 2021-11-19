@@ -139,6 +139,7 @@ class StoryMenuState extends MusicBeatState
 
 		leftArrow = new FlxSprite(grpWeekText.members[0].x + grpWeekText.members[0].width + 10, grpWeekText.members[0].y + 10);
 		leftArrow.frames = ui_tex;
+		leftArrow.antialiasing = true;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
 		leftArrow.animation.addByPrefix('press', "arrow push left");
 		leftArrow.animation.play('idle');
@@ -146,6 +147,7 @@ class StoryMenuState extends MusicBeatState
 
 		sprDifficulty = new FlxSprite(leftArrow.x + 130, leftArrow.y);
 		sprDifficulty.frames = ui_tex;
+		sprDifficulty.antialiasing = true;
 		for (i in CoolUtil.difficultyArray)
 			sprDifficulty.animation.addByPrefix(i.toLowerCase(), i.toUpperCase());
 		sprDifficulty.animation.play('easy');
@@ -155,6 +157,7 @@ class StoryMenuState extends MusicBeatState
 
 		rightArrow = new FlxSprite(sprDifficulty.x + sprDifficulty.width + 50, leftArrow.y);
 		rightArrow.frames = ui_tex;
+		rightArrow.antialiasing = true;
 		rightArrow.animation.addByPrefix('idle', 'arrow right');
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
 		rightArrow.animation.play('idle');

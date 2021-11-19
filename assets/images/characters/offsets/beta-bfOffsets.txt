@@ -7,3 +7,4 @@ singUPmiss -29 13
 singLEFTmiss -20 17
 singRIGHTmiss -75 22
 singDOWNmiss -55 -23
+scared -30 0

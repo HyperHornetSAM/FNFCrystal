@@ -7,3 +7,5 @@ singUPmiss 55 137
 singLEFTmiss 88 82
 singRIGHTmiss 23 62
 singDOWNmiss 18 19
+hey 50 100
+scared 50 75
