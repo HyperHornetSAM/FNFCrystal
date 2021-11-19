@@ -201,7 +201,7 @@ class MainMenuState extends MusicBeatState
 			case 1:
 				menuItems.members[0].alpha = 1;
 				menuItems.members[1].alpha = 0;
-				menuItems.members[0].x = 465.5;
+				menuItems.members[0].x = 465;
 			case 2:
 				menuItems.members[0].alpha = 1;
 				menuItems.members[1].alpha = 0;

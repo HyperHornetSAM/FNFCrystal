@@ -24,6 +24,7 @@ class PauseSubState extends MusicBeatSubState
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
+	var randomInt:Int;
 
 	public function new(x:Float, y:Float)
 	{
@@ -31,8 +32,12 @@ class PauseSubState extends MusicBeatSubState
 		#if debug
 		// trace('pause call');
 		#end
-
+		
+		randomInt = FlxG.random.int(0, 9);
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
+		if(randomInt == 9){
+			pauseMusic = new FlxSound().loadEmbedded(Paths.music('altbreakfast'), true, true);
+		}
 		pauseMusic.volume = 0;
 		pauseMusic.play(false, FlxG.random.int(0, Std.int(pauseMusic.length / 2)));
 
