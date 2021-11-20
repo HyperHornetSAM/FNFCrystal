@@ -92,7 +92,7 @@ class Character extends FNFSprite
 				// GIRLFRIEND CODE
 				tex = Paths.getSparrowAtlas('characters/gf/GF_assets');
 				frames = tex;
-				animation.addByPrefix('cheer', 'GF Cheer0', 24, false);
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
 				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
 				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
