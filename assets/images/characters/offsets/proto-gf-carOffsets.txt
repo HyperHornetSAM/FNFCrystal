@@ -1,0 +1,3 @@
+danceLeft -115 0
+danceRight -115 0
+idleHair -115 0

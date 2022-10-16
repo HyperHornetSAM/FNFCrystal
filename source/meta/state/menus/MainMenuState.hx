@@ -8,6 +8,7 @@ import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
+import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
@@ -29,9 +30,21 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
-	var optionShit:Array<String> = ['story mode', 'freeplay', 'options', 'twitter'];
+	var optionShit:Array<String> = ['story mode', 'freeplay', 'options', 'changeskin', 'credits', 'soundtrack', 'twitter'];
 	var canSnap:Array<Float> = [];
-
+	
+	var storyMenuItem:FlxSprite;
+	var storyMenuItem_2:FlxSprite;
+	var storyMenuItem_3:FlxSprite;
+	var storyMenuItem_4:FlxSprite;
+	var freeplayMenuItem:FlxSprite;
+	var freeplayMenuItem_2:FlxSprite;
+	var freeplayMenuItem_3:FlxSprite;
+	var freeplayMenuItem_4:FlxSprite;
+	var changeskinMenuItem_1:FlxSprite;
+	var changeskinMenuItem_2:FlxSprite;
+	var changeskinMenuItem_3:FlxSprite;
+	var changeskinMenuItem_4:FlxSprite;
 	// the create 'state'
 	override function create()
 	{
@@ -53,7 +66,17 @@ class MainMenuState extends MusicBeatState
 
 		// background
 		bg = new FlxSprite(-85);
-		bg.loadGraphic(Paths.image('menus/base/menuBG'));
+		//bg.loadGraphic(Paths.image('menus/base/menuBG'));
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-beta'));
+			case 'Mean':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-mean'));
+			case 'Cheffriend':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-chef'));
+			default:
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-bf'));
+		}
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.18;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
@@ -62,7 +85,17 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = true;
 		add(bg);
 
-		magenta = new FlxSprite(-85).loadGraphic(Paths.image('menus/base/menuDesat'));
+		magenta = new FlxSprite(-85);
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-betaDesat'));
+			case 'Mean':
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-meanDesat'));
+			case 'Cheffriend':
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-chefDesat'));
+			default:
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-bfDesat'));
+		}
 		magenta.scrollFactor.x = 0;
 		magenta.scrollFactor.y = 0.18;
 		magenta.setGraphicSize(Std.int(magenta.width * 1.1));
@@ -84,28 +117,99 @@ class MainMenuState extends MusicBeatState
 		// create the menu items themselves
 		var tex = Paths.getSparrowAtlas('menus/base/title/FNF_main_menu_assets');
 		
-		var storyMenuItem:FlxSprite = new FlxSprite(150, 50).loadGraphic(Paths.image('menus/base/crystalmenu/story'));
-		var freeplayMenuItem:FlxSprite = new FlxSprite(482.5, 50).loadGraphic(Paths.image('menus/base/crystalmenu/freeplay'));
+		storyMenuItem = new FlxSprite(150, 50).loadGraphic(Paths.image('menus/base/crystalmenu/story'));
+		storyMenuItem_2 = new FlxSprite(150, 50).loadGraphic(Paths.image('menus/base/crystalmenu/story_beta'));
+		storyMenuItem_3 = new FlxSprite(150, 50).loadGraphic(Paths.image('menus/base/crystalmenu/story_mean'));
+		storyMenuItem_4 = new FlxSprite(150, 50).loadGraphic(Paths.image('menus/base/crystalmenu/story_chef'));
+		freeplayMenuItem = new FlxSprite(482.5, 50).loadGraphic(Paths.image('menus/base/crystalmenu/freeplay'));
+		freeplayMenuItem_2 = new FlxSprite(482.5, 50).loadGraphic(Paths.image('menus/base/crystalmenu/freeplay_proto'));
+		freeplayMenuItem_3 = new FlxSprite(482.5, 50).loadGraphic(Paths.image('menus/base/crystalmenu/freeplay_smug'));
+		freeplayMenuItem_4 = new FlxSprite(482.5, 50).loadGraphic(Paths.image('menus/base/crystalmenu/freeplay_chef'));
 		var optionsMenuItem:FlxSprite = new FlxSprite(815, 50).loadGraphic(Paths.image('menus/base/crystalmenu/options'));
-		var twitterMenuItem:FlxSprite = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/twitter_yuck'));
 		var selectorMenuItem_1:FlxSprite = new FlxSprite(133, 24).loadGraphic(Paths.image('menus/base/crystalmenu/selector1'));
-		var selectorMenuItem_2:FlxSprite = new FlxSprite(133, 509).loadGraphic(Paths.image('menus/base/crystalmenu/selector2'));
+		var selectorMenuItem_2:FlxSprite = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/thin_selector'));
+		var newtwitterMenuItem:FlxSprite =  new FlxSprite(680, 620).loadGraphic(Paths.image('menus/base/crystalmenu/twitter_yuck_shorter'));
+		changeskinMenuItem_1 = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/change_skin_beta'));
+		changeskinMenuItem_2 = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/change_skin_mean'));
+		changeskinMenuItem_3 = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/change_skin_chef'));
+		changeskinMenuItem_4 = new FlxSprite(150, 520).loadGraphic(Paths.image('menus/base/crystalmenu/change_skin_normal'));
+		var creditsMenuItem:FlxSprite = new FlxSprite(680, 520).loadGraphic(Paths.image('menus/base/crystalmenu/credits'));
+		var soundtrackMenuItem:FlxSprite = new FlxSprite(150, 620).loadGraphic(Paths.image('menus/base/crystalmenu/soundtrack'));
 		
 		storyMenuItem.antialiasing = true;
+		storyMenuItem_2.antialiasing = true;
+		storyMenuItem_3.antialiasing = true;
+		storyMenuItem_4.antialiasing = true;
 		freeplayMenuItem.antialiasing = true;
+		freeplayMenuItem_2.antialiasing = true;
+		freeplayMenuItem_3.antialiasing = true;
+		freeplayMenuItem_4.antialiasing = true;
 		optionsMenuItem.antialiasing = true;
-		twitterMenuItem.antialiasing = true;
 		selectorMenuItem_1.antialiasing = true;
 		selectorMenuItem_2.antialiasing = true;
+		newtwitterMenuItem.antialiasing = true;
+		changeskinMenuItem_1.antialiasing = true;
+		changeskinMenuItem_2.antialiasing = true;
+		changeskinMenuItem_3.antialiasing = true;
+		changeskinMenuItem_4.antialiasing = true;
+		creditsMenuItem.antialiasing = true;
+		soundtrackMenuItem.antialiasing = true;
+		
+		storyMenuItem.alpha = 0;
+		storyMenuItem_2.alpha = 0;
+		storyMenuItem_3.alpha = 0;
+		storyMenuItem_4.alpha = 0;
+		
+		freeplayMenuItem.alpha = 0;
+		freeplayMenuItem_2.alpha = 0;
+		freeplayMenuItem_3.alpha = 0;
+		freeplayMenuItem_4.alpha = 0;
+		
+		changeskinMenuItem_1.alpha = 0;
+		changeskinMenuItem_2.alpha = 0;
+		changeskinMenuItem_3.alpha = 0;
+		changeskinMenuItem_4.alpha = 0;
+		
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				storyMenuItem_2.alpha = 1;
+				freeplayMenuItem_2.alpha = 1;
+				changeskinMenuItem_2.alpha = 1;
+			case 'Mean':
+				storyMenuItem_3.alpha = 1;
+				freeplayMenuItem_3.alpha = 1;
+				changeskinMenuItem_3.alpha = 1;
+			case 'Cheffriend':
+				storyMenuItem_4.alpha = 1;
+				freeplayMenuItem_4.alpha = 1;
+				changeskinMenuItem_4.alpha = 1;
+			default:
+				storyMenuItem.alpha = 1;
+				freeplayMenuItem.alpha = 1;
+				changeskinMenuItem_1.alpha = 1;
+		}
 		
 		add(storyMenuItem);
+		add(storyMenuItem_2);
+		add(storyMenuItem_3);
+		add(storyMenuItem_4);
 		add(freeplayMenuItem);
+		add(freeplayMenuItem_2);
+		add(freeplayMenuItem_3);
+		add(freeplayMenuItem_4);
 		add(optionsMenuItem);
-		add(twitterMenuItem);
+		add(newtwitterMenuItem);
+		add(changeskinMenuItem_1);
+		add(changeskinMenuItem_2);
+		add(changeskinMenuItem_3);
+		add(changeskinMenuItem_4);
+		add(creditsMenuItem);
+		add(soundtrackMenuItem);
 		selectorMenuItem_1.ID = 0;
 		selectorMenuItem_2.ID = 1;
 		menuItems.add(selectorMenuItem_1);
 		menuItems.add(selectorMenuItem_2);
+		
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, "Forever Engine v" + Main.gameVersion, 12);
 		versionShit.scrollFactor.set();
@@ -142,7 +246,7 @@ class MainMenuState extends MusicBeatState
 								case 1:
 									curSelected = 1;
 								case 2:
-									curSelected = 3;
+									curSelected = 5;
 								case 3:
 									curSelected = 3;
 							}
@@ -153,7 +257,7 @@ class MainMenuState extends MusicBeatState
 								case 1:
 									curSelected = 2;
 								case 2:
-									curSelected = 3;
+									curSelected = 5;
 								case 3:
 									curSelected = 3;
 							}
@@ -164,20 +268,53 @@ class MainMenuState extends MusicBeatState
 								case 1:
 									curSelected = 0;
 								case 2:
-									curSelected = 3;
+									curSelected = 6;
 								case 3:
-									curSelected = 3;
+									curSelected = 4;
 							}
 						case 3:
 							switch(i){
 								case 0:
-									curSelected = 0;
+									curSelected = 4;
 								case 1:
-									curSelected = 2;
+									curSelected = 4;
 								case 2:
-									curSelected = 1;
+									curSelected = 0;
 								case 3:
-									curSelected = 1;
+									curSelected = 5;
+							}
+						case 4:
+							switch(i){
+								case 0:
+									curSelected = 3;
+								case 1:
+									curSelected = 3;
+								case 2:
+									curSelected = 2;
+								case 3:
+									curSelected = 6;
+							}
+						case 5:
+							switch(i){
+								case 0:
+									curSelected = 6;
+								case 1:
+									curSelected = 6;
+								case 2:
+									curSelected = 3;
+								case 3:
+									curSelected = 0;
+							}
+						case 6:
+							switch(i){
+								case 0:
+									curSelected = 5;
+								case 1:
+									curSelected = 5;
+								case 2:
+									curSelected = 4;
+								case 3:
+									curSelected = 2;
 							}
 					}
 					if (curSelected < 0)
@@ -209,6 +346,23 @@ class MainMenuState extends MusicBeatState
 			case 3:
 				menuItems.members[0].alpha = 0;
 				menuItems.members[1].alpha = 1;
+				menuItems.members[1].x = 140;
+				menuItems.members[1].y = 512.5;
+			case 4:
+				menuItems.members[0].alpha = 0;
+				menuItems.members[1].alpha = 1;
+				menuItems.members[1].x = 670;
+				menuItems.members[1].y = 512.5;
+			case 5:
+				menuItems.members[0].alpha = 0;
+				menuItems.members[1].alpha = 1;
+				menuItems.members[1].x = 140;
+				menuItems.members[1].y = 612.5;
+			case 6:
+				menuItems.members[0].alpha = 0;
+				menuItems.members[1].alpha = 1;
+				menuItems.members[1].x = 670;
+				menuItems.members[1].y = 612.5;
 		}
 		if ((controls.ACCEPT) && (!selectedSomethin))
 		{
@@ -236,6 +390,20 @@ class MainMenuState extends MusicBeatState
 						transIn = FlxTransitionableState.defaultTransIn;
 						transOut = FlxTransitionableState.defaultTransOut;
 						Main.switchState(this, new OptionsMenuState());
+					case 'changeskin':
+						transIn = FlxTransitionableState.defaultTransIn;
+						transOut = FlxTransitionableState.defaultTransOut;
+						selectedSomethin = false;
+						new FlxTimer().start(0.2, function(tmr:FlxTimer){changeSkinInMenu();});
+						Main.switchState(this, new MainMenuState());
+					case 'credits':
+						transIn = FlxTransitionableState.defaultTransIn;
+						transOut = FlxTransitionableState.defaultTransOut;
+						Main.switchState(this, new CreditsMenuState());
+					case 'soundtrack':
+						FlxG.openURL("https://youtube.com/playlist?list=PLuY8MeN5tU5_USkdzd-ZZwUDW7jYfQ24f");
+						trace("Opening Playlist!");
+						selectedSomethin = false;
 					case 'twitter':
 						FlxG.openURL("https://twitter.com/FNFCrystal");
 						trace("Opening Twitter Page!");
@@ -248,6 +416,50 @@ class MainMenuState extends MusicBeatState
 
 	var lastCurSelected:Int = 0;
 
+	private function changeSkinInMenu(){
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				Init.trueSettings.set('BF Skin', 'Mean');
+				storyMenuItem_2.alpha = 0;
+				freeplayMenuItem_2.alpha = 0;
+				changeskinMenuItem_2.alpha = 0;
+				storyMenuItem_3.alpha = 1;
+				freeplayMenuItem_3.alpha = 1;
+				changeskinMenuItem_3.alpha = 1;
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-mean'));
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-meanDesat'));
+			case 'Mean':
+				Init.trueSettings.set('BF Skin', 'Cheffriend');
+				storyMenuItem_3.alpha = 0;
+				freeplayMenuItem_3.alpha = 0;
+				changeskinMenuItem_3.alpha = 0;
+				storyMenuItem_4.alpha = 1;
+				freeplayMenuItem_4.alpha = 1;
+				changeskinMenuItem_4.alpha = 1;
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-chef'));
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-chefDesat'));
+			case 'Cheffriend':
+				Init.trueSettings.set('BF Skin', 'Normal');
+				storyMenuItem_4.alpha = 0;
+				freeplayMenuItem_4.alpha = 0;
+				changeskinMenuItem_4.alpha = 0;
+				storyMenuItem.alpha = 1;
+				freeplayMenuItem.alpha = 1;
+				changeskinMenuItem_1.alpha = 1;
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-bf'));
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-bfDesat'));
+			default:
+				Init.trueSettings.set('BF Skin', 'Beta');
+				storyMenuItem.alpha = 0;
+				freeplayMenuItem.alpha = 0;
+				changeskinMenuItem_1.alpha = 0;
+				storyMenuItem_2.alpha = 1;
+				freeplayMenuItem_2.alpha = 1;
+				changeskinMenuItem_2.alpha = 1;
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-beta'));
+				magenta.loadGraphic(Paths.image('menus/base/menucards/menu-betaDesat'));
+		}
+	}
 	private function updateSelection()
 	{
 		// reset all selections

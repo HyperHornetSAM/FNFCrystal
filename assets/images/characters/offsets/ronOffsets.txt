@@ -1,5 +1,7 @@
-idle -35 0
-singUP -39 14
-singLEFT -4 -7
-singRIGHT -78 -6
-singDOWN -50 -52
+idle 0 75
+singUP 0 170
+singLEFT 0 0
+singRIGHT 0 0
+singDOWN 0 20
+bruh 0 100
+bruhNOLEAD 0 100

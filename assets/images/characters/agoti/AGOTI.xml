@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="AGOTI.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Agoti Down0000" x="0" y="0" width="714" height="810" pivotX="371.8" pivotY="443.9" frameX="0" frameY="0" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0001" x="0" y="0" width="714" height="810" frameX="0" frameY="0" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0002" x="724" y="0" width="738" height="728" frameX="-1" frameY="-81" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0003" x="724" y="0" width="738" height="728" frameX="-1" frameY="-81" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0004" x="1472" y="0" width="755" height="737" frameX="-1" frameY="-72" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0005" x="1472" y="0" width="755" height="737" frameX="-1" frameY="-72" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0006" x="2237" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0007" x="2237" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0008" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0009" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0010" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0011" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0012" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0013" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0014" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0015" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0016" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0017" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0018" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Down0019" x="3000" y="0" width="753" height="736" frameX="-1" frameY="-73" frameWidth="756" frameHeight="810"/>
+	<SubTexture name="Agoti Left0000" x="3763" y="0" width="956" height="827" pivotX="407.85" pivotY="412.3" frameX="0" frameY="-7" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0001" x="3763" y="0" width="956" height="827" frameX="0" frameY="-7" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0002" x="4729" y="0" width="834" height="834" frameX="-44" frameY="0" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0003" x="4729" y="0" width="834" height="834" frameX="-44" frameY="0" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0004" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0005" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0006" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0007" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0008" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0009" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0010" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0011" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0012" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0013" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0014" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0015" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0016" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0017" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0018" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Left0019" x="5573" y="0" width="839" height="831" frameX="-38" frameY="-3" frameWidth="956" frameHeight="834"/>
+	<SubTexture name="Agoti Right0000" x="6422" y="0" width="880" height="829" pivotX="443.75" pivotY="404.85" frameX="-29" frameY="0" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0001" x="6422" y="0" width="880" height="829" frameX="-29" frameY="0" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0002" x="7312" y="0" width="869" height="811" frameX="-1" frameY="-18" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0003" x="7312" y="0" width="869" height="811" frameX="-1" frameY="-18" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0004" x="0" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0005" x="0" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0006" x="885" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0007" x="885" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0008" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0009" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0010" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0011" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0012" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0013" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0014" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0015" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0016" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0017" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0018" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Right0019" x="1770" y="844" width="875" height="814" frameX="0" frameY="-15" frameWidth="909" frameHeight="829"/>
+	<SubTexture name="Agoti Up0000" x="2655" y="844" width="987" height="530" pivotX="488.2" pivotY="384.55" frameX="0" frameY="-7" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0001" x="2655" y="844" width="987" height="530" frameX="0" frameY="-7" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0002" x="3652" y="844" width="945" height="519" frameX="-15" frameY="0" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0003" x="3652" y="844" width="945" height="519" frameX="-15" frameY="0" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0004" x="4607" y="844" width="937" height="506" frameX="-16" frameY="-19" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0005" x="4607" y="844" width="937" height="506" frameX="-16" frameY="-19" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0006" x="5554" y="844" width="927" height="526" frameX="-14" frameY="-27" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0007" x="5554" y="844" width="927" height="526" frameX="-14" frameY="-27" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0008" x="6491" y="844" width="928" height="518" frameX="-15" frameY="-39" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0009" x="6491" y="844" width="928" height="518" frameX="-15" frameY="-39" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0010" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0011" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0012" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0013" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0014" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0015" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0016" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0017" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0018" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti Up0019" x="0" y="1668" width="928" height="521" frameX="-15" frameY="-36" frameWidth="987" frameHeight="557"/>
+	<SubTexture name="Agoti idle0000" x="938" y="1668" width="386" height="865" pivotX="249.25" pivotY="451.7" frameX="-56" frameY="-24" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0001" x="938" y="1668" width="386" height="865" frameX="-56" frameY="-24" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0002" x="1334" y="1668" width="391" height="873" frameX="-58" frameY="-16" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0003" x="1334" y="1668" width="391" height="873" frameX="-58" frameY="-16" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0004" x="1735" y="1668" width="450" height="878" frameX="-22" frameY="-11" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0005" x="1735" y="1668" width="450" height="878" frameX="-22" frameY="-11" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0006" x="2195" y="1668" width="468" height="881" frameX="-18" frameY="-8" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0007" x="2195" y="1668" width="468" height="881" frameX="-18" frameY="-8" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0008" x="2673" y="1668" width="497" height="884" frameX="-2" frameY="-5" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0009" x="2673" y="1668" width="497" height="884" frameX="-2" frameY="-5" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0010" x="3180" y="1668" width="545" height="875" frameX="0" frameY="-14" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0011" x="3180" y="1668" width="545" height="875" frameX="0" frameY="-14" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0012" x="3735" y="1668" width="533" height="879" frameX="-6" frameY="-10" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0013" x="3735" y="1668" width="533" height="879" frameX="-6" frameY="-10" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0014" x="4278" y="1668" width="505" height="888" frameX="-17" frameY="-1" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0015" x="4278" y="1668" width="505" height="888" frameX="-17" frameY="-1" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0016" x="4793" y="1668" width="493" height="889" frameX="-20" frameY="0" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0017" x="4793" y="1668" width="493" height="889" frameX="-20" frameY="0" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0018" x="5296" y="1668" width="466" height="877" frameX="-32" frameY="-12" frameWidth="545" frameHeight="889"/>
+	<SubTexture name="Agoti idle0019" x="5296" y="1668" width="466" height="877" frameX="-32" frameY="-12" frameWidth="545" frameHeight="889"/>
+</TextureAtlas>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="crystal anxiety mines.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="full anxiety instance 10000" x="0" y="0" width="218" height="218" pivotX="111.4" pivotY="118.5" frameX="-5" frameY="-12" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10001" x="0" y="0" width="218" height="218" frameX="-5" frameY="-12" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10002" x="228" y="0" width="217" height="217" frameX="-5" frameY="-13" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10003" x="228" y="0" width="217" height="217" frameX="-5" frameY="-13" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10004" x="455" y="0" width="218" height="215" frameX="-5" frameY="-12" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10005" x="455" y="0" width="218" height="215" frameX="-5" frameY="-12" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10006" x="683" y="0" width="222" height="214" frameX="0" frameY="-13" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10007" x="683" y="0" width="222" height="214" frameX="0" frameY="-13" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10008" x="915" y="0" width="227" height="232"/>
+	<SubTexture name="full anxiety instance 10009" x="915" y="0" width="227" height="232"/>
+	<SubTexture name="full anxiety instance 10010" x="1152" y="0" width="217" height="228" frameX="-5" frameY="-4" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 10011" x="1152" y="0" width="217" height="228" frameX="-5" frameY="-4" frameWidth="227" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 20000" x="1379" y="0" width="218" height="218" pivotX="108.2" pivotY="111.4" frameX="-2" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20001" x="1379" y="0" width="218" height="218" frameX="-2" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20002" x="1607" y="0" width="218" height="217" frameX="-1" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20003" x="1607" y="0" width="218" height="217" frameX="-1" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20004" x="0" y="242" width="215" height="218" frameX="-5" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20005" x="0" y="242" width="215" height="218" frameX="-5" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20006" x="225" y="242" width="215" height="222" frameX="-4" frameY="0" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20007" x="225" y="242" width="215" height="222" frameX="-4" frameY="0" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20008" x="450" y="242" width="232" height="228"/>
+	<SubTexture name="full anxiety instance 20009" x="450" y="242" width="232" height="228"/>
+	<SubTexture name="full anxiety instance 20010" x="692" y="242" width="219" height="227" frameX="-4" frameY="0" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 20011" x="692" y="242" width="219" height="227" frameX="-4" frameY="0" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30000" x="921" y="242" width="218" height="218" pivotX="118.5" pivotY="111.1" frameX="-12" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30001" x="921" y="242" width="218" height="218" frameX="-12" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30002" x="1149" y="242" width="217" height="217" frameX="-13" frameY="-6" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30003" x="1149" y="242" width="217" height="217" frameX="-13" frameY="-6" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30004" x="1376" y="242" width="215" height="218" frameX="-12" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30005" x="1376" y="242" width="215" height="218" frameX="-12" frameY="-5" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30006" x="1601" y="242" width="214" height="222" frameX="-13" frameY="-6" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30007" x="1601" y="242" width="214" height="222" frameX="-13" frameY="-6" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30008" x="0" y="480" width="232" height="228"/>
+	<SubTexture name="full anxiety instance 30009" x="0" y="480" width="232" height="228"/>
+	<SubTexture name="full anxiety instance 30010" x="242" y="480" width="218" height="227" frameX="-9" frameY="-1" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 30011" x="242" y="480" width="218" height="227" frameX="-9" frameY="-1" frameWidth="232" frameHeight="228"/>
+	<SubTexture name="full anxiety instance 40000" x="470" y="480" width="218" height="218" pivotX="111.1" pivotY="108.9" frameX="-5" frameY="-2" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40001" x="470" y="480" width="218" height="218" frameX="-5" frameY="-2" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40002" x="698" y="480" width="217" height="216" frameX="-6" frameY="-2" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40003" x="698" y="480" width="217" height="216" frameX="-6" frameY="-2" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40004" x="925" y="480" width="218" height="215" frameX="-5" frameY="-5" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40005" x="925" y="480" width="218" height="215" frameX="-5" frameY="-5" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40006" x="1153" y="480" width="222" height="214" frameX="-6" frameY="-5" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40007" x="1153" y="480" width="222" height="214" frameX="-6" frameY="-5" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40008" x="1385" y="480" width="228" height="232"/>
+	<SubTexture name="full anxiety instance 40009" x="1385" y="480" width="228" height="232"/>
+	<SubTexture name="full anxiety instance 40010" x="1623" y="480" width="215" height="228" frameX="-6" frameY="0" frameWidth="228" frameHeight="232"/>
+	<SubTexture name="full anxiety instance 40011" x="1623" y="480" width="215" height="228" frameX="-6" frameY="0" frameWidth="228" frameHeight="232"/>
+</TextureAtlas>

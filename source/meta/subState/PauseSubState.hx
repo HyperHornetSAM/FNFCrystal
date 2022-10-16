@@ -35,7 +35,7 @@ class PauseSubState extends MusicBeatSubState
 		
 		randomInt = FlxG.random.int(0, 9);
 		pauseMusic = new FlxSound().loadEmbedded(Paths.music('breakfast'), true, true);
-		if(randomInt == 9){
+		if(randomInt == 9 || PlayState.sharedCurSong == 'Thump-Thump'){
 			pauseMusic = new FlxSound().loadEmbedded(Paths.music('altbreakfast'), true, true);
 		}
 		pauseMusic.volume = 0;

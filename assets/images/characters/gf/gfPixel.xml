@@ -15,20 +15,20 @@
 	<SubTexture name="GF IDLE0010" x="0" y="110" width="125" height="100"/>
 	<SubTexture name="GF IDLE0011" x="0" y="110" width="125" height="100"/>
 	<SubTexture name="GF IDLE0012" x="0" y="110" width="125" height="100"/>
-	<SubTexture name="GF IDLE0013" x="135" y="110" width="125" height="100"/>
-	<SubTexture name="GF IDLE0014" x="135" y="110" width="125" height="100"/>
-	<SubTexture name="GF IDLE0015" x="270" y="110" width="125" height="100"/>
-	<SubTexture name="GF IDLE0016" x="270" y="110" width="125" height="100"/>
-	<SubTexture name="GF IDLE0017" x="0" y="220" width="125" height="100"/>
-	<SubTexture name="GF IDLE0018" x="0" y="220" width="125" height="100"/>
+	<SubTexture name="GF IDLE0013" x="0" y="110" width="125" height="100"/>
+	<SubTexture name="GF IDLE0014" x="0" y="110" width="125" height="100"/>
+	<SubTexture name="GF IDLE0015" x="135" y="110" width="125" height="100"/>
+	<SubTexture name="GF IDLE0016" x="135" y="110" width="125" height="100"/>
+	<SubTexture name="GF IDLE0017" x="270" y="110" width="125" height="100"/>
+	<SubTexture name="GF IDLE0018" x="270" y="110" width="125" height="100"/>
 	<SubTexture name="GF IDLE0019" x="0" y="220" width="125" height="100"/>
-	<SubTexture name="GF IDLE0020" x="135" y="220" width="125" height="100"/>
-	<SubTexture name="GF IDLE0021" x="135" y="220" width="125" height="100"/>
+	<SubTexture name="GF IDLE0020" x="0" y="220" width="125" height="100"/>
+	<SubTexture name="GF IDLE0021" x="0" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0022" x="135" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0023" x="135" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0024" x="135" y="220" width="125" height="100"/>
-	<SubTexture name="GF IDLE0025" x="270" y="220" width="125" height="100"/>
-	<SubTexture name="GF IDLE0026" x="270" y="220" width="125" height="100"/>
+	<SubTexture name="GF IDLE0025" x="135" y="220" width="125" height="100"/>
+	<SubTexture name="GF IDLE0026" x="135" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0027" x="270" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0028" x="270" y="220" width="125" height="100"/>
 	<SubTexture name="GF IDLE0029" x="270" y="220" width="125" height="100"/>

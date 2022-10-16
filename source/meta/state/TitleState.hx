@@ -97,8 +97,8 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
-		logoBl.frames = Paths.getSparrowAtlas('menus/base/title/logoBumpin');
+		logoBl = new FlxSprite(-25, 0);
+		logoBl.frames = Paths.getSparrowAtlas('menus/base/title/newlogo_bumpin');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
@@ -301,11 +301,11 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 2:
-				createCoolText(['Keno', 'and', 'HyperSAM', '']);
+				createCoolText(['The Crystal Team', '']);
 
 			// credTextShit.visible = true;
 			case 3:
-				addMoreText('present');
+				addMoreText('presents');
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
 			case 4:

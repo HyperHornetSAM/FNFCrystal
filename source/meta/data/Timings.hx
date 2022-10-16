@@ -22,6 +22,14 @@ class Timings
 		"shit" => [3, 140, -50, -150],
 		"miss" => [4, 180, -100, -175],
 	];
+	
+	public static var minesjudgementsMap:Map<String, Array<Dynamic>> = [
+		"hit" => [0, 80, -50, -400],
+	];
+	
+	public static var ebolajudgementsMap:Map<String, Array<Dynamic>> = [
+		"hit" => [0, 80, -50, 0],
+	];
 
 	public static var msThreshold:Float = 0;
 

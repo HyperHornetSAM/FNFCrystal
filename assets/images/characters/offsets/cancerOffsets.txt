@@ -1,0 +1,6 @@
+idle 0 0
+singUP 0 200
+singLEFT 140 65
+singRIGHT 40 15
+singDOWN 50 -50
+scream 0 0

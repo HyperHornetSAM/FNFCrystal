@@ -26,7 +26,17 @@ class OptionsSubstate extends MusicBeatSubState
 	{
 		// call the options menu
 		var bg = new FlxSprite(-85);
-		bg.loadGraphic(Paths.image('menus/base/menuDesat'));
+		//bg.loadGraphic(Paths.image('menus/base/menuDesat'));
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-beta'));
+			case 'Mean':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-mean'));
+			case 'Cheffriend':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-chef'));
+			default:
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-bf'));
+		}
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.18;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));

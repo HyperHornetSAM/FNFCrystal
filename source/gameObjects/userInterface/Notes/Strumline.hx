@@ -126,6 +126,7 @@ class Strumline extends FlxTypedGroup<FlxBasic>
 	//
 	public var receptors:FlxTypedGroup<UIStaticArrow>;
 	public var splashNotes:FlxTypedGroup<NoteSplash>;
+	public var mineSplashNotes:FlxTypedGroup<NoteSplash>;
 	public var notesGroup:FlxTypedGroup<Note>;
 
 	public var autoplay:Bool = true;
@@ -140,6 +141,7 @@ class Strumline extends FlxTypedGroup<FlxBasic>
 
 		receptors = new FlxTypedGroup<UIStaticArrow>();
 		splashNotes = new FlxTypedGroup<NoteSplash>();
+		mineSplashNotes = new FlxTypedGroup<NoteSplash>();
 		notesGroup = new FlxTypedGroup<Note>();
 
 		this.autoplay = autoplay;
@@ -168,6 +170,8 @@ class Strumline extends FlxTypedGroup<FlxBasic>
 			if (noteSplashes) {
 				var noteSplash:NoteSplash = ForeverAssets.generateNoteSplashes('noteSplashes', PlayState.assetModifier, 'noteskins/notes', i);
 				splashNotes.add(noteSplash);
+				var mineNoteSplash:NoteSplash = ForeverAssets.generateMineNoteSplashes('anxietynotesplash', PlayState.assetModifier, 'noteskins/mines/base', i);
+				mineSplashNotes.add(mineNoteSplash);
 			}
 		}
 
@@ -175,6 +179,8 @@ class Strumline extends FlxTypedGroup<FlxBasic>
 		add(notesGroup);
 		if (splashNotes != null)
 			add(splashNotes);
+		if (mineSplashNotes != null)
+			add(mineSplashNotes);
 	}
 
 	public function createSplash(coolNote:Note)

@@ -42,6 +42,8 @@ class FreeplayState extends MusicBeatState
 
 	var songThread:Thread;
 	var threadActive:Bool = true;
+	
+	var fpBGColor:FlxColor;
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
@@ -87,7 +89,37 @@ class FreeplayState extends MusicBeatState
 				{
 					var castSong:SwagSong = Song.loadFromJson(i, i);
 					icon = (castSong != null) ? castSong.player2 : 'gf';
-					addSong(CoolUtil.spaceToDash(castSong.song), 1, icon, FlxColor.WHITE);
+					switch (i.toLowerCase())
+					{
+						case 'bivalve':
+							fpBGColor = FlxColor.CYAN;
+						case 'check-up' | 'ebin':
+							fpBGColor = FlxColor.GREEN;
+						case 'maddening' | 'voidslave':
+							fpBGColor = FlxColor.RED;
+						case 'rekt':
+							fpBGColor = FlxColor.WHITE;
+						case 'sonicool':
+							fpBGColor = FlxColor.BLUE;
+						case 'thump-thump':
+							fpBGColor = FlxColor.PINK;
+						case 'test':
+						{
+							switch(Init.trueSettings.get('BF Skin')){
+								case 'Beta':
+									fpBGColor = FlxColor.RED;
+								case 'Mean':
+									fpBGColor = FlxColor.YELLOW;
+								case 'Cheffriend':
+									fpBGColor = FlxColor.WHITE;
+								default:
+									fpBGColor = FlxColor.BLUE;
+							}
+						}
+						default:
+							fpBGColor = FlxColor.WHITE;
+					}
+					addSong(CoolUtil.spaceToDash(castSong.song), 1, icon, fpBGColor);
 				}
 			}
 		}
@@ -101,7 +133,17 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		bg = new FlxSprite().loadGraphic(Paths.image('menus/base/menuDesat'));
+		bg = new FlxSprite();
+		switch(Init.trueSettings.get('BF Skin')){
+			case 'Beta':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-betaDesat'));
+			case 'Mean':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-meanDesat'));
+			case 'Cheffriend':
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-chefDesat'));
+			default:
+				bg.loadGraphic(Paths.image('menus/base/menucards/menu-bfDesat'));
+		}
 		add(bg);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
@@ -217,6 +259,8 @@ class FreeplayState extends MusicBeatState
 		if (controls.BACK)
 		{
 			threadActive = false;
+			FlxG.sound.music.stop();
+			ForeverTools.resetMenuMusic();
 			Main.switchState(this, new MainMenuState());
 		}
 

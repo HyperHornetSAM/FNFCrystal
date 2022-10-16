@@ -5115,7 +5115,7 @@
 		"player2": "agoti",
 		"player3": "gf",
 		"song": "Voidslave",
-		"needsVoices": false,
+		"needsVoices": true,
 		"sections": 0,
 		"validScore": true,
 		"stage": "ring",

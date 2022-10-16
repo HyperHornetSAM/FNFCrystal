@@ -32,4 +32,16 @@ bf-holding-gf
 ron
 agoti
 ace
-shubs
+valerie-opera
+valerie-popstar
+onek
+onek-happy
+onek-inverted
+maggie
+maggie-inverted
+cancer
+vtan
+bf-alt
+beta-bf-alt
+mean-bf-alt
+chef-bf-alt

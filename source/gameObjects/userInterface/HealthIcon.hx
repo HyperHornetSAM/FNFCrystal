@@ -8,7 +8,7 @@ class HealthIcon extends FlxSprite
 {
 	// rewrite using da new icon system as ninjamuffin would say it
 	public var sprTracker:FlxSprite;
-	public var exclusions:Array<String> = ['pixel', 'christmas'];
+	public var exclusions:Array<String> = ['pixel', 'christmas', 'opera', 'popstar', 'inverted', 'alt'];
 
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
@@ -25,39 +25,6 @@ class HealthIcon extends FlxSprite
 		}
 
 		antialiasing = true;
-		/*if(char == 'bf' && Init.trueSettings.get('BF Skin') != 'Normal'){
-			switch(Init.trueSettings.get('BF Skin')){
-				case 'Beta':
-					loadGraphic(Paths.image('icons/icon-beta-bf'), true, 150, 150);
-				case 'Mean':
-					loadGraphic(Paths.image('icons/icon-mean-bf'), true, 150, 150);
-				case 'Cheffriend':
-					loadGraphic(Paths.image('icons/icon-chef-bf'), true, 150, 150);
-			}
-		}
-		else if(char == 'bf-pixel' && Init.trueSettings.get('BF Skin') != 'Normal'){
-			switch(Init.trueSettings.get('BF Skin')){
-				case 'Beta':
-					loadGraphic(Paths.image('icons/icon-beta-bf-pixel'), true, 150, 150);
-				case 'Mean':
-					loadGraphic(Paths.image('icons/icon-mean-bf-pixel'), true, 150, 150);
-				case 'Cheffriend':
-					loadGraphic(Paths.image('icons/icon-chef-bf-pixel'), true, 150, 150);
-			}
-		}
-		else if(char == 'bf-christmas' && Init.trueSettings.get('BF Skin') != 'Normal'){
-			switch(Init.trueSettings.get('BF Skin')){
-				case 'Beta':
-					loadGraphic(Paths.image('icons/icon-beta-bf-christmas'), true, 150, 150);
-				case 'Mean':
-					loadGraphic(Paths.image('icons/icon-mean-bf-christmas'), true, 150, 150);
-				case 'Cheffriend':
-					loadGraphic(Paths.image('icons/icon-chef-bf-christmas'), true, 150, 150);
-			}
-		}
-		else{
-			loadGraphic(Paths.image('icons/icon-' + char), true, 150, 150);
-		}*/
 		
 		if(char == 'bf' || char == 'bf-pixel' || char == 'bf-christmas'){
 			switch(Init.trueSettings.get('BF Skin')){
@@ -65,6 +32,30 @@ class HealthIcon extends FlxSprite
 					loadGraphic(Paths.image('icons/icon-beta-' + char), true, 150, 150);
 				case 'Mean':
 					loadGraphic(Paths.image('icons/icon-mean-' + char), true, 150, 150);
+				case 'Cheffriend':
+					loadGraphic(Paths.image('icons/icon-chef-' + char), true, 150, 150);
+				default:
+					loadGraphic(Paths.image('icons/icon-' + char), true, 150, 150);
+			}
+		}
+		else if(char == 'bf-alt'){
+			switch(Init.trueSettings.get('BF Skin')){
+				case 'Beta':
+					loadGraphic(Paths.image('icons/icon-beta-bf'), true, 150, 150);
+				case 'Mean':
+					loadGraphic(Paths.image('icons/icon-mean-bf'), true, 150, 150);
+				case 'Cheffriend':
+					loadGraphic(Paths.image('icons/icon-chef-bf'), true, 150, 150);
+				default:
+					loadGraphic(Paths.image('icons/icon-bf'), true, 150, 150);
+			}
+		}
+		else if(char == 'gf'){
+			switch(Init.trueSettings.get('BF Skin')){
+				case 'Beta':
+					loadGraphic(Paths.image('icons/icon-proto-' + char), true, 150, 150);
+				case 'Mean':
+					loadGraphic(Paths.image('icons/icon-smug-' + char), true, 150, 150);
 				case 'Cheffriend':
 					loadGraphic(Paths.image('icons/icon-chef-' + char), true, 150, 150);
 				default:

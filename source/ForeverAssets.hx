@@ -167,6 +167,16 @@ class ForeverAssets
 
 		return tempSplash;
 	}
+	
+	public static function generateMineNoteSplashes(asset:String, assetModifier:String = 'base', baseLibrary:String, noteData:Int):NoteSplash
+	{
+		var tempSplash:NoteSplash = new NoteSplash(noteData);
+		tempSplash.frames = Paths.getSparrowAtlas('noteskins/mines/base/anxietynotesplash');
+		tempSplash.animation.addByPrefix('anim', 'anxiety note splash', 24, false);
+		tempSplash.animation.play('anim');
+		tempSplash.addOffset('anim', -25, -20);
+		return tempSplash;
+	}
 
 	public static function generateUIArrows(x:Float, y:Float, ?staticArrowType:Int = 0, assetModifier:String):UIStaticArrow
 	{
@@ -249,15 +259,15 @@ class ForeverAssets
 	/**
 		Notes!
 	**/
-	public static function generateArrow(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null):Note
+	public static function generateArrow(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null, actual_noteType:Float):Note
 	{
 		var newNote:Note;
 		var changeableSkin:String = Init.trueSettings.get("Note Skin");
 		// gonna improve the system eventually
 		if (changeableSkin.startsWith('quant'))
-			newNote = Note.returnQuantNote(assetModifier, strumTime, noteData, noteType, noteAlt, isSustainNote, prevNote);
+			newNote = Note.returnQuantNote(assetModifier, strumTime, noteData, noteType, noteAlt, isSustainNote, prevNote, actual_noteType);
 		else
-			newNote = Note.returnDefaultNote(assetModifier, strumTime, noteData, noteType, noteAlt, isSustainNote, prevNote);
+			newNote = Note.returnDefaultNote(assetModifier, strumTime, noteData, noteType, noteAlt, isSustainNote, prevNote, actual_noteType);
 
 		// hold note offset
 		if (isSustainNote && prevNote != null)
@@ -267,7 +277,7 @@ class ForeverAssets
 			else // calculate a new visual offset based on that note's width and newnote's width
 				newNote.noteVisualOffset = ((prevNote.width / 2) - (newNote.width / 2));
 		}
-
+		
 		return newNote;
 	}
 

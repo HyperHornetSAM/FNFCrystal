@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="vTan.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="V DOWN0000" x="0" y="0" width="482" height="719" pivotX="242.2" pivotY="371.25" frameX="0" frameY="-24" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0001" x="0" y="0" width="482" height="719" frameX="0" frameY="-24" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0002" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0003" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0004" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0005" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0006" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0007" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0008" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0009" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0010" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0011" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0012" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V DOWN0013" x="492" y="0" width="465" height="743" frameX="-10" frameY="0" frameWidth="482" frameHeight="743"/>
+	<SubTexture name="V IDLE0000" x="967" y="0" width="387" height="805" pivotX="215.85" pivotY="415.25" frameX="0" frameY="-29" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0001" x="967" y="0" width="387" height="805" frameX="0" frameY="-29" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0002" x="1364" y="0" width="369" height="803" frameX="-14" frameY="-31" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0003" x="1364" y="0" width="369" height="803" frameX="-14" frameY="-31" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0004" x="1743" y="0" width="356" height="815" frameX="-26" frameY="-19" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0005" x="1743" y="0" width="356" height="815" frameX="-26" frameY="-19" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0006" x="2109" y="0" width="373" height="832" frameX="-28" frameY="-2" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0007" x="2109" y="0" width="373" height="832" frameX="-28" frameY="-2" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0008" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0009" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0010" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0011" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0012" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V IDLE0013" x="2492" y="0" width="370" height="834" frameX="-28" frameY="0" frameWidth="401" frameHeight="834"/>
+	<SubTexture name="V LEFT0000" x="2872" y="0" width="418" height="842" pivotX="230.05" pivotY="420.8" frameX="0" frameY="0" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0001" x="2872" y="0" width="418" height="842" frameX="0" frameY="0" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0002" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0003" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0004" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0005" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0006" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0007" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0008" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0009" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0010" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0011" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0012" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V LEFT0013" x="3300" y="0" width="392" height="840" frameX="-28" frameY="-2" frameWidth="420" frameHeight="842"/>
+	<SubTexture name="V RIGHT0000" x="0" y="852" width="453" height="854" pivotX="239.6" pivotY="425.6"/>
+	<SubTexture name="V RIGHT0001" x="0" y="852" width="453" height="854"/>
+	<SubTexture name="V RIGHT0002" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0003" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0004" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0005" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0006" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0007" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0008" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0009" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0010" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0011" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0012" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V RIGHT0013" x="463" y="852" width="438" height="854" frameX="0" frameY="0" frameWidth="453" frameHeight="854"/>
+	<SubTexture name="V UP0000" x="911" y="852" width="390" height="904" pivotX="180.3" pivotY="455.1" frameX="-1" frameY="0" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0001" x="911" y="852" width="390" height="904" frameX="-1" frameY="0" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0002" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0003" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0004" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0005" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0006" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0007" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0008" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0009" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0010" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0011" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0012" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+	<SubTexture name="V UP0013" x="1311" y="852" width="388" height="887" frameX="0" frameY="-17" frameWidth="391" frameHeight="904"/>
+</TextureAtlas>

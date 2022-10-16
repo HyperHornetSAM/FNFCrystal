@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ValerieTransform.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Valerie Transform0000" x="0" y="0" width="556" height="686" pivotX="363.15" pivotY="656.75" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0001" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0002" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0003" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0004" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0005" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0006" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0007" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0008" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0009" x="0" y="0" width="556" height="686" frameX="-78" frameY="-315" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0010" x="566" y="0" width="554" height="675" frameX="-71" frameY="-326" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0011" x="566" y="0" width="554" height="675" frameX="-71" frameY="-326" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0012" x="566" y="0" width="554" height="675" frameX="-71" frameY="-326" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0013" x="566" y="0" width="554" height="675" frameX="-71" frameY="-326" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0014" x="1130" y="0" width="556" height="753" frameX="-78" frameY="-248" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0015" x="1696" y="0" width="556" height="797" frameX="-78" frameY="-244" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0016" x="2262" y="0" width="649" height="805" frameX="-29" frameY="-238" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0017" x="2921" y="0" width="668" height="823" frameX="-10" frameY="-227" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0018" x="0" y="833" width="683" height="896" frameX="0" frameY="-163" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0019" x="693" y="833" width="681" height="965" frameX="-2" frameY="-105" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0020" x="1384" y="833" width="686" height="992" frameX="-23" frameY="-83" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0021" x="2080" y="833" width="682" height="1052" frameX="-24" frameY="-28" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0022" x="2772" y="833" width="695" height="1052" frameX="-9" frameY="0" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0023" x="2080" y="833" width="682" height="1052" frameX="-24" frameY="-28" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0024" x="0" y="1895" width="686" height="992" frameX="-23" frameY="-83" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0025" x="696" y="1895" width="680" height="965" frameX="-2" frameY="-105" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0026" x="1386" y="1895" width="679" height="896" frameX="0" frameY="-163" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0027" x="2075" y="1895" width="617" height="823" frameX="-10" frameY="-227" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0028" x="2702" y="1895" width="563" height="805" frameX="-29" frameY="-238" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0029" x="3275" y="1895" width="455" height="797" frameX="-114" frameY="-244" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0030" x="0" y="2897" width="427" height="739" frameX="-139" frameY="-248" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0031" x="437" y="2897" width="311" height="592" frameX="-216" frameY="-395" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0032" x="758" y="2897" width="291" height="590" frameX="-228" frameY="-397" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0033" x="758" y="2897" width="291" height="590" frameX="-228" frameY="-397" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0034" x="1059" y="2897" width="295" height="596" frameX="-228" frameY="-391" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0035" x="1059" y="2897" width="295" height="596" frameX="-228" frameY="-391" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0036" x="1364" y="2897" width="295" height="603" frameX="-228" frameY="-384" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0037" x="1364" y="2897" width="295" height="603" frameX="-228" frameY="-384" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0038" x="1669" y="2897" width="295" height="602" frameX="-228" frameY="-385" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0039" x="1669" y="2897" width="295" height="602" frameX="-228" frameY="-385" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0040" x="1669" y="2897" width="295" height="602" frameX="-228" frameY="-385" frameWidth="709" frameHeight="1080"/>
+	<SubTexture name="Valerie Transform0041" x="1669" y="2897" width="295" height="602" frameX="-228" frameY="-385" frameWidth="709" frameHeight="1080"/>
+</TextureAtlas>

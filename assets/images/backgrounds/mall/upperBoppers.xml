@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="upperBoppers.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Upper Crowd Bob0000" x="0" y="0" width="2266" height="290" frameX="0" frameY="-16" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0001" x="0" y="0" width="2266" height="290" frameX="0" frameY="-16" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0002" x="0" y="300" width="2256" height="296" frameX="-5" frameY="-10" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0003" x="0" y="300" width="2256" height="296" frameX="-5" frameY="-10" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0004" x="0" y="606" width="2254" height="303" frameX="-6" frameY="-3" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0005" x="0" y="606" width="2254" height="303" frameX="-6" frameY="-3" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0006" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0007" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0008" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0009" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0010" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0011" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+	<SubTexture name="Upper Crowd Bob0012" x="0" y="919" width="2250" height="306" frameX="-8" frameY="0" frameWidth="2266" frameHeight="306"/>
+</TextureAtlas>

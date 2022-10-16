@@ -67,7 +67,7 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 		var P1HealthBarColor:Array<FlxColor> = [0xFF66FF33];
 		var P2HealthBarColor:Array<FlxColor> = [0xFFFF0000];
 		switch(SONG.player1) {
-			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car':
+			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car' | 'bf-alt':
 				switch(Init.trueSettings.get('BF Skin')){
 					case 'Mean':
 						P1HealthBarColor = [0xFFF6F41C];
@@ -77,7 +77,14 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 						P1HealthBarColor = [0xFF2D76FF];
 				}
 			case 'gf':
-				P1HealthBarColor = [0xFFE879FF];
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Mean':
+						P2HealthBarColor = [0xFFF6F41C];
+					case 'Beta':
+						P2HealthBarColor = [0xFFFF5889];
+					default:
+						P2HealthBarColor = [0xFFE879FF];
+				}
 				
 			case 'dad':
 				P1HealthBarColor = [0xFFFC731E];
@@ -112,12 +119,39 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			case 'tankman':
 				P1HealthBarColor = [0xFF81949A];
 				
+			case 'cancer':
+				P1HealthBarColor = [0xFF00FFAA];
+			
+			case 'vtan':
+				P1HealthBarColor = [0xFF7745B1, 0xFF7745B1, 0xFF3AB145];
+				
+			case 'valerie-opera' | 'valerie-popstar':
+				P1HealthBarColor = [0xFF9BD2DC];
+				
+			case 'onek' | 'onek-happy':
+				P1HealthBarColor = [0xFFB05007];
+			
+			case 'maggie':
+				P1HealthBarColor = [0xFFFFB3E5];
+			
+			case 'maggie-inverted' | 'onek-inverted':
+				P1HealthBarColor = [0xFFFFFFFF];
+			
+			case 'sonic':
+				P1HealthBarColor = [0xFF5189B5];
+				
+			case 'tricky':
+				P1HealthBarColor = [0xFF91AC99];
+			
+			case 'ron':
+				P1HealthBarColor = [0xFF9EBFC8];
+				
 			default:
 				P1HealthBarColor = [0xFF66FF33];
 			
 		}
 		switch(SONG.player2) {
-			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car':
+			case 'bf' | 'bf-pixel' | 'bf-christmas' | 'bf-car' | 'bf-alt':
 				switch(Init.trueSettings.get('BF Skin')){
 					case 'Mean':
 						P2HealthBarColor = [0xFFF6F41C];
@@ -127,8 +161,14 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 						P2HealthBarColor = [0xFF2D76FF];
 				}
 			case 'gf':
-				P2HealthBarColor = [0xFFE879FF];
-				
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Mean':
+						P2HealthBarColor = [0xFFF6F41C];
+					case 'Beta':
+						P2HealthBarColor = [0xFFFF5889];
+					default:
+						P2HealthBarColor = [0xFFE879FF];
+				}
 			case 'dad':
 				P2HealthBarColor = [0xFFFC731E];
 				
@@ -161,6 +201,33 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 				
 			case 'tankman':
 				P2HealthBarColor = [0xFF81949A];
+			
+			case 'cancer':
+				P2HealthBarColor = [0xFF00FFAA];
+			
+			case 'vtan':
+				P2HealthBarColor = [0xFF7745B1, 0xFF7745B1, 0xFF3AB145];
+			
+			case 'valerie-opera' | 'valerie-popstar':
+				P2HealthBarColor = [0xFF9BD2DC];
+			
+			case 'onek' | 'onek-happy':
+				P2HealthBarColor = [0xFFB05007];
+			
+			case 'maggie':
+				P2HealthBarColor = [0xFFFFB3E5];
+			
+			case 'maggie-inverted' | 'onek-inverted':
+				P2HealthBarColor = [0xFFFFFFFF];
+				
+			case 'sonic':
+				P2HealthBarColor = [0xFF5189B5];
+				
+			case 'tricky':
+				P2HealthBarColor = [0xFF91AC99];
+				
+			case 'ron':
+				P2HealthBarColor = [0xFF9EBFC8];
 				
 			default:
 				P2HealthBarColor = [0xFFFF0000];
@@ -261,5 +328,23 @@ class ClassHUD extends FlxTypedGroup<FlxBasic>
 			iconP2.updateHitbox();
 		}
 		//
+	}
+	
+	public function updateIcons(char:String, isPlayer:Bool)
+	{
+		if(isPlayer){
+			//iconP1 = new HealthIcon(char, true);
+			//iconP1.y = healthBar.y - (iconP1.height / 2);
+			iconP1.updateIcon(char, true);
+		}
+		else{
+			iconP2.updateIcon(char, false);
+		}
+		if(char == 'onek-inverted'){
+			healthBar.createGradientBar([0xFFFFFFFF], [0xFFFFFFFF]);
+		}
+		if(char == 'onek'){
+			healthBar.createGradientBar([0xFFFFB3E5], [0xFFB05007]);
+		}
 	}
 }

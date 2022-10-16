@@ -2,9 +2,10 @@
 <TextureAtlas imagePath="the ring.png">
 	<!-- Created with Adobe Animate version 20.0.3.25487 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="full ring green 0" x="0" y="0" width="2784" height="1816" pivotX="1390.55" pivotY="903"/>
-	<SubTexture name="full ring blue 0" x="2794" y="0" width="2784" height="1816"/>
-	<SubTexture name="full ring red 0" x="0" y="1826" width="2784" height="1816"/>
-	<SubTexture name="full ring purple 0" x="2794" y="1826" width="2784" height="1816"/>
-	<SubTexture name="full ring white 0" x="0" y="3652" width="2784" height="1816"/>
+	<SubTexture name="full ring0000" x="0" y="0" width="2784" height="1817"/>
+	<SubTexture name="full ring0001" x="2794" y="0" width="2784" height="1817"/>
+	<SubTexture name="full ring0002" x="0" y="1827" width="2784" height="1817"/>
+	<SubTexture name="full ring0003" x="2794" y="1827" width="2784" height="1817"/>
+	<SubTexture name="full ring0004" x="0" y="3654" width="2784" height="1817"/>
+	<SubTexture name="full ring0005" x="2794" y="3654" width="2784" height="1817"/>
 </TextureAtlas>

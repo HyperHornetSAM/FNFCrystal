@@ -1,0 +1,11 @@
+cheer 0 -100
+sad -2 -111
+danceLeft 0 -109
+danceRight 0 -109
+singUP 0 -96
+singRIGHT 0 -120
+singLEFT 0 -119
+singDOWN 0 -120
+hairBlow 45 -108
+hairFall 0 -109
+scared -2 -117

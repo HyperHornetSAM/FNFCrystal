@@ -1,0 +1,29 @@
+Crystal 1.0
+- The OG
+- Updated Roses instrumental at some point
+Crystal 2.0
+- Moved to Forever Engine
+- Added Kamexmas, Ebin, and Voidslave
+- New custom menu
+- Added Test remix
+- Added Crystal Beta, Crystal Mean, and Crystal Chef BF's
+- Updated character designs
+- Updated stage designs
+Crystal 2.1
+- Added Crystal Proto, Crystal Smug, and Crystal Chef GF's
+- Added Proto and Smug versions of tutorial
+- Added Rekt
+- Added Bivalve
+- Added Check-up
+- Added Thump-Thump
+- Added SONICOOL
+- Added Maddening
+- Updated vocals and visuals for Voidslave (old voices are in the same song folder labeled OLDVoices.ogg)
+- Updated visuals for Kamexmas
+- Updated visuals for Ebin
+- Fixed visual tutorial bug where gf doesn't cheer
+- Fixed winter horrorland cutscene not playing
+- Resolved scores not saving on certain songs
+- Updated logo
+- Updated menu
+- Updated other minor visuals

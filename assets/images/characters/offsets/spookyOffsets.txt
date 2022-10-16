@@ -4,3 +4,4 @@ singUP -2 10
 singRIGHT -134 -22
 singLEFT 162 -37
 singDOWN -50 -151
+yeah 0, 0

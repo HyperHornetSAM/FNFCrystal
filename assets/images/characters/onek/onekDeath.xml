@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="onekDeath.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="onekDeath0000" x="5" y="5" width="1527" height="1063" frameX="0" frameY="-12" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0001" x="1537" y="5" width="1527" height="1075"/>
+	<SubTexture name="onekDeath0002" x="1537" y="5" width="1527" height="1075"/>
+	<SubTexture name="onekDeath0003" x="3069" y="5" width="1527" height="1068" frameX="0" frameY="-7" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0004" x="3069" y="5" width="1527" height="1068" frameX="0" frameY="-7" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0005" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0006" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0007" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0008" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0009" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0010" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0011" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0012" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0013" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0014" x="6133" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0015" x="6133" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0016" x="5" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0017" x="5" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0018" x="6133" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0019" x="6133" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0020" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0021" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0022" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0023" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0024" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0025" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0026" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0027" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0028" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0029" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0030" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0031" x="4601" y="5" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0032" x="1537" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0033" x="1537" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0034" x="3069" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0035" x="3069" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0036" x="4601" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0037" x="4601" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0038" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0039" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0040" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0041" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0042" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0043" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0044" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0045" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0046" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0047" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0048" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0049" x="5" y="2161" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0050" x="6133" y="1085" width="1527" height="1071" frameX="0" frameY="-4" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0051" x="1537" y="2161" width="1527" height="1070" frameX="0" frameY="-5" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0052" x="3069" y="2161" width="1527" height="1070" frameX="0" frameY="-5" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0053" x="4601" y="2161" width="1527" height="1049" frameX="0" frameY="-26" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0054" x="6133" y="2161" width="1527" height="1049" frameX="0" frameY="-26" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0055" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0056" x="1537" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0057" x="3069" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0058" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0059" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0060" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0061" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0062" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0063" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0064" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0065" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0066" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0067" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0068" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath0069" x="5" y="3237" width="1527" height="1044" frameX="0" frameY="-31" frameWidth="1527" frameHeight="1075"/>
+	<SubTexture name="onekDeath confirm0000" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0001" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0002" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0003" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0004" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0005" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0006" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0007" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0008" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0009" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0010" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0011" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0012" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0013" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0014" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0015" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0016" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0017" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0018" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0019" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0020" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0021" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0022" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0023" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0024" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0025" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0026" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0027" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath confirm0028" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0000" x="6133" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0001" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0002" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0003" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0004" x="6133" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0005" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0006" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0007" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0008" x="6133" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0009" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0010" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0011" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0012" x="6133" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0013" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0014" x="4601" y="3237" width="1527" height="1044"/>
+	<SubTexture name="onekDeath wait0015" x="4601" y="3237" width="1527" height="1044"/>
+</TextureAtlas>

@@ -23,6 +23,7 @@ class Note extends FNFSprite
 	public var mustPress:Bool = false;
 	public var noteData:Int = 0;
 	public var noteAlt:Float = 0;
+	public var actual_noteType:Float = 0;
 	public var noteType:Float = 0;
 	public var noteString:String = "";
 
@@ -90,7 +91,7 @@ class Note extends FNFSprite
 
 		these are for all your custom note needs
 	**/
-	public static function returnDefaultNote(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null):Note
+	public static function returnDefaultNote(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null, ?actual_noteType:Float = 0):Note
 	{
 		var newNote:Note = new Note(strumTime, noteData, noteAlt, prevNote, isSustainNote);
 
@@ -126,23 +127,56 @@ class Note extends FNFSprite
 				newNote.setGraphicSize(Std.int(newNote.width * PlayState.daPixelZoom));
 				newNote.updateHitbox();
 			default: // base game arrows for no reason whatsoever
-				newNote.frames = Paths.getSparrowAtlas(ForeverTools.returnSkinAsset('NOTE_assets', assetModifier, Init.trueSettings.get("Note Skin"),
-					'noteskins/notes'));
-				newNote.animation.addByPrefix('greenScroll', 'green0');
-				newNote.animation.addByPrefix('redScroll', 'red0');
-				newNote.animation.addByPrefix('blueScroll', 'blue0');
-				newNote.animation.addByPrefix('purpleScroll', 'purple0');
-				newNote.animation.addByPrefix('purpleholdend', 'pruple end hold');
-				newNote.animation.addByPrefix('greenholdend', 'green hold end');
-				newNote.animation.addByPrefix('redholdend', 'red hold end');
-				newNote.animation.addByPrefix('blueholdend', 'blue hold end');
-				newNote.animation.addByPrefix('purplehold', 'purple hold piece');
-				newNote.animation.addByPrefix('greenhold', 'green hold piece');
-				newNote.animation.addByPrefix('redhold', 'red hold piece');
-				newNote.animation.addByPrefix('bluehold', 'blue hold piece');
-				newNote.setGraphicSize(Std.int(newNote.width * 0.7));
-				newNote.updateHitbox();
-				newNote.antialiasing = true;
+				switch(actual_noteType){
+					case 1:
+					{
+						//thump-thump mines
+						newNote.frames = Paths.getSparrowAtlas('noteskins/mines/base/crystal_anxiety_mines');
+							
+						newNote.animation.addByPrefix('greenScroll', 'full anxiety instance 1', false);
+						newNote.animation.addByPrefix('redScroll', 'full anxiety instance 2', false);
+						newNote.animation.addByPrefix('blueScroll', 'full anxiety instance 4', false);
+						newNote.animation.addByPrefix('purpleScroll', 'full anxiety instance 3', false);
+							
+						newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+                        newNote.updateHitbox();
+                        newNote.antialiasing = true;
+					}
+					case 2:
+					{
+						//rekt mines
+						newNote.frames = Paths.getSparrowAtlas('noteskins/mines/base/RektArrows');
+							
+						newNote.animation.addByPrefix('greenScroll', 'green0', false);
+						newNote.animation.addByPrefix('redScroll', 'red0', false);
+						newNote.animation.addByPrefix('blueScroll', 'blue0', false);
+						newNote.animation.addByPrefix('purpleScroll', 'purple0', false);
+							
+						newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+                        newNote.updateHitbox();
+                        newNote.antialiasing = true;
+					}
+					default:
+					{
+						newNote.frames = Paths.getSparrowAtlas(ForeverTools.returnSkinAsset('NOTE_assets', assetModifier, Init.trueSettings.get("Note Skin"),
+							'noteskins/notes'));
+						newNote.animation.addByPrefix('greenScroll', 'green0');
+						newNote.animation.addByPrefix('redScroll', 'red0');
+						newNote.animation.addByPrefix('blueScroll', 'blue0');
+						newNote.animation.addByPrefix('purpleScroll', 'purple0');
+						newNote.animation.addByPrefix('purpleholdend', 'pruple end hold');
+						newNote.animation.addByPrefix('greenholdend', 'green hold end');
+						newNote.animation.addByPrefix('redholdend', 'red hold end');
+						newNote.animation.addByPrefix('blueholdend', 'blue hold end');
+						newNote.animation.addByPrefix('purplehold', 'purple hold piece');
+						newNote.animation.addByPrefix('greenhold', 'green hold piece');
+						newNote.animation.addByPrefix('redhold', 'red hold piece');
+						newNote.animation.addByPrefix('bluehold', 'blue hold piece');
+						newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+						newNote.updateHitbox();
+						newNote.antialiasing = true;
+					}
+				}
 		}
 		//
 		if (!isSustainNote)
@@ -165,7 +199,7 @@ class Note extends FNFSprite
 		return newNote;
 	}
 
-	public static function returnQuantNote(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null):Note
+	public static function returnQuantNote(assetModifier, strumTime, noteData, noteType, noteAlt, ?isSustainNote:Bool = false, ?prevNote:Note = null, ?actual_noteType:Float = 0):Note
 	{
 		var newNote:Note = new Note(strumTime, noteData, noteAlt, prevNote, isSustainNote);
 
@@ -203,47 +237,80 @@ class Note extends FNFSprite
 		switch (assetModifier)
 		{
 			default:
-				// inherit last quant if hold note
-				if (isSustainNote && prevNote != null)
-					newNote.noteQuant = prevNote.noteQuant;
-				// base quant notes
-				if (!isSustainNote)
-				{
-					// in case you're unfamiliar with these, they're ternary operators, I just dont wanna check for pixel notes using a separate statement
-					var newNoteSize:Int = (assetModifier == 'pixel') ? 17 : 157;
-					newNote.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('NOTE_quants', assetModifier, Init.trueSettings.get("Note Skin"),
-						'noteskins/notes', 'quant')),
-						true, newNoteSize, newNoteSize);
+				switch(actual_noteType){
+					case 1:
+					{
+						//thump-thump mines
+						newNote.frames = Paths.getSparrowAtlas('noteskins/mines/base/crystal_anxiety_mines');
+							
+						newNote.animation.addByPrefix('upScroll', 'full anxiety instance 1', false);
+						newNote.animation.addByPrefix('rightScroll', 'full anxiety instance 2', false);
+						newNote.animation.addByPrefix('downScroll', 'full anxiety instance 4', false);
+						newNote.animation.addByPrefix('leftScroll', 'full anxiety instance 3', false);
+							
+						newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+                        newNote.updateHitbox();
+                        newNote.antialiasing = true;
+					}
+					case 2:
+					{
+						//rekt mines
+						newNote.frames = Paths.getSparrowAtlas('noteskins/mines/base/RektArrows');
+							
+						newNote.animation.addByPrefix('upScroll', 'green0', false);
+						newNote.animation.addByPrefix('rightScroll', 'red0', false);
+						newNote.animation.addByPrefix('downScroll', 'blue0', false);
+						newNote.animation.addByPrefix('leftScroll', 'purple0', false);
+							
+						newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+                        newNote.updateHitbox();
+                        newNote.antialiasing = true;
+					}
+					default:
+					{
+						// inherit last quant if hold note
+						if (isSustainNote && prevNote != null)
+							newNote.noteQuant = prevNote.noteQuant;
+						// base quant notes
+						if (!isSustainNote)
+						{
+							// in case you're unfamiliar with these, they're ternary operators, I just dont wanna check for pixel notes using a separate statement
+							var newNoteSize:Int = (assetModifier == 'pixel') ? 17 : 157;
+							newNote.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('NOTE_quants', assetModifier, Init.trueSettings.get("Note Skin"),
+								'noteskins/notes', 'quant')),
+								true, newNoteSize, newNoteSize);
 
-					newNote.animation.add('leftScroll', [0 + (newNote.noteQuant * 4)]);
-					// LOL downscroll thats so funny to me
-					newNote.animation.add('downScroll', [1 + (newNote.noteQuant * 4)]);
-					newNote.animation.add('upScroll', [2 + (newNote.noteQuant * 4)]);
-					newNote.animation.add('rightScroll', [3 + (newNote.noteQuant * 4)]);
-				}
-				else
-				{
-					// quant holds
-					newNote.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('HOLD_quants', assetModifier, Init.trueSettings.get("Note Skin"),
-						'noteskins/notes', 'quant')),
-						true, (assetModifier == 'pixel') ? 17 : 109, (assetModifier == 'pixel') ? 6 : 52);
-					newNote.animation.add('hold', [0 + (newNote.noteQuant * 4)]);
-					newNote.animation.add('holdend', [1 + (newNote.noteQuant * 4)]);
-					newNote.animation.add('rollhold', [2 + (newNote.noteQuant * 4)]);
-					newNote.animation.add('rollend', [3 + (newNote.noteQuant * 4)]);
-				}
+							newNote.animation.add('leftScroll', [0 + (newNote.noteQuant * 4)]);
+							// LOL downscroll thats so funny to me
+							newNote.animation.add('downScroll', [1 + (newNote.noteQuant * 4)]);
+							newNote.animation.add('upScroll', [2 + (newNote.noteQuant * 4)]);
+							newNote.animation.add('rightScroll', [3 + (newNote.noteQuant * 4)]);
+						}
+						else
+						{
+							// quant holds
+							newNote.loadGraphic(Paths.image(ForeverTools.returnSkinAsset('HOLD_quants', assetModifier, Init.trueSettings.get("Note Skin"),
+								'noteskins/notes', 'quant')),
+								true, (assetModifier == 'pixel') ? 17 : 109, (assetModifier == 'pixel') ? 6 : 52);
+							newNote.animation.add('hold', [0 + (newNote.noteQuant * 4)]);
+							newNote.animation.add('holdend', [1 + (newNote.noteQuant * 4)]);
+							newNote.animation.add('rollhold', [2 + (newNote.noteQuant * 4)]);
+							newNote.animation.add('rollend', [3 + (newNote.noteQuant * 4)]);
+						}
 
-				if (assetModifier == 'pixel')
-				{
-					newNote.antialiasing = false;
-					newNote.setGraphicSize(Std.int(newNote.width * PlayState.daPixelZoom));
-					newNote.updateHitbox();
-				}
-				else
-				{
-					newNote.setGraphicSize(Std.int(newNote.width * 0.7));
-					newNote.updateHitbox();
-					newNote.antialiasing = true;
+						if (assetModifier == 'pixel')
+						{
+							newNote.antialiasing = false;
+							newNote.setGraphicSize(Std.int(newNote.width * PlayState.daPixelZoom));
+							newNote.updateHitbox();
+						}
+						else
+						{
+							newNote.setGraphicSize(Std.int(newNote.width * 0.7));
+							newNote.updateHitbox();
+							newNote.antialiasing = true;
+						}
+					}
 				}
 		}
 

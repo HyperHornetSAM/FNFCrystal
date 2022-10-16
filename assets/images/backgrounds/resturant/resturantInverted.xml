@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="resturantInverted.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="resty0000" x="0" y="0" width="2863" height="1797" pivotX="1431.15" pivotY="888.45"/>
+	<SubTexture name="resty0001" x="0" y="0" width="2863" height="1797"/>
+	<SubTexture name="resty0002" x="2873" y="0" width="2863" height="1797"/>
+	<SubTexture name="resty0003" x="2873" y="0" width="2863" height="1797"/>
+	<SubTexture name="resty0004" x="0" y="1807" width="2863" height="1797"/>
+	<SubTexture name="resty0005" x="0" y="1807" width="2863" height="1797"/>
+	<SubTexture name="resty0006" x="2873" y="1807" width="2863" height="1797"/>
+	<SubTexture name="resty0007" x="2873" y="1807" width="2863" height="1797"/>
+</TextureAtlas>

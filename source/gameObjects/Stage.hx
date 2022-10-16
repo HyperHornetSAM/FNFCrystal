@@ -43,7 +43,15 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var bottomBoppers:FNFSprite;
 	var santa:FNFSprite;
 
+	var ringbg:FNFSprite;
 	var bgGirls:BackgroundGirls;
+	var valerieTransform:FNFSprite;
+	var cancerScream:FNFSprite;
+	var onekSnapBack:FNFSprite;
+	var resturantbg:FNFSprite;
+	var resturantbg_inv:FNFSprite;
+	var table:FNFSprite;
+	var table_inv:FNFSprite;
 
 	public var curStage:String;
 
@@ -77,8 +85,12 @@ class Stage extends FlxTypedGroup<FlxBasic>
 					curStage = 'school';
 				case 'thorns':
 					curStage = 'schoolEvil';
-				case 'ebin' | 'kamexmas' | 'voidslave':
+				case 'ebin' | 'kamexmas' | 'voidslave' | 'check-up' | 'bivalve' | 'old-voidslave' | 'sonicool' | 'maddening':
 					curStage = 'ring';
+				case 'thump-thump':
+					curStage = 'resturant';
+				case 'rekt':
+					curStage = 'alt-ring';
 				default:
 					curStage = 'stage';
 			}
@@ -216,7 +228,14 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(bg);
 
 				upperBoppers = new FNFSprite(-315, -135);
-				upperBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/upperBop');
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Beta'|'Mean'|'Cheffriend':
+						upperBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/upperBoppers');
+						upperBoppers.y += 25;
+					default:
+						upperBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/upperBop');
+				}
+				
 				upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
 				upperBoppers.antialiasing = true;
 				upperBoppers.scrollFactor.set(0.33, 0.33);
@@ -236,9 +255,20 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				tree.antialiasing = true;
 				tree.scrollFactor.set(0.40, 0.40);
 				add(tree);
+				
+				var stool = new FNFSprite(635, 550).loadGraphic(Paths.image('backgrounds/' + curStage + '/stool'));
+				stool.antialiasing = true;
+				stool.scrollFactor.set(0.9, 0.9);
+				stool.updateHitbox();
+				add(stool);
 
 				bottomBoppers = new FNFSprite(-300, 140);
-				bottomBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/bottomBop');
+				switch(Init.trueSettings.get('BF Skin')){
+					case 'Beta'|'Mean'|'Cheffriend':
+						bottomBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/bottomboppers');
+					default:
+						bottomBoppers.frames = Paths.getSparrowAtlas('backgrounds/' + curStage + '/bottomBop');
+				}
 				bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
 				bottomBoppers.antialiasing = true;
 				bottomBoppers.scrollFactor.set(0.9, 0.9);
@@ -349,32 +379,90 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				add(bg);
 				
 			case 'ring':
+				curStage = 'ring';
 				PlayState.defaultCamZoom = .6;
 				var hallowTex = Paths.getSparrowAtlas('backgrounds/ring/the_ring');
-				var bg:FNFSprite = new FNFSprite(-625, -300);
-				bg.frames = hallowTex;
+				ringbg = new FNFSprite(-625, -300);
+				ringbg.frames = hallowTex;
 				switch(PlayState.SONG.song.toLowerCase())
 				{
 					case 'ebin':
-						bg.animation.addByPrefix('idle', 'full ring green', 24, false);
-						bg.animation.play('idle');
+						ringbg.animation.addByPrefix('idle', 'full ring0000', 24, false);
+						ringbg.animation.play('idle');
 					case 'kamexmas':
-						bg.animation.addByPrefix('idle', 'full ring white', 24, false);
-						bg.animation.play('idle');
-					case 'voidslave':
-						bg.animation.addByPrefix('idle', 'full ring red', 24, false);
-						bg.animation.play('idle');
+						ringbg.animation.addByPrefix('idle', 'full ring0004', 24, false);
+						ringbg.animation.play('idle');
+					case 'voidslave' | 'old-voidslave':
+						ringbg.animation.addByPrefix('idle', 'full ring0002', 24, false);
+						ringbg.animation.play('idle');
+					case 'check-up':
+						ringbg.animation.addByPrefix('purple', 'full ring0005', 24, false);
+						ringbg.animation.addByPrefix('green', 'full ring0000', 24, false);
+						ringbg.animation.play('purple');
+					case 'bivalve':
+						ringbg.animation.addByPrefix('idle', 'full ring0001', 24, false);
+						ringbg.animation.play('idle');
+						valerieTransform = new FNFSprite(-125, -70);
+						valerieTransform.antialiasing = true;
+						valerieTransform.frames = Paths.getSparrowAtlas('characters/valerie/ValerieTransform');
+						valerieTransform.animation.addByPrefix('transform', 'Valerie Transform', 24, false);
+					case 'sonicool':
+						ringbg.animation.addByPrefix('idle', 'full ring0001', 24, false);
+						ringbg.animation.play('idle');
+					case 'maddening':
+						ringbg.animation.addByPrefix('idle', 'full ring0002', 24, false);
+						ringbg.animation.play('idle');
 					default:
-						bg.animation.addByPrefix('idle', 'full ring purple', 24, false);
-						bg.animation.play('idle');
+						ringbg.animation.addByPrefix('idle', 'full ring0005', 24, false);
+						ringbg.animation.play('idle');
 				}
-				bg.antialiasing = true;
-				bg.scrollFactor.set(1, 1);
-				bg.active = false;
+				ringbg.antialiasing = true;
+				ringbg.scrollFactor.set(1, 1);
+				ringbg.active = false;
 				
 				// add to the final array
+				add(ringbg);
+			
+			case 'alt-ring':
+				curStage = 'alt-ring';
+				PlayState.defaultCamZoom = .6;
+				var bg:FNFSprite = new FNFSprite(-100, -400).loadGraphic(Paths.image('backgrounds/alt-ring/alt_ring'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(1,1);
 				add(bg);
-				
+				cancerScream = new FNFSprite(-525, -325);
+				cancerScream.antialiasing = true;
+				cancerScream.frames = Paths.getSparrowAtlas('characters/cancer/CancerCrystalSCREAM');
+				cancerScream.animation.addByPrefix('scream', 'CANCER SCREAM', 24, false);
+			case 'resturant':
+				curStage = 'resturant';
+				PlayState.defaultCamZoom = .8;
+				resturantbg = new FNFSprite(-600, -300);
+				resturantbg.frames = Paths.getSparrowAtlas('backgrounds/resturant/resturant');
+				resturantbg.animation.addByPrefix('anim', 'resty', 24, true);
+				resturantbg.animation.play('anim');
+				resturantbg_inv = new FNFSprite(-600, -300);
+				resturantbg_inv.frames = Paths.getSparrowAtlas('backgrounds/resturant/resturantInverted');
+				resturantbg_inv.animation.addByPrefix('anim', 'resty', 24, true);
+				resturantbg_inv.animation.play('anim');
+				resturantbg_inv.alpha = 0;
+				table = new FNFSprite(250, 900).loadGraphic(Paths.image('backgrounds/resturant/table'));
+				table_inv = new FNFSprite(250, 900).loadGraphic(Paths.image('backgrounds/resturant/table_inverted'));
+				table_inv.alpha = 0;
+				onekSnapBack = new FNFSprite(880, 520);
+				onekSnapBack.frames = Paths.getSparrowAtlas('characters/onek/Onek_SnapBack');
+				onekSnapBack.antialiasing = true;
+				onekSnapBack.animation.addByPrefix('snapbacktoreality', 'Onek SNAP BACK', 24, false);
+				onekSnapBack.alpha = 0;
+				resturantbg.antialiasing = true;
+				resturantbg_inv.antialiasing = true;
+				table.antialiasing = true;
+				table_inv.antialiasing = true;
+				add(resturantbg);
+				add(resturantbg_inv);
+				foreground.add(onekSnapBack);
+				foreground.add(table);
+				foreground.add(table_inv);
 			default:
 				PlayState.defaultCamZoom = 0.9;
 				curStage = 'stage';
@@ -538,7 +626,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	{
 		switch (songPlayer2)
 		{
-			case 'gf':
+			case 'gf' | 'smug-gf' | 'proto-gf' | 'chef-gf':
 				dad.setPosition(gf.x, gf.y);
 				gf.visible = false;
 			/*
@@ -580,8 +668,19 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'tankman':
 				dad.x += 50;
 				dad.y += 200;
-			case 'ron' | 'agoti' | 'ace':
+			case 'ron':
 				dad.y += 350;
+				dad.x += 50;
+			case 'ace':
+				dad.y -= 0;
+			case 'agoti':
+				dad.y += -50;
+			case 'sonic':
+				dad.y += 200;
+			case 'tricky':
+				dad.y += 200;
+			case 'valerie-opera':
+				dad.y += 125;
 		}
 	}
 
@@ -648,6 +747,13 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'ring':
 				boyfriend.x += 300;
 				dad.x -= 150;
+			case 'alt-ring':
+				dad.y += 200;
+			case 'resturant':
+				boyfriend.x += 170;
+				boyfriend.y -= 35;
+				dad.x -= 30;
+				dad.y += 110;
 		}
 	}
 
@@ -659,6 +765,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 	var trainFinishing:Bool = false;
 	var trainCooldown:Int = 0;
 	var startedMoving:Bool = false;
+	var isGreen:Bool = false;
 
 	public function stageUpdate(curBeat:Int, boyfriend:Boyfriend, gf:Character, dadOpponent:Character)
 	{
@@ -678,7 +785,69 @@ class Stage extends FlxTypedGroup<FlxBasic>
 
 			case 'school':
 				bgGirls.dance();
-
+				
+			case 'ring':
+				if(PlayState.SONG.song.toLowerCase() == 'check-up'){
+					if (curBeat % 4 == 0)
+					{
+						if (isGreen){
+							ringbg.animation.play('purple');
+							isGreen = false;
+						}
+						else{
+							ringbg.animation.play('green');
+							isGreen = true;
+						}
+					}
+				}
+				if(PlayState.SONG.song.toLowerCase() == 'bivalve'){
+					if (curBeat == 112)
+					{
+						foreground.add(valerieTransform);
+						valerieTransform.animation.play('transform');
+					}
+					if (curBeat == 116){
+						valerieTransform.alpha = 0;
+						foreground.remove(valerieTransform);
+					}
+				}
+			
+			case 'alt-ring':
+				if (curBeat == 60 || curBeat == 284){
+					cancerScream.alpha = 1;
+					foreground.add(cancerScream);
+					cancerScream.animation.play('scream');
+				}
+				
+				if (curBeat == 65 || curBeat == 289){
+					cancerScream.alpha = 0;
+					foreground.remove(cancerScream);
+				}
+			
+			case 'resturant':
+				if (curBeat == 264){
+					resturantbg.alpha = 0;
+					resturantbg_inv.alpha = 1;
+					table.alpha = 0;
+					table_inv.alpha = 1;
+				}
+				if (curBeat > 264 && curBeat < 382){
+					table_inv.alpha -= 0.0075;
+					resturantbg_inv.alpha -= 0.0075;
+				}
+				if (curBeat == 382){
+					resturantbg.alpha = 1;
+					resturantbg_inv.alpha = 0;
+					table.alpha = 1;
+					table_inv.alpha = 0;
+					onekSnapBack.alpha = 1;
+					onekSnapBack.animation.play('snapbacktoreality');
+				}
+				if (curBeat == 388){
+					onekSnapBack.alpha = 0;
+					foreground.remove(onekSnapBack);
+				}
+				
 			case 'philly':
 				if (!trainMoving)
 					trainCooldown += 1;
