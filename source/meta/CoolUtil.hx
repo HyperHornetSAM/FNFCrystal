@@ -5,10 +5,6 @@ import meta.state.PlayState;
 
 using StringTools;
 
-#if !html5
-import sys.FileSystem;
-#end
-
 class CoolUtil
 {
 	// tymgus45
@@ -62,18 +58,31 @@ class CoolUtil
 
 	public static function returnAssetsLibrary(library:String, ?subDir:String = 'assets/images'):Array<String>
 	{
-		//
 		var libraryArray:Array<String> = [];
-		#if !html5
-		var unfilteredLibrary = FileSystem.readDirectory('$subDir/$library');
 
-		for (folder in unfilteredLibrary)
+		for (folder in Assets.list().filter(list -> list.contains('$subDir/$library')))
 		{
-			if (!folder.contains('.'))
-				libraryArray.push(folder);
+			// simulating da FileSystem.readDirectory?
+			var daFolder:String = folder.replace('$subDir/$library/', '');
+			if (daFolder.contains('/'))
+				daFolder = daFolder.replace(daFolder.substring(daFolder.indexOf('/'), daFolder.length), ''); // fancy
+
+			if (!daFolder.startsWith('.') && !libraryArray.contains(daFolder))
+				libraryArray.push(daFolder);
 		}
-		trace(libraryArray);
-		#end
+
+		libraryArray.sort(function(a:String, b:String):Int
+		{
+			a = a.toUpperCase();
+			b = b.toUpperCase();
+
+			if (a < b)
+				return -1;
+			else if if (a > b)
+				return 1;
+			else
+				return 0;
+		});
 
 		return libraryArray;
 	}
