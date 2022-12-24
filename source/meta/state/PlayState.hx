@@ -1924,11 +1924,12 @@ class PlayState extends MusicBeatState
 		else{
 			dialogPath = Paths.json(SONG.song.toLowerCase() + '/dialogue');
 		}
-		if (sys.FileSystem.exists(dialogPath))
+
+		if (Assets.exists(dialogPath))
 		{
 			startedCountdown = false;
 
-			dialogueBox = DialogueBox.createDialogue(sys.io.File.getContent(dialogPath));
+			dialogueBox = DialogueBox.createDialogue(Assets.getText(dialogPath));
 			dialogueBox.cameras = [dialogueHUD];
 			dialogueBox.whenDaFinish = startCountdown;
 
