@@ -20,6 +20,7 @@ import meta.data.Song.SwagSong;
 import meta.data.dependency.Discord;
 import meta.data.font.Alphabet;
 import openfl.media.Sound;
+import openfl.utils.Assets;
 import sys.FileSystem;
 import sys.thread.Thread;
 
@@ -84,7 +85,7 @@ class FreeplayState extends MusicBeatState
 			if (!existingSongs.contains(i.toLowerCase()))
 			{
 				var icon:String = 'gf';
-				var chartExists:Bool = FileSystem.exists(Paths.songJson(i, i));
+				var chartExists:Bool = Assets.exists(Paths.songJson(i, i));
 				if (chartExists)
 				{
 					var castSong:SwagSong = Song.loadFromJson(i, i);
@@ -200,8 +201,8 @@ class FreeplayState extends MusicBeatState
 		///*
 		var coolDifficultyArray = [];
 		for (i in CoolUtil.difficultyArray)
-			if (FileSystem.exists(Paths.songJson(songName, songName + '-' + i))
-				|| (FileSystem.exists(Paths.songJson(songName, songName)) && i == "NORMAL"))
+			if (Assets.exists(Paths.songJson(songName, songName + '-' + i))
+				|| (Assets.exists(Paths.songJson(songName, songName)) && i == "NORMAL"))
 				coolDifficultyArray.push(i);
 
 		if (coolDifficultyArray.length > 0)
@@ -384,7 +385,7 @@ class FreeplayState extends MusicBeatState
 						{
 							trace("Loading index " + index);
 
-							var inst:Sound = Sound.fromFile('./' + Paths.inst(songs[curSelected].songName));
+							var inst:Sound = Assets.getSound(Paths.inst(songs[curSelected].songName));
 
 							if (index == curSelected && threadActive)
 							{
