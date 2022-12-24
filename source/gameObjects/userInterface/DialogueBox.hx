@@ -12,6 +12,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import meta.data.dependency.FNFSprite;
 import meta.data.font.Alphabet;
+import openfl.utils.Assets;
 
 typedef PortraitDataDef =
 {
@@ -103,7 +104,7 @@ class DialogueBox extends FlxSpriteGroup
 		var truePath = Paths.file(file);
 
 		// load the json file
-		if (sys.FileSystem.exists(dialoguePath))
+		if (Assets.exists(dialoguePath))
 			return dialoguePath;
 		else
 			return truePath;
@@ -316,7 +317,7 @@ class DialogueBox extends FlxSpriteGroup
 				var portraitJson = Paths.file('images/dialogue/portraits/$curCharacter/$curCharacter.json');
 
 				// load the json file
-				if (sys.FileSystem.exists(portraitJson))
+				if (Assets.exists(portraitJson))
 				{
 					portraitData = haxe.Json.parse(sys.io.File.getContent(portraitJson));
 					portrait.frames = Paths.getSparrowAtlas('dialogue/portraits/$curCharacter/$curCharacter');
