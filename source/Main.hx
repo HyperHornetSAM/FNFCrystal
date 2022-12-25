@@ -222,7 +222,7 @@ class Main extends Sprite
 		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
-			var obj:Null<FlxGraphic> = FlxG.bitmap._cache.get(key);
+			var obj = FlxG.bitmap._cache.get(key);
 			if (obj != null)
 			{
 				if (Assets.cache.hasBitmapData(key))
@@ -235,7 +235,7 @@ class Main extends Sprite
 
 		for (key in Assets.cache.getSoundKeys())
 		{
-			var obj:Sound = Assets.cache.getSound(key);
+			var obj = Assets.cache.getSound(key);
 			if (obj != null)
 			{
 				Assets.cache.removeSound(key);
