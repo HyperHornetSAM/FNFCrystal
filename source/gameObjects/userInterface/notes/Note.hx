@@ -1,4 +1,4 @@
-package gameObjects.userInterface.notes;
+packagepackage gameObjects.userInterface.notes;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
