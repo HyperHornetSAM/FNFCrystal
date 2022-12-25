@@ -1485,21 +1485,21 @@ class PlayState extends MusicBeatState
 		sharedCurSong = curSong;
 		if(curSong == 'Tutorial'){
 			if(Init.trueSettings.get('BF Skin') == 'Beta'){
-				songMusic = new FlxSound().loadEmbedded(Sound.fromFile('./' + Paths.inst(SONG.song + "-Proto")), false, true);
+				songMusic = new FlxSound().loadEmbedded(Paths.inst(SONG.song + "-Proto"), false, true);
 			}
 			else if(Init.trueSettings.get('BF Skin') == 'Mean'){
-				songMusic = new FlxSound().loadEmbedded(Sound.fromFile('./' + Paths.inst(SONG.song + "-Smug")), false, true);
+				songMusic = new FlxSound().loadEmbedded(Paths.inst(SONG.song + "-Smug"), false, true);
 			}
 			else{
-				songMusic = new FlxSound().loadEmbedded(Sound.fromFile('./' + Paths.inst(SONG.song)), false, true);
+				songMusic = new FlxSound().loadEmbedded(Paths.inst(SONG.song), false, true);
 			}
 		}
 		else{
-			songMusic = new FlxSound().loadEmbedded(Sound.fromFile('./' + Paths.inst(SONG.song)), false, true);
+			songMusic = new FlxSound().loadEmbedded(Paths.inst(SONG.song), false, true);
 		}
 
 		if (SONG.needsVoices)
-			vocals = new FlxSound().loadEmbedded(Sound.fromFile('./' + Paths.voices(SONG.song)), false, true);
+			vocals = new FlxSound().loadEmbedded(Paths.voices(SONG.song), false, true);
 		else
 			vocals = new FlxSound();
 
