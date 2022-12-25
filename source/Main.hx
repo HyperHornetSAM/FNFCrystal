@@ -151,7 +151,7 @@ class Main extends Sprite
 
 		#if html5
 		framerate = 60;
-		#enf
+		#end
 
 		SUtil.checkPermissions();
 
