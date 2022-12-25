@@ -441,7 +441,6 @@ class OptionsMenuState extends MusicBeatState
 						});
 					}
 				case Init.SettingTypes.Selector:
-					#if desktop
 					var selector:Selector = currentAttachmentMap.get(activeSubgroup.members[curSelection]);
 
 					if (!controls.LEFT)
@@ -453,7 +452,6 @@ class OptionsMenuState extends MusicBeatState
 						updateSelector(selector, 1);
 					else if (controls.LEFT_P)
 						updateSelector(selector, -1);
-					#end
 				default:
 					// none
 			}
