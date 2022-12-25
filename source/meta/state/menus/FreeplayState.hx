@@ -385,11 +385,9 @@ class FreeplayState extends MusicBeatState
 						{
 							trace("Loading index " + index);
 
-							var inst:Sound = Assets.getSound(Paths.inst(songs[curSelected].songName));
-
 							if (index == curSelected && threadActive)
 							{
-								FlxG.sound.playMusic(inst);
+								FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName));
 
 								if (FlxG.sound.music.fadeTween != null)
 									FlxG.sound.music.fadeTween.cancel();
