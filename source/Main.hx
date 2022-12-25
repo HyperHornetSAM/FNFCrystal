@@ -6,6 +6,7 @@ import flixel.FlxGame;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.util.FlxColor;
+import flixel.util.FlxDestroyUtil;
 import haxe.CallStack.StackItem;
 import haxe.CallStack;
 import haxe.io.Path;
@@ -218,20 +219,29 @@ class Main extends Sprite
 
 	public static function dumpCache()
 	{
-		///* SPECIAL THANKS TO HAYA
 		@:privateAccess
 		for (key in FlxG.bitmap._cache.keys())
 		{
-			var obj = FlxG.bitmap._cache.get(key);
+			var obj:Null<FlxGraphic> = FlxG.bitmap._cache.get(key);
 			if (obj != null)
 			{
-				Assets.cache.removeBitmapData(key);
+				if (Assets.cache.hasBitmapData(key))
+					Assets.cache.removeBitmapData(key);
+
 				FlxG.bitmap._cache.remove(key);
-				obj.destroy();
+				obj = FlxDestroyUtil.destroy(obj);
 			}
 		}
-		Assets.cache.clear("songs");
-		// */
+
+		for (key in Assets.cache.getSoundKeys())
+		{
+			var obj:Sound = Assets.cache.getSound(key);
+			if (obj != null)
+			{
+				Assets.cache.removeSound(key);
+				obj.close();
+			}
+		}
 	}
 	
 
