@@ -204,7 +204,7 @@ class Init extends FlxState
 		loadSettings();
 		loadControls();
 
-		#if !html5
+		#if desktop
 		Main.updateFramerate(trueSettings.get("Framerate Cap"));
 		#end
 
@@ -298,7 +298,7 @@ class Init extends FlxState
 	{
 		InfoHud.updateDisplayInfo(trueSettings.get('FPS Counter'), trueSettings.get('Debug Info'), trueSettings.get('Memory Counter'));
 
-		#if !html5
+		#if desktop
 		Main.updateFramerate(trueSettings.get("Framerate Cap"));
 		#end
 

@@ -41,7 +41,7 @@ import sys.io.File;
 
 using StringTools;
 
-#if !html5
+#if desktop
 import meta.data.dependency.Discord;
 #end
 
@@ -1170,7 +1170,7 @@ class PlayState extends MusicBeatState
 
 	public static function updateRPC(pausedRPC:Bool)
 	{
-		#if !html5
+		#if desktop
 		var displayRPC:String = (pausedRPC) ? detailsPausedText : songDetails;
 
 		if (health > 0)
@@ -1452,7 +1452,7 @@ class PlayState extends MusicBeatState
 			songMusic.onComplete = endSong;
 			vocals.play();
 
-			#if !html5
+			#if desktop
 			// Song duration in a float, useful for the time left feature
 			songLength = songMusic.length;
 
