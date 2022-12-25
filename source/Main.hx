@@ -70,7 +70,7 @@ class Main extends Sprite
 
 	public static var gameVersion:String = '0.2.4.1';
 
-	var zoom:Float = -1; // If -1, zoom is automatically calculated to fit the window dimensions.
+	var zoom:Float = 1; // If -1, zoom is automatically calculated to fit the window dimensions.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
 	var infoCounter:InfoHud; // initialize the heads up display that shows information before creating it.
 
@@ -143,34 +143,19 @@ class Main extends Sprite
 			note studders and shit its weird.
 		**/
 
+		#if desktop
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
+		#else
+		SUtil.uncaughtErrorHandler();
+		#end
 
 		#if html5
 		framerate = 60;
-		#end
+		#enf
 
-		// simply said, a state is like the 'surface' area of the window where everything is drawn.
-		// if you've used gamemaker you'll probably understand the term surface better
-		// this defines the surface bounds
+		SUtil.checkPermissions();
 
-		var stageWidth:Int = Lib.current.stage.stageWidth;
-		var stageHeight:Int = Lib.current.stage.stageHeight;
-
-		if (zoom == -1)
-		{
-			var ratioX:Float = stageWidth / gameWidth;
-			var ratioY:Float = stageHeight / gameHeight;
-			zoom = Math.min(ratioX, ratioY);
-			gameWidth = Math.ceil(stageWidth / zoom);
-			gameHeight = Math.ceil(stageHeight / zoom);
-			// this just kind of sets up the camera zoom in accordance to the surface width and camera zoom.
-			// if set to negative one, it is done so automatically, which is the default.
-		}
-
-		// here we set up the base game
-		var gameCreate:FlxGame;
-		gameCreate = new FlxGame(gameWidth, gameHeight, mainClassState, zoom, framerate, framerate, skipSplash);
-		addChild(gameCreate); // and create it afterwards
+		addChild(new FlxGame(gameWidth, gameHeight, mainClassState, zoom, framerate, framerate, skipSplash));
 
 		// default game FPS settings, I'll probably comment over them later.
 		// addChild(new FPS(10, 3, 0xFFFFFF));
