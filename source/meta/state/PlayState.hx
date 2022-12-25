@@ -437,15 +437,22 @@ class PlayState extends MusicBeatState
 		// dialogue checks
 		if (dialogueBox != null && dialogueBox.alive) {
 			// wheee the shift closes the dialogue
-			if (FlxG.keys.justPressed.SHIFT){
+			if (FlxG.keys.justPressed.SHIFT #if android || FlxG.android.justReleased.BACK #end){
 				if(curSong.toLowerCase() == 'thorns' || curSong.toLowerCase() == 'senpai'){
 					sound.fadeOut(2.2, 0);
 				}
 				dialogueBox.closeDialog();
 			}
 
+			#if mobile
+			var justTouched:Bool = false;
+			for (touch in FlxG.touches.list)
+				if (touch.justPressed)
+					justTouched = true;
+			#end
+
 			// the change I made was just so that it would only take accept inputs
-			if (controls.ACCEPT && dialogueBox.textStarted)
+			if (controls.ACCEPT #if mobile || justTouched #end && dialogueBox.textStarted)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
 				dialogueBox.curPage += 1;
@@ -464,7 +471,7 @@ class PlayState extends MusicBeatState
 
 		if (!inCutscene) {
 			// pause the game if the game is allowed to pause and enter is pressed
-			if (FlxG.keys.justPressed.ENTER && startedCountdown && canPause)
+			if (FlxG.keys.justPressed.ENTER #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
 			{
 				// update drawing stuffs
 				persistentUpdate = false;
