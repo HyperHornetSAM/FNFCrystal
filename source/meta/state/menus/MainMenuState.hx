@@ -209,13 +209,16 @@ class MainMenuState extends MusicBeatState
 		selectorMenuItem_2.ID = 1;
 		menuItems.add(selectorMenuItem_1);
 		menuItems.add(selectorMenuItem_2);
-		
 
 		var versionShit:FlxText = new FlxText(5, FlxG.height - 18, 0, "Forever Engine v" + Main.gameVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 
+		#if mobile
+		addVirtualPad(LEFT_FULL, A);
+		virtualPad.y -= 18;
+		#end
 	}
 
 	// var colorTest:Float = 0;
