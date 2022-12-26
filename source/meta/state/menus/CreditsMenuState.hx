@@ -107,7 +107,7 @@ class CreditsMenuState extends MusicBeatState
 		credits7.scrollFactor.set();
 		add(credits7);
 		credits8 = new FlxText(400, 685, 0, "", 20);
-		credits8.text = "Press [ENTER] to return to the main menu.";
+		credits8.text = #if mobile "Touch the [SCREEN]" #else "Press [ENTER]" #end + " to return to the main menu.";
 		credits8.screenCenter(X);
 		credits8.alignment = CENTER;
 		credits8.scrollFactor.set();
@@ -122,9 +122,17 @@ class CreditsMenuState extends MusicBeatState
 	
 	override function update(elapsed:Float)
 	{
-		if(controls.ACCEPT){
+		#if mobile
+		var justTouched:Bool = false;
+		for (touch in FlxG.touches.list)
+			if (touch.justPressed)
+				justTouched = true;
+		#else
+
+		if(controls.ACCEPT #if mobile || justTouched #end){
 			exitState();
 		}
+
 		super.update(elapsed);
 	}
 
