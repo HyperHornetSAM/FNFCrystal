@@ -20,6 +20,7 @@ import openfl.display.FPS;
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.events.UncaughtErrorEvent;
+import openfl.system.System;
 import sys.FileSystem;
 import sys.io.File;
 import sys.io.Process;
