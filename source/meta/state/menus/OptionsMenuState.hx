@@ -143,6 +143,10 @@ class OptionsMenuState extends MusicBeatState
 		add(infoText);
 
 		loadSubgroup('main');
+
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		#end
 	}
 
 	private var currentAttachmentMap:Map<Alphabet, Dynamic>;
