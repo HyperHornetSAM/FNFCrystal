@@ -41,8 +41,7 @@ class MusicBeatState extends FNFUIState
 	#if mobile
 	var hitbox:FlxHitbox;
 	var virtualPad:FlxVirtualPad;
-	var trackedInputsHitbox:Array<FlxActionInput> = [];
-	var trackedInputsVirtualPad:Array<FlxActionInput> = [];
+	var trackedInputs:Array<FlxActionInput> = [];
 
 	public function addVirtualPad(DPad:FlxDPadMode, Action:FlxActionMode, ?visible = true):Void
 	{
@@ -54,7 +53,7 @@ class MusicBeatState extends FNFUIState
 		add(virtualPad);
 
 		controls.setVirtualPad(virtualPad, DPad, Action);
-		trackedInputsVirtualPad = controls.trackedInputs;
+		trackedInputs = controls.trackedInputs;
 		controls.trackedInputs = [];
 	}
 
@@ -71,8 +70,8 @@ class MusicBeatState extends FNFUIState
 
 	public function removeVirtualPad():Void
 	{
-		if (trackedInputsVirtualPad.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsVirtualPad);
+		if (trackedInputs.length > 0)
+			controls.removeVirtualControlsInput(trackedInputs);
 
 		if (virtualPad != null)
 			remove(virtualPad);
@@ -88,7 +87,7 @@ class MusicBeatState extends FNFUIState
 		add(hitbox);
 
 		controls.setHitBox(hitbox);
-		trackedInputsHitbox = controls.trackedInputs;
+		trackedInputs = controls.trackedInputs;
 		controls.trackedInputs = [];
 	}
 
@@ -105,34 +104,13 @@ class MusicBeatState extends FNFUIState
 
 	public function removeHitbox():Void
 	{
-		if (trackedInputsHitbox.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsHitbox);
+		if (trackedInputs.length > 0)
+			controls.removeVirtualControlsInput(trackedInputs);
 
 		if (hitbox != null)
 			remove(hitbox);
 	}
 	#end
-
-	override function destroy()
-	{
-		#if mobile
-		if (trackedInputsHitbox.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsHitbox);
-
-		if (trackedInputsVirtualPad.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsVirtualPad);
-		#end
-
-		super.destroy();
-
-		#if mobile
-		if (virtualPad != null)
-			virtualPad = FlxDestroyUtil.destroy(virtualPad);
-
-		if (hitbox != null)
-			hitbox = FlxDestroyUtil.destroy(hitbox);
-		#end
-	}
 
 	// class create event
 	override function create()
@@ -225,8 +203,7 @@ class MusicBeatSubState extends FlxSubState
 	#if mobile
 	var hitbox:FlxHitbox;
 	var virtualPad:FlxVirtualPad;
-	var trackedInputsHitbox:Array<FlxActionInput> = [];
-	var trackedInputsVirtualPad:Array<FlxActionInput> = [];
+	var trackedInputs:Array<FlxActionInput> = [];
 
 	public function addVirtualPad(DPad:FlxDPadMode, Action:FlxActionMode, ?visible = true):Void
 	{
@@ -238,7 +215,7 @@ class MusicBeatSubState extends FlxSubState
 		add(virtualPad);
 
 		controls.setVirtualPad(virtualPad, DPad, Action);
-		trackedInputsVirtualPad = controls.trackedInputs;
+		trackedInputs = controls.trackedInputs;
 		controls.trackedInputs = [];
 	}
 
@@ -255,8 +232,8 @@ class MusicBeatSubState extends FlxSubState
 
 	public function removeVirtualPad():Void
 	{
-		if (trackedInputsVirtualPad.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsVirtualPad);
+		if (trackedInputs.length > 0)
+			controls.removeVirtualControlsInput(trackedInputs);
 
 		if (virtualPad != null)
 			remove(virtualPad);
@@ -272,7 +249,7 @@ class MusicBeatSubState extends FlxSubState
 		add(hitbox);
 
 		controls.setHitBox(hitbox);
-		trackedInputsHitbox = controls.trackedInputs;
+		trackedInputs = controls.trackedInputs;
 		controls.trackedInputs = [];
 	}
 
@@ -289,8 +266,8 @@ class MusicBeatSubState extends FlxSubState
 
 	public function removeHitbox():Void
 	{
-		if (trackedInputsHitbox.length > 0)
-			controls.removeVirtualControlsInput(trackedInputsHitbox);
+		if (trackedInputs.length > 0)
+			controls.removeVirtualControlsInput(trackedInputs);
 
 		if (hitbox != null)
 			remove(hitbox);
