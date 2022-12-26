@@ -352,6 +352,11 @@ class PlayState extends MusicBeatState
 		dialogueHUD = new FlxCamera();
 		dialogueHUD.bgColor.alpha = 0;
 		FlxG.cameras.add(dialogueHUD);
+
+		#if mobile
+		addHitbox(false);
+		addHitboxCamera();
+		#end
 		
 		if (SONG.song.toLowerCase() == 'thump-thump'){
 			var preloadInvertedMaggie:Character = new Character(0, 0);
@@ -1721,6 +1726,10 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		#if mobile
+		hitbox.visible = false;
+		#end
+
 		canPause = false;
 		songMusic.volume = 0;
 		vocals.volume = 0;
@@ -1976,6 +1985,10 @@ class PlayState extends MusicBeatState
 		swagCounter = 0;
 		
 		camHUD.visible = true;
+
+		#if mobile
+		hitbox.visible = true;
+		#end
 
 		startTimer = new FlxTimer().start(Conductor.crochet / 1000, function(tmr:FlxTimer)
 		{
