@@ -127,7 +127,7 @@ class CreditsMenuState extends MusicBeatState
 		for (touch in FlxG.touches.list)
 			if (touch.justPressed)
 				justTouched = true;
-		#else
+		#end
 
 		if(controls.ACCEPT #if mobile || justTouched #end){
 			exitState();
