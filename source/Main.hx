@@ -242,8 +242,10 @@ class Main extends Sprite
 				obj.close();
 			}
 		}
+
+		// run the garbage collector for good measure lmfao
+		System.gc();
 	}
-	
 
 	function onCrash(e:UncaughtErrorEvent):Void
 	{
