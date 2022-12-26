@@ -112,6 +112,11 @@ class GameOverSubstate extends MusicBeatSubState
 		}
 
 		bf.playAnim('firstDeath');
+
+		#if mobile
+		addVirtualPad(NONE, A_B);
+		addVirtualPadCamera();
+		#end
 	}
 
 	override function update(elapsed:Float)
